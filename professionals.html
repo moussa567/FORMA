@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="fr" data-lang="fr">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>FORMA | 福玛 — Services Professionnels</title>
+<meta name="description" content="FORMA accompagne architectes, designers d'intérieur, hôtels, promoteurs et distributeurs : personnalisation, sélection de matériaux, échantillons et commandes professionnelles depuis Foshan."/>
+<link rel="canonical" href="https://www.formalife.cn/professionals.html"/>
+<link rel="alternate" hreflang="fr" href="https://www.formalife.cn/professionals.html"/>
+<link rel="alternate" hreflang="en" href="https://www.formalife.cn/en/professionals.html"/>
+<link rel="alternate" hreflang="es" href="https://www.formalife.cn/es/professionals.html"/>
+<link rel="alternate" hreflang="ru" href="https://www.formalife.cn/ru/professionals.html"/>
+<link rel="alternate" hreflang="ar" href="https://www.formalife.cn/ar/professionals.html"/>
+<link rel="alternate" hreflang="zh" href="https://www.formalife.cn/zh/professionals.html"/>
+<link rel="alternate" hreflang="x-default" href="https://www.formalife.cn/en/professionals.html"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Montserrat:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet"/>
+<style>
+  :root{
+    --gold:#C9A96A;--gold-light:#e2c68a;--black:#0A0A0A;--black-mid:#111;--black-soft:#1a1a1a;
+    --ivory:#F8F5EE;--ivory-mid:rgba(248,245,238,.55);--ivory-dim:rgba(248,245,238,.06);
+  }
+  *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--black);color:var(--ivory);font-family:'Montserrat',sans-serif;font-weight:300;overflow-x:hidden}
+  img{display:block;max-width:100%;height:auto}
+  a{color:inherit}
+  button{font-family:inherit}
+
+  .skip-link{position:absolute;left:-999px;top:0;background:var(--gold);color:var(--black);padding:12px 20px;font-family:'Montserrat',sans-serif;font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;z-index:10000}
+  .skip-link:focus{left:16px;top:16px}
+  :focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+
+  .eyebrow{display:flex;flex-wrap:wrap;row-gap:4px;align-items:center;gap:10px;font-family:'Montserrat',sans-serif;font-size:.62rem;letter-spacing:.4em;text-transform:uppercase;color:var(--gold);margin-bottom:18px}
+  .eyebrow .zh{font-family:'Cinzel',serif;letter-spacing:.1em;color:rgba(201,169,106,.55);font-size:.7rem}
+  .eyebrow::before{content:'';width:24px;height:1px;background:var(--gold)}
+
+  nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;align-items:center;justify-content:space-between;padding:18px 60px;background:rgba(10,10,10,.94);border-bottom:1px solid rgba(201,169,106,.18)}
+  .nav-logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+  .nav-mark{height:42px;width:35px;flex-shrink:0;object-fit:contain}
+  .nav-logo-main{font-family:'Cinzel',serif;font-size:.85rem;letter-spacing:.32em;color:var(--ivory)}
+  .nav-logo-main span{color:var(--gold)}
+  .nav-logo-sub{font-family:'Cinzel',serif;font-size:.5rem;letter-spacing:.4em;color:rgba(201,169,106,.5)}
+  .nav-links{display:flex;align-items:center;gap:34px;list-style:none}
+  .nav-links a{font-family:'Montserrat',sans-serif;font-size:.68rem;letter-spacing:.16em;text-transform:uppercase;color:var(--ivory-mid);text-decoration:none;transition:color .3s}
+  .nav-links a:hover,.nav-links a[aria-current="page"]{color:var(--gold)}
+  .nav-right{display:flex;align-items:center;gap:26px}
+  .btn-quote{font-family:'Montserrat',sans-serif;font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;background:var(--gold);color:var(--black);border:none;padding:13px 26px;font-weight:500;text-decoration:none;transition:background .3s,transform .3s;display:inline-block}
+  .btn-quote:hover{background:var(--gold-light);transform:translateY(-2px)}
+  .nav-toggle{display:none;background:none;border:none;color:var(--ivory);cursor:pointer;padding:8px}
+  .nav-mobile-cta{display:none}
+
+  .page-header{padding:170px 60px 60px;text-align:center}
+  .page-header h1{font-family:'Cinzel',serif;font-weight:400;font-size:clamp(2rem,3.6vw,3rem);color:var(--ivory);margin-bottom:20px}
+  .page-header p{font-family:'Montserrat',sans-serif;font-weight:300;font-style:italic;color:var(--ivory-mid);font-size:1rem;max-width:640px;margin:0 auto}
+
+  .breadcrumb{padding:0 60px;max-width:1400px;margin:0 auto;font-family:'Montserrat',sans-serif;font-size:.68rem;letter-spacing:.08em;color:rgba(248,245,238,.35)}
+  .breadcrumb a{color:rgba(201,169,106,.7);text-decoration:none}
+  .breadcrumb a:hover{color:var(--gold)}
+
+  section{padding:100px 60px}
+  .section-head{max-width:640px;margin:0 auto 50px;text-align:center}
+  .section-head h2{font-family:'Cinzel',serif;font-weight:400;font-size:clamp(1.7rem,2.8vw,2.4rem);color:var(--ivory);margin-bottom:20px}
+  .section-head p{font-family:'Montserrat',sans-serif;font-weight:300;font-style:italic;color:var(--ivory-mid);font-size:1rem;line-height:1.8}
+
+  .audience-band{background:var(--black-soft)}
+  .audience-list{display:flex;flex-wrap:wrap;justify-content:center;gap:14px;max-width:960px;margin:0 auto}
+  .audience-chip{font-family:'Montserrat',sans-serif;font-size:.72rem;letter-spacing:.06em;color:var(--ivory-mid);border:1px solid rgba(201,169,106,.25);padding:12px 22px}
+
+  .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(201,169,106,.15);max-width:1400px;margin:0 auto}
+  .service-card{background:var(--black);padding:44px 36px}
+  .service-card .num{font-family:'Cinzel',serif;color:rgba(201,169,106,.4);font-size:.72rem;letter-spacing:.2em;display:block;margin-bottom:20px}
+  .service-card h3{font-family:'Cinzel',serif;font-weight:400;font-size:1.02rem;color:var(--ivory);margin-bottom:12px}
+  .service-card p{font-family:'Montserrat',sans-serif;font-size:.78rem;color:var(--ivory-mid);line-height:1.75}
+
+  .form-band{background:var(--black-soft)}
+  .form-container{max-width:800px;margin:0 auto}
+  .form-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+  .form-group{display:flex;flex-direction:column;gap:8px}
+  .form-group.full{grid-column:span 2}
+  label{font-family:'Montserrat',sans-serif;font-size:.6rem;letter-spacing:.25em;text-transform:uppercase;color:var(--gold)}
+  input,select,textarea{
+    background:rgba(248,245,238,.04);border:1px solid rgba(201,169,106,.2);color:var(--ivory);
+    font-family:'Montserrat',sans-serif;font-weight:300;font-style:italic;font-size:.95rem;padding:14px 18px;outline:none;
+    transition:border-color .3s,background .3s;width:100%;
+  }
+  input::placeholder,textarea::placeholder{color:rgba(248,245,238,.25)}
+  input:focus,select:focus,textarea:focus{border-color:var(--gold);background:rgba(201,169,106,.05)}
+  select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M0 0l6 8 6-8z' fill='%23C9A96A' fill-opacity='.5'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 18px center;padding-right:40px}
+  select option{background:#1a1a1a;color:var(--ivory)}
+  textarea{resize:vertical;min-height:120px}
+  .btn-submit{font-family:'Montserrat',sans-serif;font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;background:var(--gold);color:var(--black);border:none;padding:16px 44px;font-weight:500;transition:background .3s;cursor:pointer;margin-top:12px}
+  .btn-submit:hover{background:var(--gold-light)}
+  .consent-row{display:flex;align-items:flex-start;gap:14px;margin-top:6px}
+  .consent-row input{width:18px;height:18px;flex-shrink:0;margin-top:2px}
+  .consent-row label{letter-spacing:.05em;text-transform:none;color:rgba(248,245,238,.45);font-size:.72rem;line-height:1.6;font-weight:300}
+  .success-note{display:none;text-align:center;padding:50px 20px;font-family:'Montserrat',sans-serif;font-weight:300;font-style:italic;color:var(--ivory-mid);font-size:1rem}
+  .success-note.show{display:block}
+  .success-note strong{color:var(--gold);font-style:normal}
+
+  .cta-band{background:var(--black-mid);text-align:center}
+  .cta-band h2{font-family:'Cinzel',serif;font-weight:400;font-size:clamp(1.7rem,2.8vw,2.4rem);color:var(--ivory);margin-bottom:22px}
+  .cta-band p{font-family:'Montserrat',sans-serif;font-weight:300;font-style:italic;color:var(--ivory-mid);max-width:560px;margin:0 auto 36px}
+  .cta-actions{display:flex;justify-content:center;gap:20px;flex-wrap:wrap}
+  .btn-outline{font-family:'Montserrat',sans-serif;font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;background:transparent;color:var(--ivory);border:1px solid rgba(248,245,238,.4);padding:15px 32px;text-decoration:none;transition:border-color .3s,color .3s;display:inline-block}
+  .btn-outline:hover{border-color:var(--gold);color:var(--gold)}
+  .btn-fill{font-family:'Montserrat',sans-serif;font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;background:var(--gold);color:var(--black);border:none;padding:15px 32px;font-weight:500;text-decoration:none;transition:background .3s;display:inline-block}
+  .btn-fill:hover{background:var(--gold-light)}
+
+  footer{background:var(--black-soft);border-top:1px solid rgba(201,169,106,.15);padding:70px 60px 36px}
+  .footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:50px;margin-bottom:56px}
+  .footer-brand p{font-family:'Montserrat',sans-serif;font-weight:300;font-style:italic;color:var(--ivory-mid);font-size:.85rem;line-height:1.7;max-width:280px;margin-top:14px}
+  .footer-col h4{font-family:'Montserrat',sans-serif;font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:20px}
+  .footer-col ul{list-style:none;display:flex;flex-direction:column;gap:12px}
+  .footer-col a{font-family:'Montserrat',sans-serif;font-size:.78rem;color:var(--ivory-mid);text-decoration:none;transition:color .3s}
+  .footer-col a:hover{color:var(--gold)}
+  .footer-bottom{border-top:1px solid rgba(201,169,106,.1);padding-top:26px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-family:'Montserrat',sans-serif;font-size:.68rem;color:rgba(248,245,238,.32);letter-spacing:.04em}
+  .footer-social{display:flex;align-items:flex-start;gap:14px;flex-wrap:wrap}
+  .footer-social-item{display:flex;flex-direction:column;align-items:center;gap:7px;text-decoration:none;color:var(--ivory-mid);transition:color .3s;background:none;border:none;padding:0;font:inherit;cursor:pointer}
+  .footer-social-item:hover{color:var(--gold)}
+  .footer-social-icon{display:flex;align-items:center;justify-content:center;width:44px;height:44px;border:1px solid rgba(201,169,106,.25);overflow:hidden;transition:border-color .3s}
+  .footer-social-item:hover .footer-social-icon{border-color:var(--gold)}
+  .footer-social-icon svg{width:20px;height:20px}
+  .footer-social-label{font-family:'Montserrat',sans-serif;font-size:.56rem;letter-spacing:.14em;text-transform:uppercase}
+
+
+  .cursor-dot,.cursor-ring{display:none}
+  body.cc-active{cursor:none}
+  body.cc-active .cursor-dot{position:fixed;top:0;left:0;display:block;width:6px;height:6px;background:var(--gold);border-radius:50%;transform:translate(-50%,-50%);pointer-events:none;z-index:9999;transition:transform .1s}
+  body.cc-active .cursor-ring{position:fixed;top:0;left:0;display:block;width:36px;height:36px;border:1px solid rgba(201,169,106,.5);border-radius:50%;transform:translate(-50%,-50%);pointer-events:none;z-index:9998;transition:width .25s,height .25s,border-color .25s}
+  body.cc-active .cursor-ring.expand{width:54px;height:54px;border-color:var(--gold)}
+  body.cc-active a,body.cc-active button{cursor:none}
+
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+  .reveal.in{opacity:1;transform:translateY(0)}
+
+  @media(prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    body.cc-active{cursor:auto}
+    body.cc-active .cursor-dot,body.cc-active .cursor-ring{display:none}
+    .reveal{opacity:1;transform:none;transition:none}
+    *{animation-duration:.01ms !important;transition-duration:.01ms !important}
+  }
+
+  @media(max-width:1600px){
+    nav{padding:14px 22px}
+    .nav-links{position:fixed;inset:0 0 0 auto;width:78%;max-width:340px;background:var(--black);flex-direction:column;align-items:flex-start;gap:0;padding:100px 32px 40px;transform:translateX(100%);transition:transform .4s ease;border-left:1px solid rgba(201,169,106,.18);overflow-y:auto}
+    .nav-links.open{transform:translateX(0)}
+    .nav-links li{width:100%;border-bottom:1px solid rgba(201,169,106,.1);padding:18px 0}
+    .nav-right .btn-quote{display:none}
+    .nav-toggle{display:block}
+    .nav-mobile-cta{display:block;width:100%;margin-top:20px}
+    .nav-mobile-cta .btn-quote{display:block;width:100%;text-align:center;box-sizing:border-box}
+  }
+  @media(max-width:1080px){
+    .grid-3{grid-template-columns:1fr}
+    .footer-grid{grid-template-columns:1fr 1fr}
+  }
+  @media(max-width:760px){
+    nav{padding:14px 22px}
+    .nav-links{position:fixed;inset:0 0 0 auto;width:78%;max-width:340px;background:var(--black);flex-direction:column;align-items:flex-start;gap:0;padding:100px 32px 40px;transform:translateX(100%);transition:transform .4s ease;border-left:1px solid rgba(201,169,106,.18);overflow-y:auto}
+    .nav-links.open{transform:translateX(0)}
+    .nav-links li{width:100%;border-bottom:1px solid rgba(201,169,106,.1);padding:18px 0}
+    .nav-right .btn-quote{display:none}
+    .nav-toggle{display:block}
+    .nav-mobile-cta{display:block;width:100%;margin-top:20px}
+    .nav-mobile-cta .btn-quote{display:block;width:100%;text-align:center;box-sizing:border-box}
+    .page-header{padding:130px 22px 40px}
+    section{padding:70px 22px}
+    .form-grid{grid-template-columns:1fr}
+    .form-group.full{grid-column:span 1}
+    .breadcrumb{padding:0 22px}
+    .footer-grid{grid-template-columns:1fr}
+    footer{padding:60px 22px 30px}
+  }
+
+  .lang-switch{position:relative}
+  .lang-switch-btn{display:flex;align-items:center;gap:6px;font-family:'Cinzel',serif;font-size:.6rem;letter-spacing:.2em;color:rgba(201,169,106,.8);border:1px solid rgba(201,169,106,.3);padding:6px 10px;background:transparent;cursor:pointer;text-transform:uppercase;transition:border-color .3s,color .3s}
+  .lang-switch-btn:hover{border-color:var(--gold);color:var(--gold)}
+  .lang-switch-menu{list-style:none;position:absolute;top:calc(100% + 10px);right:0;background:var(--black-soft);border:1px solid rgba(201,169,106,.25);min-width:150px;padding:6px;display:none;z-index:2000;box-shadow:0 12px 30px rgba(0,0,0,.4)}
+  .lang-switch.open .lang-switch-menu{display:block}
+  .lang-switch-menu a{display:block;padding:9px 12px;font-family:'Montserrat',sans-serif;font-size:.72rem;letter-spacing:.03em;color:var(--ivory-mid);text-decoration:none;transition:background .2s,color .2s}
+  .lang-switch-menu a:hover,.lang-switch-menu a:focus-visible{background:rgba(201,169,106,.1);color:var(--gold)}
+  .lang-switch-menu a[aria-current="true"]{color:var(--gold);font-weight:500}
+  [dir="rtl"] .lang-switch-menu{right:auto;left:0}
+
+  [dir="rtl"] body{direction:rtl}
+  [dir="rtl"] .eyebrow::before{order:2}
+  [dir="rtl"] .cta-actions{direction:rtl}
+  [dir="rtl"] .footer-bottom{direction:rtl}
+  [dir="rtl"] .skip-link{left:auto;right:-999px}
+  [dir="rtl"] .skip-link:focus{left:auto;right:16px}
+</style>
+</head>
+<body>
+
+<a href="#main" class="skip-link">Aller au contenu</a>
+<div class="cursor-dot" id="dot" aria-hidden="true"></div>
+<div class="cursor-ring" id="ring" aria-hidden="true"></div>
+
+<!-- NAV -->
+<nav id="siteNav">
+  <a href="index.html" class="nav-logo">
+    <img class="nav-mark" src="images/logo-mark.webp" alt="FORMA" width="35" height="42"/>
+    <div>
+      <div class="nav-logo-main">FORMA <span>|</span> <span lang="zh">福玛</span></div>
+      <div class="nav-logo-sub" lang="en">Luxury Furniture</div>
+    </div>
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="collections.html">Collections</a></li>
+    <li><a href="materials.html">Matériaux</a></li>
+    <li><a href="gallery.html">Galerie</a></li>
+    <li><a href="projects.html">Projets</a></li>
+    <li><a href="professionals.html" aria-current="page">Professionnels</a></li>
+    <li><a href="about.html">À propos</a></li>
+    <li><a href="showroom.html">Showroom</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li class="nav-mobile-cta"><a href="contact.html" class="btn-quote" lang="fr">Demander un Devis</a></li>
+  </ul>
+  <div class="nav-right">
+    <div class="lang-switch" id="langSwitch">
+    <button class="lang-switch-btn" id="langSwitchBtn" aria-haspopup="true" aria-expanded="false">
+      FR
+      <svg width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.3"/></svg>
+    </button>
+    <ul class="lang-switch-menu" id="langSwitchMenu" role="menu" aria-label="Choisir la langue">
+        <li role="none"><a role="menuitem" href="professionals.html" lang="fr" aria-current="true">Français</a></li>
+        <li role="none"><a role="menuitem" href="en/professionals.html" lang="en">English</a></li>
+        <li role="none"><a role="menuitem" href="es/professionals.html" lang="es">Español</a></li>
+        <li role="none"><a role="menuitem" href="ru/professionals.html" lang="ru">Русский</a></li>
+        <li role="none"><a role="menuitem" href="ar/professionals.html" lang="ar">العربية</a></li>
+        <li role="none"><a role="menuitem" href="zh/professionals.html" lang="zh">中文</a></li>
+    </ul>
+  </div>
+    <a href="contact.html" class="btn-quote" lang="fr">Demander un Devis</a>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Ouvrir le menu">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </div>
+</nav>
+
+<main id="main">
+  <p class="breadcrumb"><a href="index.html">Accueil</a> / Professionnels</p>
+
+  <div class="page-header">
+    <p class="eyebrow" style="justify-content:center"><span>Professionnels</span> <span class="zh" lang="zh">专业客户</span></p>
+    <h1>Un Partenaire de Fabrication à Foshan</h1>
+    <p>FORMA travaille avec les architectes, designers d'intérieur, hôtels, promoteurs et distributeurs qui ont besoin d'un interlocuteur direct côté fabrication.</p>
+  </div>
+
+  <section class="audience-band reveal">
+    <div class="section-head">
+      <p class="eyebrow" style="justify-content:center"><span>Pour Qui</span> <span class="zh" lang="zh">适用对象</span></p>
+      <h2>Un Même Interlocuteur, Plusieurs Métiers</h2>
+    </div>
+    <div class="audience-list">
+      <span class="audience-chip">Architectes</span>
+      <span class="audience-chip">Designers d'intérieur</span>
+      <span class="audience-chip">Hôtels</span>
+      <span class="audience-chip">Promoteurs</span>
+      <span class="audience-chip">Distributeurs</span>
+      <span class="audience-chip">Revendeurs</span>
+      <span class="audience-chip">Acheteurs professionnels</span>
+    </div>
+  </section>
+
+  <section class="reveal">
+    <div class="section-head">
+      <p class="eyebrow" style="justify-content:center"><span>Accompagnement</span> <span class="zh" lang="zh">服务</span></p>
+      <h2>Ce Que Nous Coordonnons Avec Vous</h2>
+      <p>Chaque projet professionnel est suivi individuellement ; le périmètre exact est confirmé avec notre équipe selon vos besoins.</p>
+    </div>
+    <div class="grid-3">
+      <div class="service-card">
+        <span class="num">01</span>
+        <h3>Personnalisation</h3>
+        <p>Dimensions, finitions et configurations ajustées à partir d'une base de travail commune, projet par projet.</p>
+      </div>
+      <div class="service-card">
+        <span class="num">02</span>
+        <h3>Sélection des Matériaux</h3>
+        <p>Choix des cuirs, textiles, marbres et bois en fonction de l'usage prévu et de l'identité du projet.</p>
+      </div>
+      <div class="service-card">
+        <span class="num">03</span>
+        <h3>Accompagnement de Projet</h3>
+        <p>Un point de contact suivi pour la coordination des configurations, des délais et des livraisons.</p>
+      </div>
+      <div class="service-card">
+        <span class="num">04</span>
+        <h3>Échantillons</h3>
+        <p>Envoi d'échantillons de matières sur demande, pour valider une teinte ou un toucher avant commande.</p>
+      </div>
+      <div class="service-card">
+        <span class="num">05</span>
+        <h3>Commandes Professionnelles</h3>
+        <p>Commandes en volume pour des projets hôteliers, résidentiels groupés ou des programmes de distribution.</p>
+      </div>
+      <div class="service-card">
+        <span class="num">06</span>
+        <h3>Distribution</h3>
+        <p>Échanges avec des distributeurs et revendeurs intéressés par une collaboration à plus long terme, à discuter au cas par cas.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FORM SECTION -->
+  <section class="form-band reveal" id="pro-form">
+    <div class="section-head">
+      <p class="eyebrow" style="justify-content:center"><span>Demande Professionnelle</span> <span class="zh" lang="zh">专业咨询</span></p>
+      <h2>Présentez Votre Projet</h2>
+      <p>Ces informations nous permettent d'orienter votre demande vers la bonne personne au sein de l'équipe FORMA.</p>
+    </div>
+    <div class="form-container">
+      <form id="proForm">
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="proCompany">Société</label>
+            <input type="text" id="proCompany" placeholder="Nom de votre société"/>
+          </div>
+          <div class="form-group">
+            <label for="proContact">Nom &amp; Prénom *</label>
+            <input type="text" id="proContact" required placeholder="Votre nom complet"/>
+          </div>
+          <div class="form-group">
+            <label for="proRole">Fonction *</label>
+            <select id="proRole" required>
+              <option value="">Sélectionner...</option>
+              <option>Architecte</option>
+              <option>Designer d'intérieur</option>
+              <option>Hôtel / Groupe hôtelier</option>
+              <option>Promoteur</option>
+              <option>Distributeur</option>
+              <option>Revendeur</option>
+              <option>Acheteur professionnel</option>
+              <option>Autre</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="proEmail">Email professionnel *</label>
+            <input type="email" id="proEmail" required placeholder="vous@societe.com"/>
+          </div>
+          <div class="form-group">
+            <label for="proPhone">Téléphone</label>
+            <input type="text" id="proPhone" placeholder="+..."/>
+          </div>
+          <div class="form-group">
+            <label for="proCountry">Pays</label>
+            <input type="text" id="proCountry" placeholder="Pays de l'entreprise"/>
+          </div>
+          <div class="form-group full">
+            <label for="proProjectType">Type de projet</label>
+            <select id="proProjectType">
+              <option value="">Sélectionner...</option>
+              <option>Résidentiel groupé</option>
+              <option>Hôtellerie</option>
+              <option>Restauration</option>
+              <option>Bureaux</option>
+              <option>Espace commercial</option>
+              <option>Distribution / Revente</option>
+              <option>Autre</option>
+            </select>
+          </div>
+          <div class="form-group full">
+            <label for="proProducts">Produits concernés</label>
+            <input type="text" id="proProducts" placeholder="Ex : canapés en cuir, tables en marbre..."/>
+          </div>
+          <div class="form-group full">
+            <label for="proMessage">Votre projet en quelques mots *</label>
+            <textarea id="proMessage" required placeholder="Contexte du projet, volumes envisagés, délais, échantillons souhaités..."></textarea>
+          </div>
+        </div>
+        <div class="consent-row">
+          <input type="checkbox" id="proConsent" required/>
+          <label for="proConsent">J'accepte que FORMA | <span lang="zh">福玛</span> utilise mes informations pour traiter cette demande professionnelle. Ces données ne seront jamais partagées avec des tiers. (Obligatoire)</label>
+        </div>
+        <button type="submit" class="btn-submit">Envoyer ma Demande</button>
+      </form>
+      <div class="success-note" id="proSuccess" role="status">
+        <strong>Demande reçue.</strong><br>Notre équipe FORMA revient vers vous sous 48 heures.
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band reveal">
+    <p class="eyebrow" style="justify-content:center"><span>Showroom</span> <span class="zh" lang="zh">展厅</span></p>
+    <h2>Évaluer les Matières à Foshan</h2>
+    <p>Le showroom reste le meilleur point de départ pour un projet professionnel — sur place ou en visioconférence, sur rendez-vous.</p>
+    <div class="cta-actions">
+      <a href="showroom.html" class="btn-fill">Réserver une Visite</a>
+      <a href="contact.html" class="btn-outline">Demander le Catalogue</a>
+    </div>
+  </section>
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="nav-logo-main">FORMA <span>|</span> <span lang="zh">福玛</span></div>
+      <p>Mobilier contemporain conçu et fabriqué à Foshan, Guangdong. Élégance européenne, raffinement asiatique.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Site</h4>
+      <ul>
+        <li><a href="collections.html">Collections</a></li>
+        <li><a href="materials.html">Matériaux</a></li>
+        <li><a href="gallery.html">Galerie</a></li>
+        <li><a href="projects.html">Projets</a></li>
+        <li><a href="showroom.html">Showroom</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Professionnels</h4>
+      <ul>
+        <li><a href="professionals.html">Services Professionnels</a></li>
+        <li><a href="contact.html">Demande de devis</a></li>
+        <li><a href="contact.html">Distribution</a></li>
+        <li><a href="contact.html">Presse</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="tel:+8613138614198">+86 1313 8614 198</a></li>
+        <li><a href="https://wa.me/message/P5GC3C72CQSXD1" target="_blank" rel="noopener">WhatsApp</a></li>
+        <li><a href="https://u.wechat.com/MLt8EcsR12yTC2cylwff6d8" target="_blank" rel="noopener">WeChat</a></li>
+        <li><a href="contact.html">Formulaire complet</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 FORMA — Foshan, Guangdong, Chine</span>
+  <div class="footer-social"><button aria-label="FORMA WhatsApp — cliquer pour afficher le code QR et discuter directement" class="footer-social-item" data-qr="images/qr-whatsapp.webp" data-qr-label="FORMA WhatsApp — cliquer pour afficher le code QR et discuter directement" type="button"><span class="footer-social-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M7 17.5l-3 1 1-3A8 8 0 1 1 7 17.5Z" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 10c0 3 2.5 5.5 5.5 5.5.6 0 1-.1 1.3-.3.4-.2.6-.7.5-1.1l-.3-1a.8.8 0 0 0-.9-.5l-1 .2a.7.7 0 0 1-.7-.2c-.6-.5-1.2-1.2-1.6-2a.7.7 0 0 1 0-.7l.4-.8a.8.8 0 0 0-.1-.9l-.7-.9a.8.8 0 0 0-1-.2c-.7.4-1.4 1.2-1.4 2.4Z"/></svg></span><span class="footer-social-label">WhatsApp</span></button><button aria-label="FORMA WeChat — cliquer pour afficher le code QR et ajouter en contact" class="footer-social-item" data-qr="images/qr-wechat.webp" data-qr-label="FORMA WeChat — cliquer pour afficher le code QR et ajouter en contact" type="button"><span class="footer-social-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M9.5 4C5.9 4 3 6.5 3 9.6c0 1.8 1 3.4 2.5 4.4l-.5 2 2.1-1.1c.7.2 1.5.3 2.4.3h.3a5.6 5.6 0 0 1-.2-1.5c0-3.3 3.1-6 7-6h.2C15.9 5.5 13 4 9.5 4Z" stroke-linejoin="round"/><path d="M15.5 9.7c-3 0-5.5 2.1-5.5 4.7s2.5 4.7 5.5 4.7c.6 0 1.2-.1 1.8-.3l1.9.9-.5-1.7C20 17 21 15.6 21 14.4c0-2.6-2.5-4.7-5.5-4.7Z" stroke-linejoin="round"/><circle cx="7.3" cy="8.6" r="0.6" fill="currentColor" stroke="none"/><circle cx="11.5" cy="8.6" r="0.6" fill="currentColor" stroke="none"/><circle cx="13.7" cy="13.5" r="0.55" fill="currentColor" stroke="none"/><circle cx="17.3" cy="13.5" r="0.55" fill="currentColor" stroke="none"/></svg></span><span class="footer-social-label">WeChat</span></button><a class="footer-social-item" href="#" rel="noopener" target="_blank"><span class="footer-social-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect height="18" rx="5" width="18" x="3" y="3"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.2" cy="6.8" fill="currentColor" r="0.6" stroke="none"/></svg></span><span class="footer-social-label">Instagram</span></a><a class="footer-social-item" href="#" rel="noopener" target="_blank"><span class="footer-social-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="12" r="9"/><path d="M14 8.5h-1.6c-.9 0-1.4.5-1.4 1.4V11h3l-.4 2.6h-2.6V19" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="footer-social-label">Facebook</span></a><a class="footer-social-item" href="#" rel="noopener" target="_blank"><span class="footer-social-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 4c-3 0-5 2.3-5 5.3v2.1c0 .5-.3.9-.9 1.3l-1 .7c-.5.3-.4 1 .1 1.2l1.6.7c.3.1.5.4.6.7.2.9 1 2.3 3 2.6.3 0 .5.2.6.5.2.6.9 1.4 3 1.4s2.8-.8 3-1.4c.1-.3.3-.5.6-.5 2-.3 2.8-1.7 3-2.6.1-.3.3-.6.6-.7l1.6-.7c.5-.2.6-.9.1-1.2l-1-.7c-.6-.4-.9-.8-.9-1.3V9.3C17 6.3 15 4 12 4Z" stroke-linejoin="round"/></svg></span><span class="footer-social-label">Snapchat</span></a><a class="footer-social-item" href="#" rel="noopener" target="_blank"><span class="footer-social-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M14 4v10.5a3.5 3.5 0 1 1-3.5-3.5c.35 0 .7.04 1 .12" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 4c.3 2 1.8 3.6 4 3.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="footer-social-label">TikTok</span></a></div></div>
+</footer>
+
+<script>
+function syncDocumentLanguage(){
+  const code = document.documentElement.dataset.lang || 'fr';
+  document.documentElement.setAttribute('lang', code);
+}
+syncDocumentLanguage();
+window.setSiteLanguage = function(code){
+  document.documentElement.dataset.lang = code;
+  syncDocumentLanguage();
+};
+
+const navToggle = document.getElementById('navToggle');
+const navLinks = document.getElementById('navLinks');
+navToggle.addEventListener('click', () => {
+  const open = navLinks.classList.toggle('open');
+  navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+});
+navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+  navLinks.classList.remove('open');
+  navToggle.setAttribute('aria-expanded', 'false');
+}));
+
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+if (!reduceMotion && 'IntersectionObserver' in window) {
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, {threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+} else {
+  document.querySelectorAll('.reveal').forEach(el => el.classList.add('in'));
+}
+
+const langSwitch = document.getElementById('langSwitch');
+const langSwitchBtn = document.getElementById('langSwitchBtn');
+if (langSwitch && langSwitchBtn) {
+  langSwitchBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const open = langSwitch.classList.toggle('open');
+    langSwitchBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  document.addEventListener('click', () => {
+    langSwitch.classList.remove('open');
+    langSwitchBtn.setAttribute('aria-expanded', 'false');
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      langSwitch.classList.remove('open');
+      langSwitchBtn.setAttribute('aria-expanded', 'false');
+    }
+  });
+}
+
+// Soumission du formulaire professionnel — validation native HTML5 puis
+// écran de confirmation. Le traitement serveur réel (envoi, stockage,
+// anti-spam) sera branché lors de l'intégration CMS.
+const proForm = document.getElementById('proForm');
+const proSuccess = document.getElementById('proSuccess');
+if (proForm) {
+  proForm.addEventListener('submit', function(e){
+    e.preventDefault();
+    if (!proForm.checkValidity()) { proForm.reportValidity(); return; }
+    proForm.style.display = 'none';
+    proSuccess.classList.add('show');
+    proSuccess.setAttribute('tabindex','-1');
+    proSuccess.focus();
+  });
+}
+</script>
+<script src="zoom.js" defer></script>
+</body>
+</html>

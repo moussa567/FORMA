@@ -1,1059 +1,613 @@
 <!DOCTYPE html>
-<html lang="fr" dir="ltr">
-
+<html lang="fr" data-lang="fr">
 <head>
-
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>FORMA | Luxury Contemporary Furniture</title>
-
-<meta name="description"
-content="FORMA — Luxury contemporary furniture showroom in Foshan. Bespoke interiors, leather collections and timeless living.">
-
-<meta property="og:title" content="FORMA Luxury Furniture">
-<meta property="og:description" content="Timeless living. Contemporary luxury.">
-<meta property="og:type" content="website">
-
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Playfair+Display:wght@400;500&family=Montserrat:wght@300;400;500&family=Cairo:wght@300;400;600&family=Noto+Sans+SC:wght@300;400;500&display=swap" rel="stylesheet">
-
+<meta charset="UTF-8"/>
+<script>
+(function(){
+  try {
+    var stored = localStorage.getItem('formaLangPref');
+    if (stored) return; // l'utilisateur a déjà un choix de langue établi, on ne redirige plus
+    var supported = ['fr','en','es','ru','ar','zh'];
+    var langs = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || navigator.userLanguage || 'en'];
+    var detected = 'en'; // repli par défaut, cohérent avec le hreflang x-default du site
+    for (var i = 0; i < langs.length; i++) {
+      var code = String(langs[i] || '').slice(0, 2).toLowerCase();
+      if (supported.indexOf(code) !== -1) { detected = code; break; }
+    }
+    localStorage.setItem('formaLangPref', detected);
+    if (detected !== 'fr') {
+      window.location.replace(detected + '/index.html');
+    }
+  } catch (e) {}
+})();
+</script>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>FORMA | 福玛 — Mobilier Contemporain de Luxe, Foshan</title>
+<meta name="description" content="FORMA conçoit et fabrique du mobilier contemporain à Foshan : canapés en cuir et en textile, tables en marbre, pièces sur mesure. Pour résidences privées, hôtels, architectes et distributeurs."/>
+<link rel="canonical" href="https://www.formalife.cn/"/>
+<link rel="alternate" hreflang="fr" href="https://www.formalife.cn/"/>
+<link rel="alternate" hreflang="en" href="https://www.formalife.cn/en/"/>
+<link rel="alternate" hreflang="es" href="https://www.formalife.cn/es/"/>
+<link rel="alternate" hreflang="ru" href="https://www.formalife.cn/ru/"/>
+<link rel="alternate" hreflang="ar" href="https://www.formalife.cn/ar/"/>
+<link rel="alternate" hreflang="zh" href="https://www.formalife.cn/zh/"/>
+<link rel="alternate" hreflang="x-default" href="https://www.formalife.cn/en/"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Montserrat:ital,wght@0,300;0,400;0,500;1,300;1,400&display=swap" rel="stylesheet"/>
 <style>
+  :root{
+    --gold:#C9A96A;--gold-light:#e2c68a;--black:#0A0A0A;--black-mid:#111;--black-soft:#1a1a1a;
+    --ivory:#F8F5EE;--ivory-mid:rgba(248,245,238,.55);--ivory-dim:rgba(248,245,238,.06);
+    --overlay:rgba(10,10,10,.5);
+  }
+  *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--black);color:var(--ivory);font-family:'Montserrat',sans-serif;font-weight:300;overflow-x:hidden}
+  img{display:block;max-width:100%;height:auto}
+  a{color:inherit}
 
-:root{
---gold:#C9A96A;
---black:#0A0A0A;
---soft:#111111;
---ivory:#F8F5EE;
-}
+  /* SKIP LINK */
+  .skip-link{position:absolute;left:-999px;top:0;background:var(--gold);color:var(--black);padding:12px 20px;font-family:'Montserrat',sans-serif;font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;z-index:10000}
+  .skip-link:focus{left:16px;top:16px}
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-}
+  /* FOCUS */
+  :focus-visible{outline:2px solid var(--gold);outline-offset:3px}
 
-html{
-scroll-behavior:smooth;
-}
+  /* EYEBROW BILINGUE — signature graphique du site */
+  .eyebrow{display:flex;flex-wrap:wrap;row-gap:4px;align-items:center;gap:10px;font-family:'Montserrat',sans-serif;font-size:.62rem;letter-spacing:.4em;text-transform:uppercase;color:var(--gold);margin-bottom:18px}
+  .eyebrow .zh{font-family:'Cinzel',serif;letter-spacing:.1em;color:rgba(201,169,106,.55);font-size:.7rem}
+  .eyebrow::before{content:'';width:24px;height:1px;background:var(--gold)}
 
-body{
-background:var(--black);
-color:var(--ivory);
-font-family:'Montserrat',sans-serif;
-overflow-x:hidden;
-}
+  /* NAV */
+  nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;align-items:center;justify-content:space-between;padding:18px 60px;background:transparent;border-bottom:1px solid transparent;transition:background .4s,border-color .4s,padding .4s}
+  nav.scrolled{background:rgba(10,10,10,.94);border-bottom:1px solid rgba(201,169,106,.18);padding:14px 60px}
+  .nav-logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+  .nav-mark{height:42px;width:35px;flex-shrink:0;object-fit:contain}
+  .nav-logo-main{font-family:'Cinzel',serif;font-size:.85rem;letter-spacing:.32em;color:var(--ivory)}
+  .nav-logo-main span{color:var(--gold)}
+  .nav-logo-sub{font-family:'Cinzel',serif;font-size:.5rem;letter-spacing:.4em;color:rgba(201,169,106,.5)}
 
-html[lang="ar"] body{
-font-family:'Cairo',sans-serif;
-direction:rtl;
-text-align:right;
-}
+  .nav-links{display:flex;align-items:center;gap:40px;list-style:none}
+  .nav-links a{font-family:'Montserrat',sans-serif;font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ivory-mid);text-decoration:none;transition:color .3s}
+  .nav-links a:hover{color:var(--gold)}
+  .nav-lang{font-family:'Cinzel',serif;font-size:.6rem;letter-spacing:.2em;color:rgba(201,169,106,.6);border:1px solid rgba(201,169,106,.25);padding:6px 10px}
+  .nav-right{display:flex;align-items:center;gap:28px}
+  .btn-quote{font-family:'Montserrat',sans-serif;font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;background:var(--gold);color:var(--black);border:none;padding:13px 26px;font-weight:500;text-decoration:none;transition:background .3s,transform .3s;display:inline-block}
+  .btn-quote:hover{background:var(--gold-light);transform:translateY(-2px)}
+  .nav-toggle{display:none;background:none;border:none;color:var(--ivory);cursor:pointer;padding:8px}
+  .nav-mobile-cta{display:none}
 
-html[lang="cn"] body{
-font-family:'Noto Sans SC',sans-serif;
-}
+  /* HERO */
+  .hero{min-height:100vh;position:relative;display:flex;align-items:flex-end;background:url('https://www.formalife.cn/photo_26.jpg') center/cover no-repeat}
+  .hero::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(10,10,10,.92) 5%,rgba(10,10,10,.55) 45%,rgba(10,10,10,.25) 100%)}
+  .hero-content{position:relative;z-index:1;padding:0 60px 100px;max-width:760px}
+  .hero-content .eyebrow{color:var(--gold)}
+  .hero h1{font-family:'Cinzel',serif;font-weight:400;font-size:clamp(2.1rem,4.4vw,3.6rem);line-height:1.18;color:var(--ivory);margin-bottom:26px}
+  .hero p{font-family:'Montserrat',sans-serif;font-weight:300;font-style:italic;font-size:1.05rem;color:var(--ivory-mid);line-height:1.75;max-width:560px;margin-bottom:40px}
+  .hero-ctas{display:flex;gap:20px;flex-wrap:wrap}
+  .btn-outline{font-family:'Montserrat',sans-serif;font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;background:transparent;color:var(--ivory);border:1px solid rgba(248,245,238,.4);padding:15px 32px;text-decoration:none;transition:border-color .3s,color .3s}
+  .btn-outline:hover{border-color:var(--gold);color:var(--gold)}
+  .btn-fill{font-family:'Montserrat',sans-serif;font-size:.66rem;letter-spacing:.2em;text-transform:uppercase;background:var(--gold);color:var(--black);border:none;padding:15px 32px;font-weight:500;text-decoration:none;transition:background .3s}
+  .btn-fill:hover{background:var(--gold-light)}
 
-img{
-max-width:100%;
-display:block;
-}
+  /* SECTION SHELL */
+  section{padding:130px 60px}
+  .section-head{max-width:640px;margin:0 auto 70px;text-align:center}
+  .section-head.left{text-align:left;margin:0 0 60px}
+  .section-head h2{font-family:'Cinzel',serif;font-weight:400;font-size:clamp(1.9rem,3vw,2.7rem);color:var(--ivory);margin-bottom:20px}
+  .section-head p{font-family:'Montserrat',sans-serif;font-weight:300;font-style:italic;color:var(--ivory-mid);font-size:1rem;line-height:1.8}
 
-.navbar{
-position:fixed;
-top:0;
-left:0;
-right:0;
-z-index:1000;
-display:flex;
-justify-content:space-between;
-align-items:center;
-padding:24px 60px;
-background:rgba(10,10,10,.95);
-backdrop-filter:blur(10px);
-border-bottom:1px solid rgba(201,169,106,.15);
-}
+  /* INTRO */
+  .intro{background:var(--black-soft);text-align:center}
+  .intro-text{max-width:760px;margin:0 auto;font-family:'Montserrat',sans-serif;font-weight:300;font-style:italic;font-size:1.2rem;line-height:1.9;color:var(--ivory-mid)}
 
-.logo{
-font-family:'Cinzel',serif;
-font-size:1.2rem;
-letter-spacing:.35em;
-text-decoration:none;
-color:var(--ivory);
-}
+  /* COLLECTIONS */
+  .grid-4{display:grid;grid-template-columns:repeat(4,1fr);gap:2px;background:rgba(201,169,106,.12)}
+  .grid-3-photo{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:rgba(201,169,106,.12);max-width:1600px;margin:0 auto;padding:0 60px}
+  .coll-card{background:var(--black);position:relative;aspect-ratio:3/4;overflow:hidden}
+  .coll-card img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+  .coll-card:hover img{transform:scale(1.045)}
+  .coll-card::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(10,10,10,.88) 0%,rgba(10,10,10,.15) 55%,transparent 75%)}
+  .coll-caption{position:absolute;left:0;right:0;bottom:0;padding:26px 24px;z-index:1}
+  .coll-caption .cat{font-family:'Montserrat',sans-serif;font-size:.58rem;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:8px}
+  .coll-caption h3{font-family:'Cinzel',serif;font-weight:400;font-size:1.05rem;color:var(--ivory)}
 
-.logo span{
-color:var(--gold);
-}
+  /* MATERIALS BAND */
+  .materials{background:var(--black-mid)}
+  .grid-5{display:grid;grid-template-columns:repeat(5,1fr);gap:2px;background:rgba(201,169,106,.1)}
+  .mat-card{background:var(--black-soft);position:relative;aspect-ratio:1/1;overflow:hidden}
+  .mat-card img{width:100%;height:100%;object-fit:cover;opacity:.75;transition:opacity .4s,transform .6s}
+  .mat-card:hover img{opacity:1;transform:scale(1.05)}
+  .mat-label{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(10,10,10,.35)}
+  .mat-label span{font-family:'Cinzel',serif;font-size:.78rem;letter-spacing:.15em;color:var(--ivory);text-align:center}
 
-.nav-right{
-display:flex;
-align-items:center;
-gap:40px;
-}
+  /* SAVOIR-FAIRE */
+  .split{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+  .split img{width:100%;aspect-ratio:4/5;object-fit:cover}
+  .split-text p{font-family:'Montserrat',sans-serif;font-weight:300;font-style:italic;color:var(--ivory-mid);font-size:1rem;line-height:1.85;margin-bottom:20px}
 
-.nav-links{
-display:flex;
-gap:40px;
-list-style:none;
-}
+  /* SIGNATURE PIECES */
+  .signature{background:var(--black-soft)}
+  .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:36px}
+  .piece-card{display:flex;flex-direction:column;gap:20px}
+  .piece-img{aspect-ratio:4/5;overflow:hidden}
+  .piece-img img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+  .piece-card:hover .piece-img img{transform:scale(1.04)}
+  .piece-card h3{font-family:'Cinzel',serif;font-weight:400;font-size:1.1rem;color:var(--ivory)}
+  .piece-card p{font-family:'Montserrat',sans-serif;font-size:.78rem;color:var(--ivory-mid);letter-spacing:.02em;line-height:1.7}
 
-.nav-links a{
-text-decoration:none;
-color:rgba(248,245,238,.7);
-font-size:.72rem;
-letter-spacing:.2em;
-text-transform:uppercase;
-transition:.3s;
-}
+  /* PROJECTS */
+  .grid-3-info{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(201,169,106,.15)}
+  .proj-card{background:var(--black);padding:48px 36px}
+  .proj-card .num{font-family:'Cinzel',serif;color:rgba(201,169,106,.4);font-size:.75rem;letter-spacing:.2em;display:block;margin-bottom:22px}
+  .proj-card h3{font-family:'Cinzel',serif;font-weight:400;font-size:1.15rem;color:var(--ivory);margin-bottom:14px}
+  .proj-card p{font-family:'Montserrat',sans-serif;font-size:.8rem;color:var(--ivory-mid);line-height:1.75}
 
-.nav-links a:hover{
-color:var(--gold);
-}
+  /* SHOWROOM */
+  .showroom-wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:0}
+  .showroom-img{aspect-ratio:16/11;overflow:hidden}
+  .showroom-img img{width:100%;height:100%;object-fit:cover}
+  .showroom-info{background:var(--black-soft);padding:70px 60px;display:flex;flex-direction:column;justify-content:center}
+  .showroom-list{list-style:none;display:flex;flex-direction:column;gap:20px;margin:32px 0 40px}
+  .showroom-list li{border-bottom:1px solid rgba(201,169,106,.12);padding-bottom:20px}
+  .showroom-list li:last-child{border-bottom:none}
+  .sl-label{font-family:'Montserrat',sans-serif;font-size:.58rem;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:8px}
+  .sl-val{font-family:'Montserrat',sans-serif;font-weight:300;font-style:italic;color:var(--ivory-mid);font-size:.95rem}
+  .sl-val a{color:var(--gold);text-decoration:none}
 
-.lang-switcher{
-display:flex;
-gap:10px;
-align-items:center;
-}
+  /* CATALOGUE BAND */
+  .catalogue{background:var(--black-mid);text-align:center;padding:100px 60px}
+  .catalogue h2{font-family:'Cinzel',serif;font-weight:400;font-size:clamp(1.6rem,2.6vw,2.2rem);margin-bottom:18px}
+  .catalogue p{font-family:'Montserrat',sans-serif;font-weight:300;font-style:italic;color:var(--ivory-mid);margin-bottom:36px;max-width:520px;margin-left:auto;margin-right:auto}
 
-.lang-btn{
-background:none;
-border:1px solid rgba(201,169,106,.25);
-padding:8px 14px;
-color:var(--gold);
-font-size:.65rem;
-letter-spacing:.15em;
-cursor:pointer;
-transition:.3s;
-}
+  /* CONTACT CTA */
+  .contact-cta{text-align:center}
+  .cta-actions{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;margin-top:10px}
 
-.lang-btn:hover,
-.lang-btn.active{
-background:var(--gold);
-color:#000;
-}
+  /* FOOTER */
+  footer{background:var(--black-soft);border-top:1px solid rgba(201,169,106,.15);padding:70px 60px 36px}
+  .footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:50px;margin-bottom:56px}
+  .footer-brand .nav-logo-main{margin-bottom:10px}
+  .footer-brand p{font-family:'Montserrat',sans-serif;font-weight:300;font-style:italic;color:var(--ivory-mid);font-size:.85rem;line-height:1.7;max-width:280px;margin-top:14px}
+  .footer-col h4{font-family:'Montserrat',sans-serif;font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:20px}
+  .footer-col ul{list-style:none;display:flex;flex-direction:column;gap:12px}
+  .footer-col a{font-family:'Montserrat',sans-serif;font-size:.78rem;color:var(--ivory-mid);text-decoration:none;transition:color .3s}
+  .footer-col a:hover{color:var(--gold)}
+  .footer-bottom{border-top:1px solid rgba(201,169,106,.1);padding-top:26px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-family:'Montserrat',sans-serif;font-size:.68rem;color:rgba(248,245,238,.32);letter-spacing:.04em}
+  .footer-social{display:flex;align-items:flex-start;gap:14px;flex-wrap:wrap}
+  .footer-social-item{display:flex;flex-direction:column;align-items:center;gap:7px;text-decoration:none;color:var(--ivory-mid);transition:color .3s;background:none;border:none;padding:0;font:inherit;cursor:pointer}
+  .footer-social-item:hover{color:var(--gold)}
+  .footer-social-icon{display:flex;align-items:center;justify-content:center;width:44px;height:44px;border:1px solid rgba(201,169,106,.25);overflow:hidden;transition:border-color .3s}
+  .footer-social-item:hover .footer-social-icon{border-color:var(--gold)}
+  .footer-social-icon svg{width:20px;height:20px}
+  .footer-social-label{font-family:'Montserrat',sans-serif;font-size:.56rem;letter-spacing:.14em;text-transform:uppercase}
 
-.hero{
-height:100vh;
-position:relative;
-display:flex;
-align-items:center;
-padding:0 60px;
-overflow:hidden;
-}
 
-.hero::before{
-content:'';
-position:absolute;
-inset:0;
-background:linear-gradient(to right,rgba(10,10,10,.92),rgba(10,10,10,.35));
-z-index:1;
-}
+  /* CURSOR — amélioration progressive, jamais un remplacement forcé */
+  .cursor-dot,.cursor-ring{display:none}
+  body.cc-active{cursor:none}
+  body.cc-active .cursor-dot{position:fixed;top:0;left:0;display:block;width:6px;height:6px;background:var(--gold);border-radius:50%;transform:translate(-50%,-50%);pointer-events:none;z-index:9999;transition:transform .1s}
+  body.cc-active .cursor-ring{position:fixed;top:0;left:0;display:block;width:36px;height:36px;border:1px solid rgba(201,169,106,.5);border-radius:50%;transform:translate(-50%,-50%);pointer-events:none;z-index:9998;transition:width .25s,height .25s,border-color .25s}
+  body.cc-active .cursor-ring.expand{width:54px;height:54px;border-color:var(--gold)}
+  body.cc-active a,body.cc-active button{cursor:none}
 
-.hero img{
-position:absolute;
-inset:0;
-width:100%;
-height:100%;
-object-fit:cover;
-}
+  /* REVEAL */
+  .reveal{opacity:0;transform:translateY(22px);transition:opacity .7s ease,transform .7s ease}
+  .reveal.in{opacity:1;transform:translateY(0)}
 
-.hero-content{
-position:relative;
-z-index:2;
-max-width:700px;
-}
+  @media(prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    .reveal{opacity:1;transform:none;transition:none}
+    .coll-card img,.mat-card img,.piece-img img{transition:none}
+    body.cc-active{cursor:auto}
+    body.cc-active .cursor-dot,body.cc-active .cursor-ring{display:none}
+  }
 
-.hero-eyebrow{
-font-size:.7rem;
-letter-spacing:.45em;
-text-transform:uppercase;
-color:var(--gold);
-margin-bottom:24px;
-}
+  /* RESPONSIVE */
+  /* La nav horizontale (8 liens + sélecteur de langue + bouton devis) déborde
+     sur les résolutions d'ordinateur portable courantes (ex. 1366px, 1536px)
+     une fois traduite dans certaines langues ; le menu mobile prend le relais
+     plus tôt pour éviter tout chevauchement ou texte tronqué. */
+  @media(max-width:1600px){
+    nav{padding:14px 22px}
+    nav.scrolled{padding:12px 22px}
+    .nav-links{position:fixed;inset:0 0 0 auto;width:78%;max-width:340px;background:var(--black);flex-direction:column;align-items:flex-start;gap:0;padding:100px 32px 40px;transform:translateX(100%);transition:transform .4s ease;border-left:1px solid rgba(201,169,106,.18);overflow-y:auto}
+    .nav-links.open{transform:translateX(0)}
+    .nav-links li{width:100%;border-bottom:1px solid rgba(201,169,106,.1);padding:18px 0}
+    .nav-right .btn-quote{display:none}
+    .nav-toggle{display:block}
+    .nav-mobile-cta{display:block;width:100%;margin-top:20px}
+    .nav-mobile-cta .btn-quote{display:block;width:100%;text-align:center;box-sizing:border-box}
+  }
+  @media(max-width:1080px){
+    .grid-4{grid-template-columns:repeat(2,1fr)}
+    .grid-3-photo{grid-template-columns:1fr;padding:0 22px}
+    .grid-5{grid-template-columns:repeat(3,1fr)}
+    .grid-3,.grid-3-info{grid-template-columns:1fr}
+    .split,.showroom-wrap{grid-template-columns:1fr}
+    .footer-grid{grid-template-columns:1fr 1fr}
+  }
+  @media(max-width:760px){
+    nav{padding:14px 22px}
+    nav.scrolled{padding:12px 22px}
+    .nav-links{position:fixed;inset:0 0 0 auto;width:78%;max-width:340px;background:var(--black);flex-direction:column;align-items:flex-start;gap:0;padding:100px 32px 40px;transform:translateX(100%);transition:transform .4s ease;border-left:1px solid rgba(201,169,106,.18);overflow-y:auto}
+    .nav-links.open{transform:translateX(0)}
+    .nav-links li{width:100%;border-bottom:1px solid rgba(201,169,106,.1);padding:18px 0}
+    .nav-right .btn-quote{display:none}
+    .nav-toggle{display:block}
+    .nav-mobile-cta{display:block;width:100%;margin-top:20px}
+    .nav-mobile-cta .btn-quote{display:block;width:100%;text-align:center;box-sizing:border-box}
+    section{padding:80px 22px}
+    .hero-content{padding:0 22px 70px}
+    .grid-5{grid-template-columns:repeat(2,1fr)}
+    .footer-grid{grid-template-columns:1fr}
+  }
 
-.hero-title{
-font-family:'Cinzel',serif;
-font-size:4rem;
-line-height:1.1;
-margin-bottom:24px;
-}
+  /* SELECTEUR DE LANGUE */
+  .lang-switch{position:relative}
+  .lang-switch-btn{display:flex;align-items:center;gap:6px;font-family:'Cinzel',serif;font-size:.6rem;letter-spacing:.2em;color:rgba(201,169,106,.8);border:1px solid rgba(201,169,106,.3);padding:6px 10px;background:transparent;cursor:pointer;text-transform:uppercase;transition:border-color .3s,color .3s}
+  .lang-switch-btn:hover{border-color:var(--gold);color:var(--gold)}
+  .lang-switch-menu{list-style:none;position:absolute;top:calc(100% + 10px);right:0;background:var(--black-soft);border:1px solid rgba(201,169,106,.25);min-width:150px;padding:6px;display:none;z-index:2000;box-shadow:0 12px 30px rgba(0,0,0,.4)}
+  .lang-switch.open .lang-switch-menu{display:block}
+  .lang-switch-menu a{display:block;padding:9px 12px;font-family:'Montserrat',sans-serif;font-size:.72rem;letter-spacing:.03em;color:var(--ivory-mid);text-decoration:none;transition:background .2s,color .2s}
+  .lang-switch-menu a:hover,.lang-switch-menu a:focus-visible{background:rgba(201,169,106,.1);color:var(--gold)}
+  .lang-switch-menu a[aria-current="true"]{color:var(--gold);font-weight:500}
+  [dir="rtl"] .lang-switch-menu{right:auto;left:0}
 
-.hero-sub{
-font-family:'Playfair Display',serif;
-font-size:1.15rem;
-line-height:1.8;
-color:rgba(248,245,238,.78);
-margin-bottom:40px;
-max-width:620px;
-}
+  /* ADAPTATIONS RTL (arabe) */
+  [dir="rtl"] body{direction:rtl}
+  [dir="rtl"] .eyebrow::before{order:2}
+  [dir="rtl"] .nav-back::before{content:'\2192'}
+  [dir="rtl"] .nav-back:hover::before{transform:translateX(4px)}
+  [dir="rtl"] .section-head.left{text-align:right}
+  [dir="rtl"] .hero-content{text-align:right}
+  [dir="rtl"] .cta-actions,[dir="rtl"] .hero-ctas,[dir="rtl"] .filters{direction:rtl}
+  [dir="rtl"] .footer-bottom{direction:rtl}
+  [dir="rtl"] .skip-link{left:auto;right:-999px}
+  [dir="rtl"] .skip-link:focus{left:auto;right:16px}
 
-.btn{
-display:inline-block;
-padding:16px 34px;
-background:var(--gold);
-color:#000;
-text-decoration:none;
-font-size:.7rem;
-letter-spacing:.2em;
-text-transform:uppercase;
-transition:.3s;
-}
-
-.btn:hover{
-transform:translateY(-2px);
-}
-
-section{
-padding:120px 60px;
-}
-
-.section-label{
-font-size:.65rem;
-letter-spacing:.4em;
-text-transform:uppercase;
-color:var(--gold);
-margin-bottom:20px;
-}
-
-.section-title{
-font-family:'Cinzel',serif;
-font-size:3rem;
-line-height:1.2;
-margin-bottom:30px;
-}
-
-.section-body{
-font-family:'Playfair Display',serif;
-font-size:1rem;
-line-height:1.9;
-max-width:720px;
-color:rgba(248,245,238,.72);
-}
-
-.collections-grid{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:20px;
-margin-top:60px;
-}
-
-.card{
-position:relative;
-overflow:hidden;
-height:420px;
-}
-
-.card img{
-width:100%;
-height:100%;
-object-fit:cover;
-transition:1s;
-}
-
-.card:hover img{
-transform:scale(1.05);
-}
-
-.card-overlay{
-position:absolute;
-inset:0;
-background:linear-gradient(to top,rgba(0,0,0,.85),transparent);
-display:flex;
-align-items:flex-end;
-padding:30px;
-}
-
-.card-overlay h3{
-font-family:'Cinzel',serif;
-font-size:1.3rem;
-}
-
-.gallery{
-background:var(--soft);
-}
-
-.gallery-filters{
-display:flex;
-gap:12px;
-margin:50px 0;
-flex-wrap:wrap;
-}
-
-.gf-btn{
-padding:10px 22px;
-background:none;
-border:1px solid rgba(201,169,106,.25);
-color:rgba(248,245,238,.6);
-letter-spacing:.2em;
-text-transform:uppercase;
-font-size:.65rem;
-cursor:pointer;
-transition:.3s;
-}
-
-.gf-btn.active,
-.gf-btn:hover{
-background:rgba(201,169,106,.08);
-border-color:var(--gold);
-color:var(--gold);
-}
-
-.gallery-scroll{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:16px;
-}
-
-.gallery-item{
-position:relative;
-overflow:hidden;
-height:360px;
-}
-
-.gallery-item img{
-width:100%;
-height:100%;
-object-fit:cover;
-transition:.8s;
-}
-
-.gallery-item:hover img{
-transform:scale(1.05);
-}
-
-.gallery-item-label{
-position:absolute;
-bottom:0;
-left:0;
-right:0;
-padding:24px;
-background:linear-gradient(to top,rgba(0,0,0,.85),transparent);
-}
-
-.gallery-item-label span{
-font-size:.75rem;
-letter-spacing:.2em;
-text-transform:uppercase;
-color:var(--gold);
-}
-
-.showroom{
-display:grid;
-grid-template-columns:1fr 1fr;
-min-height:700px;
-}
-
-.showroom img{
-width:100%;
-height:100%;
-object-fit:cover;
-}
-
-.showroom-content{
-padding:80px;
-display:flex;
-flex-direction:column;
-justify-content:center;
-background:var(--soft);
-}
-
-footer{
-padding:60px;
-text-align:center;
-border-top:1px solid rgba(201,169,106,.12);
-}
-
-footer p{
-font-size:.7rem;
-letter-spacing:.2em;
-color:rgba(248,245,238,.45);
-}
-
-@media(max-width:900px){
-
-.navbar{
-padding:20px;
-flex-direction:column;
-gap:20px;
-}
-
-.nav-right{
-flex-direction:column;
-gap:20px;
-}
-
-.nav-links{
-gap:18px;
-flex-wrap:wrap;
-justify-content:center;
-}
-
-.hero{
-padding:0 24px;
-}
-
-.hero-title{
-font-size:2.5rem;
-}
-
-section{
-padding:80px 24px;
-}
-
-.collections-grid,
-.gallery-scroll,
-.showroom{
-grid-template-columns:1fr;
-}
-
-.showroom-content{
-padding:60px 24px;
-}
-
-.lang-switcher{
-flex-wrap:wrap;
-justify-content:center;
-}
-
-}
-
+  /* CONTACT RAPIDE — WhatsApp / WeChat */
 </style>
-
 </head>
-
 <body>
 
-<nav class="navbar">
+<a href="#main" class="skip-link">Aller au contenu</a>
+<div class="cursor-dot" id="dot" aria-hidden="true"></div>
+<div class="cursor-ring" id="ring" aria-hidden="true"></div>
 
-<a href="#" class="logo">
-FORMA <span>|</span> 福玛
-</a>
-
-<div class="nav-right">
-
-<ul class="nav-links">
-
-<li>
-<a href="#collections" data-translate="navCollections">
-Collections
-</a>
-</li>
-
-<li>
-<a href="#gallery" data-translate="navGallery">
-Gallery
-</a>
-</li>
-
-<li>
-<a href="#showroom" data-translate="navShowroom">
-Showroom
-</a>
-</li>
-
-<li>
-<a href="#contact" data-translate="navContact">
-Contact
-</a>
-</li>
-
-</ul>
-
-<div class="lang-switcher">
-
-<button onclick="setLang('fr', this)" class="lang-btn active">
-FR
-</button>
-
-<button onclick="setLang('en', this)" class="lang-btn">
-EN
-</button>
-
-<button onclick="setLang('es', this)" class="lang-btn">
-ES
-</button>
-
-<button onclick="setLang('ar', this)" class="lang-btn">
-AR
-</button>
-
-<button onclick="setLang('ru', this)" class="lang-btn">
-RU
-</button>
-
-<button onclick="setLang('cn', this)" class="lang-btn">
-中文
-</button>
-
-</div>
-
-</div>
-
+<!-- NAV -->
+<nav id="siteNav">
+  <a href="index.html" class="nav-logo">
+    <img class="nav-mark" src="images/logo-mark.webp" alt="FORMA" width="35" height="42"/>
+    <div>
+      <div class="nav-logo-main">FORMA <span>|</span> <span lang="zh">福玛</span></div>
+      <div class="nav-logo-sub" lang="en">Luxury Furniture</div>
+    </div>
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="collections.html">Collections</a></li>
+    <li><a href="materials.html">Matériaux</a></li>
+    <li><a href="gallery.html">Galerie</a></li>
+    <li><a href="projects.html">Projets</a></li>
+    <li><a href="professionals.html">Professionnels</a></li>
+    <li><a href="about.html">À propos</a></li>
+    <li><a href="showroom.html">Showroom</a></li>
+    <li><a href="contact.html">Contact</a></li>
+    <li class="nav-mobile-cta"><a href="contact.html" class="btn-quote" lang="fr">Demander un Devis</a></li>
+  </ul>
+  <div class="nav-right">
+    <div class="lang-switch" id="langSwitch">
+    <button class="lang-switch-btn" id="langSwitchBtn" aria-haspopup="true" aria-expanded="false">
+      FR
+      <svg width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.3"/></svg>
+    </button>
+    <ul class="lang-switch-menu" id="langSwitchMenu" role="menu" aria-label="Choisir la langue">
+        <li role="none"><a role="menuitem" href="index.html" lang="fr" aria-current="true">Français</a></li>
+        <li role="none"><a role="menuitem" href="en/index.html" lang="en">English</a></li>
+        <li role="none"><a role="menuitem" href="es/index.html" lang="es">Español</a></li>
+        <li role="none"><a role="menuitem" href="ru/index.html" lang="ru">Русский</a></li>
+        <li role="none"><a role="menuitem" href="ar/index.html" lang="ar">العربية</a></li>
+        <li role="none"><a role="menuitem" href="zh/index.html" lang="zh">中文</a></li>
+    </ul>
+  </div>
+    <a href="contact.html" class="btn-quote" lang="fr">Demander un Devis</a>
+    <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Ouvrir le menu">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </div>
 </nav>
 
-<section class="hero">
+<main id="main">
 
-<img src="photo_23.jpg" alt="FORMA">
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-content">
+      <p class="eyebrow"><span>Foshan · Mobilier Contemporain</span> <span class="zh" lang="zh">佛山家具</span></p>
+      <h1>La Matière Prend Forme,<br>Le Confort Prend Sens</h1>
+      <p>Canapés en cuir et en textile, tables en marbre, mobilier sur mesure — pensés à Foshan pour les intérieurs contemporains, entre rigueur européenne et sensibilité asiatique.</p>
+      <div class="hero-ctas">
+        <a href="#collections" class="btn-fill">Découvrir les Collections</a>
+        <a href="#catalogue" class="btn-outline">Demander le Catalogue</a>
+      </div>
+    </div>
+  </section>
 
-<div class="hero-content">
+  <!-- INTRO -->
+  <section class="intro reveal">
+    <p class="intro-text">FORMA conçoit et fabrique du mobilier contemporain à Foshan, dans le Guangdong. Cuir, textile, marbre et bois y sont travaillés pour des intérieurs résidentiels et professionnels — résidences privées, hôtels, bureaux et espaces commerciaux. La marque accompagne architectes, décorateurs et distributeurs dans leurs projets, de la sélection des matières à la configuration finale de chaque pièce.</p>
+  </section>
 
-<p class="hero-eyebrow" data-translate="heroEyebrow">
-TIMELESS LIVING · CONTEMPORARY LUXURY
-</p>
+  <!-- COLLECTIONS -->
+  <section id="collections" class="reveal">
+    <div class="section-head">
+      <p class="eyebrow" style="justify-content:center"><span>Collections</span> <span class="zh" lang="zh">系列</span></p>
+      <h2>Quatre Familles de Mobilier</h2>
+      <p>Une sélection pensée pour des espaces contemporains haut de gamme, du canapé d'accueil à la table centrale.</p>
+    </div>
+    <div class="grid-4">
+      <div class="coll-card">
+        <img src="images/full/lit-cuir-bleu-showroom.webp" alt="Lit en cuir bleu FORMA, showroom" loading="lazy"/>
+        <div class="coll-caption"><span class="cat">Cuir</span><h3>Le Cuir</h3></div>
+      </div>
+      <div class="coll-card">
+        <img src="images/full/3D65.webp" alt="Fauteuil pivotant en velours terracotta" loading="lazy"/>
+        <div class="coll-caption"><span class="cat">Textile</span><h3>Le Textile</h3></div>
+      </div>
+      <div class="coll-card">
+        <img src="images/full/piece-1532-jz-3.webp" alt="Table basse en marbre veiné, plateau sur cadre en verre et laiton" loading="lazy"/>
+        <div class="coll-caption"><span class="cat">Marbre</span><h3>Tables &amp; Marbre</h3></div>
+      </div>
+      <div class="coll-card">
+        <img src="https://www.formalife.cn/photo_28.jpg" alt="Pièce signature FORMA" loading="lazy"/>
+        <div class="coll-caption"><span class="cat">Signature</span><h3>Pièces Signature</h3></div>
+      </div>
+    </div>
+  </section>
 
-<h1 class="hero-title" data-translate="heroTitle">
-Mobilier Contemporain de Luxe
-</h1>
+  <!-- MATERIALS -->
+  <section id="materials" class="materials reveal">
+    <div class="section-head">
+      <p class="eyebrow" style="justify-content:center"><span>Matériaux</span> <span class="zh" lang="zh">材质</span></p>
+      <h2>Le Choix des Matières</h2>
+      <p>Chaque matériau est sélectionné pour sa tenue dans le temps autant que pour son rendu — le confort contemporain se construit à partir de la matière brute.</p>
+    </div>
+    <div class="grid-5">
+      <div class="mat-card"><img src="images/full/materials-nuancier-cuir.webp" alt="Nuancier de cuirs pleine fleur" loading="lazy"/><div class="mat-label"><span>Cuir</span></div></div>
+      <div class="mat-card"><img src="images/full/materials-nuancier-textile.webp" alt="Nuancier de textiles bouclé et velours" loading="lazy"/><div class="mat-label"><span>Textile</span></div></div>
+      <div class="mat-card"><img src="images/full/materials-nuancier-bois.webp" alt="Nuancier de bois massifs" loading="lazy"/><div class="mat-label"><span>Bois</span></div></div>
+      <div class="mat-card"><img src="images/full/materials-nuancier-metal.webp" alt="Nuancier de finitions métalliques" loading="lazy"/><div class="mat-label"><span>Métal</span></div></div>
+      <div class="mat-card"><img src="images/full/materials-nuancier-marbre.webp" alt="Nuancier de marbres veinés" loading="lazy"/><div class="mat-label"><span>Marbre</span></div></div>
+    </div>
+  </section>
 
-<p class="hero-sub" data-translate="heroSub">
-L'élégance européenne rencontre le raffinement asiatique.
-</p>
+  <!-- SAVOIR-FAIRE -->
+  <section class="reveal">
+    <div class="split">
+      <img src="https://www.formalife.cn/photo_31.jpg" alt="Détail de fabrication FORMA, atelier de Foshan" loading="lazy"/>
+      <div class="split-text">
+        <p class="eyebrow"><span>Savoir-Faire</span> <span class="zh" lang="zh">工艺</span></p>
+        <h2 style="font-family:'Cinzel',serif;font-weight:400;font-size:clamp(1.7rem,2.6vw,2.3rem);color:var(--ivory);margin-bottom:24px">De la Matière à la Pièce Finie</h2>
+        <p>Chaque canapé est assemblé à la main, du piètement à la garniture. Les cuirs sont sélectionnés peau par peau, les tissus contrôlés avant coupe, et chaque configuration est vérifiée avant expédition.</p>
+        <p>Les dimensions, les finitions et les configurations peuvent être adaptées à la demande — une base de travail commune, ajustée projet par projet.</p>
+        <a href="#materials" class="btn-outline" style="display:inline-block;margin-top:10px">Explorer les Matériaux</a>
+      </div>
+    </div>
+  </section>
 
-<a href="#collections"
-class="btn"
-data-translate="heroBtn">
-Découvrir les collections
-</a>
+  <!-- AMBIANCES -->
+  <section class="reveal" style="padding-bottom:0">
+    <div class="section-head">
+      <p class="eyebrow" style="justify-content:center"><span>Ambiances</span> <span class="zh" lang="zh">氛围</span></p>
+      <h2>Le Détail Fait la Différence</h2>
+    </div>
+  </section>
+  <div class="grid-3-photo reveal">
+    <div class="coll-card"><img src="images/full/home-detail-01.webp" alt="Détail sculptural d'un canapé en cuir, structure gainée et laiton" loading="lazy"/></div>
+    <div class="coll-card"><img src="images/full/home-detail-02.webp" alt="Détail d'assise en cuir mauve, base cannelée et liseré laiton" loading="lazy"/></div>
+    <div class="coll-card"><img src="images/full/home-detail-03.webp" alt="Détail de canapé en tissu chiné écru et noir, tablette en marbre intégrée" loading="lazy"/></div>
+  </div>
 
-</div>
+  <!-- SIGNATURE PIECES -->
+  <section class="signature reveal">
+    <div class="section-head">
+      <p class="eyebrow" style="justify-content:center"><span>Sélection</span> <span class="zh" lang="zh">精选</span></p>
+      <h2>Pièces en Avant</h2>
+      <p>Les fiches produits détaillées (références, dimensions, configurations) seront publiées avec le catalogue complet.</p>
+    </div>
+    <div class="grid-3">
+      <div class="piece-card">
+        <div class="piece-img"><img src="https://www.formalife.cn/photo_28.jpg" alt="Canapé en cuir FORMA" loading="lazy"/></div>
+        <h3>Canapé en Cuir</h3>
+        <p>Assise profonde, structure bois massif, cuir pleine fleur.</p>
+      </div>
+      <div class="piece-card">
+        <div class="piece-img"><img src="https://www.formalife.cn/photo_24.jpg" alt="Fauteuil en textile FORMA" loading="lazy"/></div>
+        <h3>Fauteuil en Textile</h3>
+        <p>Piètement métal fin, garniture textile aux coloris personnalisables.</p>
+      </div>
+      <div class="piece-card">
+        <div class="piece-img"><img src="https://www.formalife.cn/photo_26.jpg" alt="Table en marbre FORMA" loading="lazy"/></div>
+        <h3>Table en Marbre</h3>
+        <p>Plateau marbre veiné, structure métal ou bois selon configuration.</p>
+      </div>
+    </div>
+  </section>
 
-</section>
+  <!-- PROJECTS -->
+  <section id="projects" class="reveal">
+    <div class="section-head left">
+      <p class="eyebrow"><span>Projets</span> <span class="zh" lang="zh">项目</span></p>
+      <h2>Résidentiel, Hôtellerie, Bureaux</h2>
+    </div>
+    <div class="grid-3-info">
+      <div class="proj-card">
+        <span class="num">01</span>
+        <h3>Résidentiel</h3>
+        <p>Appartements et villas — sélection de mobilier et configurations sur mesure pour particuliers et promoteurs.</p>
+      </div>
+      <div class="proj-card">
+        <span class="num">02</span>
+        <h3>Hôtellerie &amp; Restauration</h3>
+        <p>Mobilier contract pour chambres, espaces communs et restaurants, pensé pour la durabilité d'usage.</p>
+      </div>
+      <div class="proj-card">
+        <span class="num">03</span>
+        <h3>Bureaux &amp; Espaces Commerciaux</h3>
+        <p>Accompagnement des architectes et designers pour les espaces de travail et de réception.</p>
+      </div>
+    </div>
+    <p style="text-align:center;margin-top:50px;font-family:'Montserrat',sans-serif;font-weight:300;font-style:italic;color:var(--ivory-mid)">Les études de cas détaillées seront publiées au fur et à mesure de leur validation avec nos clients.</p>
+  </section>
 
-<section id="collections">
+  <!-- SHOWROOM -->
+  <section id="showroom" style="padding:0" class="reveal">
+    <div class="showroom-wrap">
+      <div class="showroom-img"><img src="https://www.formalife.cn/photo_23.jpg" alt="Showroom FORMA à Foshan" loading="lazy"/></div>
+      <div class="showroom-info">
+        <p class="eyebrow"><span>Showroom</span> <span class="zh" lang="zh">展厅</span></p>
+        <h2 style="font-family:'Cinzel',serif;font-weight:400;font-size:clamp(1.7rem,2.6vw,2.3rem);color:var(--ivory);margin-bottom:10px">Visitez FORMA à Foshan</h2>
+        <p style="font-family:'Montserrat',sans-serif;font-weight:300;font-style:italic;color:var(--ivory-mid);font-size:.95rem">Un espace pensé pour voir, toucher et comparer les matières avant de décider.</p>
+        <ul class="showroom-list">
+          <li><span class="sl-label">Adresse</span><span class="sl-val">Forma Life, Easyhome<br>Foshan, Guangdong, Chine</span></li>
+          <li><span class="sl-label">Horaires</span><span class="sl-val">Lun – Sam · 9h – 19h (sur RDV)</span></li>
+          <li><span class="sl-label">Téléphone</span><span class="sl-val"><a href="tel:+8613138614198">+86 1313 8614 198</a></span></li>
+        </ul>        <a href="contact.html" class="btn-fill" style="align-self:flex-start">Réserver une Visite</a>
+      </div>
+    </div>
+  </section>
 
-<p class="section-label" data-translate="collectionLabel">
-Collections
-</p>
+  <!-- CATALOGUE -->
+  <section id="catalogue" class="catalogue reveal">
+    <p class="eyebrow" style="justify-content:center"><span>Catalogue</span> <span class="zh" lang="zh">目录</span></p>
+    <h2>Consulter le Catalogue FORMA</h2>
+    <p>Le catalogue complet (collections, dimensions, finitions) est transmis sur demande à nos clients particuliers et professionnels.</p>
+    <a href="contact.html" class="btn-fill">Demander le Catalogue</a>
+  </section>
 
-<h2 class="section-title" data-translate="collectionTitle">
-FORMA Universe
-</h2>
+  <!-- CONTACT CTA -->
+  <section class="contact-cta reveal">
+    <p class="eyebrow" style="justify-content:center"><span>Contact</span> <span class="zh" lang="zh">联系我们</span></p>
+    <h2 style="font-family:'Cinzel',serif;font-weight:400;font-size:clamp(1.9rem,3vw,2.7rem);margin-bottom:20px">Parlons de Votre Projet</h2>
+    <p style="font-family:'Montserrat',sans-serif;font-weight:300;font-style:italic;color:var(--ivory-mid);max-width:520px;margin:0 auto 10px">Particuliers, architectes, hôtels ou distributeurs — un même formulaire pour préciser votre besoin.</p>
+    <div class="cta-actions">
+      <a href="contact.html" class="btn-fill">Demander un Devis</a>
+      <a href="contact.html" class="btn-outline">Réserver le Showroom</a>
+    </div>
+  </section>
 
-<p class="section-body" data-translate="collectionText">
-Une sélection de collections cuir, textile et marbre pensées pour des espaces contemporains haut de gamme.
-</p>
+</main>
 
-<div class="collections-grid">
-
-<div class="card">
-
-<img src="photo_15.jpg">
-
-<div class="card-overlay">
-<h3 data-translate="cardLeather">
-Collection Cuir
-</h3>
-</div>
-
-</div>
-
-<div class="card">
-
-<img src="photo_24.jpg">
-
-<div class="card-overlay">
-<h3 data-translate="cardFabric">
-Collection Textile
-</h3>
-</div>
-
-</div>
-
-<div class="card">
-
-<img src="photo_26.jpg">
-
-<div class="card-overlay">
-<h3 data-translate="cardShowroom">
-Expérience Showroom
-</h3>
-</div>
-
-</div>
-
-</div>
-
-</section>
-
-<section class="gallery" id="gallery">
-
-<p class="section-label" data-translate="galleryLabel">
-Galerie
-</p>
-
-<h2 class="section-title" data-translate="galleryTitle">
-Atmosphère du Showroom
-</h2>
-
-<div class="gallery-filters">
-
-<button class="gf-btn active"
-onclick="filterGallery('all',this)"
-data-translate="filterAll">
-Tout
-</button>
-
-<button class="gf-btn"
-onclick="filterGallery('showroom',this)"
-data-translate="filterShowroom">
-Showroom
-</button>
-
-<button class="gf-btn"
-onclick="filterGallery('leather',this)"
-data-translate="filterLeather">
-Cuir
-</button>
-
-<button class="gf-btn"
-onclick="filterGallery('fabric',this)"
-data-translate="filterFabric">
-Textile
-</button>
-
-</div>
-
-<div class="gallery-scroll" id="galleryScroll">
-
-<div class="gallery-item" data-cat="showroom">
-<img src="photo_23.jpg">
-<div class="gallery-item-label">
-<span data-translate="galleryShowroom">
-Showroom
-</span>
-</div>
-</div>
-
-<div class="gallery-item" data-cat="leather">
-<img src="photo_15.jpg">
-<div class="gallery-item-label">
-<span data-translate="galleryLeather">
-Cuir
-</span>
-</div>
-</div>
-
-<div class="gallery-item" data-cat="fabric">
-<img src="photo_24.jpg">
-<div class="gallery-item-label">
-<span data-translate="galleryFabric">
-Textile
-</span>
-</div>
-</div>
-
-<div class="gallery-item" data-cat="showroom">
-<img src="photo_26.jpg">
-<div class="gallery-item-label">
-<span data-translate="galleryLuxury">
-Luxury
-</span>
-</div>
-</div>
-
-<div class="gallery-item" data-cat="fabric">
-<img src="photo_28.jpg">
-<div class="gallery-item-label">
-<span data-translate="gallerySofa">
-Canapé
-</span>
-</div>
-</div>
-
-<div class="gallery-item" data-cat="leather">
-<img src="photo_31.jpg">
-<div class="gallery-item-label">
-<span data-translate="galleryDetail">
-Détail
-</span>
-</div>
-</div>
-
-</div>
-
-</section>
-
-<section class="showroom" id="showroom">
-
-<img src="photo_20.jpg">
-
-<div class="showroom-content">
-
-<p class="section-label" data-translate="showroomLabel">
-Showroom
-</p>
-
-<h2 class="section-title" data-translate="showroomTitle">
-Visitez FORMA
-</h2>
-
-<p class="section-body" data-translate="showroomText">
-Découvrez l’univers FORMA dans notre showroom contemporain à Foshan.
-</p>
-
-<br><br>
-
-<p>Email — contact@formalife.com</p>
-<br>
-
-<p data-translate="phoneText">
-Téléphone — +86 1313 8614 198
-</p>
-
-<br>
-
-<p data-translate="locationText">
-Foshan · Guangdong · Chine
-</p>
-
-</div>
-
-</section>
-
-<footer id="contact">
-
-<p data-translate="footerText">
-© 2025 FORMA — Contemporary Luxury Living
-</p>
-
+<!-- FOOTER -->
+<footer>
+  <div class="footer-grid">
+    <div class="footer-brand">
+      <div class="nav-logo-main">FORMA <span>|</span> <span lang="zh">福玛</span></div>
+      <p>Mobilier contemporain conçu et fabriqué à Foshan, Guangdong. Élégance européenne, raffinement asiatique.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Site</h4>
+      <ul>
+        <li><a href="collections.html">Collections</a></li>
+        <li><a href="materials.html">Matériaux</a></li>
+        <li><a href="gallery.html">Galerie</a></li>
+        <li><a href="projects.html">Projets</a></li>
+        <li><a href="showroom.html">Showroom</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Professionnels</h4>
+      <ul>
+        <li><a href="professionals.html">Services Professionnels</a></li>
+        <li><a href="contact.html">Demande de devis</a></li>
+        <li><a href="contact.html">Distribution</a></li>
+        <li><a href="contact.html">Presse</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="tel:+8613138614198">+86 1313 8614 198</a></li>
+        <li><a href="https://wa.me/message/P5GC3C72CQSXD1" target="_blank" rel="noopener">WhatsApp</a></li>
+        <li><a href="https://u.wechat.com/MLt8EcsR12yTC2cylwff6d8" target="_blank" rel="noopener">WeChat</a></li>
+        <li><a href="contact.html">Formulaire complet</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 FORMA — Foshan, Guangdong, Chine</span>
+  <div class="footer-social"><button aria-label="FORMA WhatsApp — cliquer pour afficher le code QR et discuter directement" class="footer-social-item" data-qr="images/qr-whatsapp.webp" data-qr-label="FORMA WhatsApp — cliquer pour afficher le code QR et discuter directement" type="button"><span class="footer-social-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M7 17.5l-3 1 1-3A8 8 0 1 1 7 17.5Z" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 10c0 3 2.5 5.5 5.5 5.5.6 0 1-.1 1.3-.3.4-.2.6-.7.5-1.1l-.3-1a.8.8 0 0 0-.9-.5l-1 .2a.7.7 0 0 1-.7-.2c-.6-.5-1.2-1.2-1.6-2a.7.7 0 0 1 0-.7l.4-.8a.8.8 0 0 0-.1-.9l-.7-.9a.8.8 0 0 0-1-.2c-.7.4-1.4 1.2-1.4 2.4Z"/></svg></span><span class="footer-social-label">WhatsApp</span></button><button aria-label="FORMA WeChat — cliquer pour afficher le code QR et ajouter en contact" class="footer-social-item" data-qr="images/qr-wechat.webp" data-qr-label="FORMA WeChat — cliquer pour afficher le code QR et ajouter en contact" type="button"><span class="footer-social-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M9.5 4C5.9 4 3 6.5 3 9.6c0 1.8 1 3.4 2.5 4.4l-.5 2 2.1-1.1c.7.2 1.5.3 2.4.3h.3a5.6 5.6 0 0 1-.2-1.5c0-3.3 3.1-6 7-6h.2C15.9 5.5 13 4 9.5 4Z" stroke-linejoin="round"/><path d="M15.5 9.7c-3 0-5.5 2.1-5.5 4.7s2.5 4.7 5.5 4.7c.6 0 1.2-.1 1.8-.3l1.9.9-.5-1.7C20 17 21 15.6 21 14.4c0-2.6-2.5-4.7-5.5-4.7Z" stroke-linejoin="round"/><circle cx="7.3" cy="8.6" r="0.6" fill="currentColor" stroke="none"/><circle cx="11.5" cy="8.6" r="0.6" fill="currentColor" stroke="none"/><circle cx="13.7" cy="13.5" r="0.55" fill="currentColor" stroke="none"/><circle cx="17.3" cy="13.5" r="0.55" fill="currentColor" stroke="none"/></svg></span><span class="footer-social-label">WeChat</span></button><a class="footer-social-item" href="#" rel="noopener" target="_blank"><span class="footer-social-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect height="18" rx="5" width="18" x="3" y="3"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.2" cy="6.8" fill="currentColor" r="0.6" stroke="none"/></svg></span><span class="footer-social-label">Instagram</span></a><a class="footer-social-item" href="#" rel="noopener" target="_blank"><span class="footer-social-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="12" r="9"/><path d="M14 8.5h-1.6c-.9 0-1.4.5-1.4 1.4V11h3l-.4 2.6h-2.6V19" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="footer-social-label">Facebook</span></a><a class="footer-social-item" href="#" rel="noopener" target="_blank"><span class="footer-social-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 4c-3 0-5 2.3-5 5.3v2.1c0 .5-.3.9-.9 1.3l-1 .7c-.5.3-.4 1 .1 1.2l1.6.7c.3.1.5.4.6.7.2.9 1 2.3 3 2.6.3 0 .5.2.6.5.2.6.9 1.4 3 1.4s2.8-.8 3-1.4c.1-.3.3-.5.6-.5 2-.3 2.8-1.7 3-2.6.1-.3.3-.6.6-.7l1.6-.7c.5-.2.6-.9.1-1.2l-1-.7c-.6-.4-.9-.8-.9-1.3V9.3C17 6.3 15 4 12 4Z" stroke-linejoin="round"/></svg></span><span class="footer-social-label">Snapchat</span></a><a class="footer-social-item" href="#" rel="noopener" target="_blank"><span class="footer-social-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M14 4v10.5a3.5 3.5 0 1 1-3.5-3.5c.35 0 .7.04 1 .12" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 4c.3 2 1.8 3.6 4 3.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="footer-social-label">TikTok</span></a></div></div>
 </footer>
 
 <script>
-
-const translations = {
-
-fr:{
-
-navCollections:"Collections",
-navGallery:"Galerie",
-navShowroom:"Showroom",
-navContact:"Contact",
-
-heroEyebrow:"TIMELESS LIVING · CONTEMPORARY LUXURY",
-heroTitle:"Mobilier Contemporain de Luxe",
-heroSub:"L'élégance européenne rencontre le raffinement asiatique.",
-heroBtn:"Découvrir les collections",
-
-collectionLabel:"Collections",
-collectionTitle:"Univers FORMA",
-collectionText:"Une sélection de collections cuir, textile et marbre pensées pour des espaces contemporains haut de gamme.",
-
-cardLeather:"Collection Cuir",
-cardFabric:"Collection Textile",
-cardShowroom:"Expérience Showroom",
-
-galleryLabel:"Galerie",
-galleryTitle:"Atmosphère du Showroom",
-
-filterAll:"Tout",
-filterShowroom:"Showroom",
-filterLeather:"Cuir",
-filterFabric:"Textile",
-
-galleryShowroom:"Showroom",
-galleryLeather:"Cuir",
-galleryFabric:"Textile",
-galleryLuxury:"Luxury",
-gallerySofa:"Canapé",
-galleryDetail:"Détail",
-
-showroomLabel:"Showroom",
-showroomTitle:"Visitez FORMA",
-showroomText:"Découvrez l’univers FORMA dans notre showroom contemporain à Foshan.",
-
-phoneText:"Téléphone — +86 1313 8614 198",
-locationText:"Foshan · Guangdong · Chine",
-
-footerText:"© 2025 FORMA — Contemporary Luxury Living"
-
-},
-
-en:{
-
-navCollections:"Collections",
-navGallery:"Gallery",
-navShowroom:"Showroom",
-navContact:"Contact",
-
-heroEyebrow:"TIMELESS LIVING · CONTEMPORARY LUXURY",
-heroTitle:"Contemporary Luxury Furniture",
-heroSub:"European elegance meets Asian refinement.",
-heroBtn:"Discover Collections",
-
-collectionLabel:"Collections",
-collectionTitle:"FORMA Universe",
-collectionText:"A selection of leather, fabric and marble collections designed for high-end contemporary interiors.",
-
-cardLeather:"Leather Collection",
-cardFabric:"Fabric Collection",
-cardShowroom:"Showroom Experience",
-
-galleryLabel:"Gallery",
-galleryTitle:"Showroom Atmosphere",
-
-filterAll:"All",
-filterShowroom:"Showroom",
-filterLeather:"Leather",
-filterFabric:"Fabric",
-
-galleryShowroom:"Showroom",
-galleryLeather:"Leather",
-galleryFabric:"Fabric",
-galleryLuxury:"Luxury",
-gallerySofa:"Sofa",
-galleryDetail:"Detail",
-
-showroomLabel:"Showroom",
-showroomTitle:"Visit FORMA",
-showroomText:"Experience the FORMA universe inside our contemporary showroom in Foshan.",
-
-phoneText:"Phone — +86 1313 8614 198",
-locationText:"Foshan · Guangdong · China",
-
-footerText:"© 2025 FORMA — Contemporary Luxury Living"
-
-},
-
-es:{
-
-navCollections:"Colecciones",
-navGallery:"Galería",
-navShowroom:"Showroom",
-navContact:"Contacto",
-
-heroEyebrow:"TIMELESS LIVING · CONTEMPORARY LUXURY",
-heroTitle:"Muebles Contemporáneos de Lujo",
-heroSub:"La elegancia europea se encuentra con el refinamiento asiático.",
-heroBtn:"Descubrir Colecciones",
-
-collectionLabel:"Colecciones",
-collectionTitle:"Universo FORMA",
-collectionText:"Una selección de colecciones de cuero, textil y mármol diseñadas para interiores contemporáneos de alta gama.",
-
-cardLeather:"Colección de Cuero",
-cardFabric:"Colección Textil",
-cardShowroom:"Experiencia Showroom",
-
-galleryLabel:"Galería",
-galleryTitle:"Atmósfera del Showroom",
-
-filterAll:"Todo",
-filterShowroom:"Showroom",
-filterLeather:"Cuero",
-filterFabric:"Textil",
-
-galleryShowroom:"Showroom",
-galleryLeather:"Cuero",
-galleryFabric:"Textil",
-galleryLuxury:"Luxury",
-gallerySofa:"Sofá",
-galleryDetail:"Detalle",
-
-showroomLabel:"Showroom",
-showroomTitle:"Visita FORMA",
-showroomText:"Descubre el universo FORMA dentro de nuestro showroom contemporáneo en Foshan.",
-
-phoneText:"Teléfono — +86 1313 8614 198",
-locationText:"Foshan · Guangdong · China",
-
-footerText:"© 2025 FORMA — Contemporary Luxury Living"
-
-},
-
-ar:{
-
-navCollections:"المجموعات",
-navGallery:"المعرض",
-navShowroom:"صالة العرض",
-navContact:"اتصال",
-
-heroEyebrow:"حياة خالدة · رفاهية معاصرة",
-heroTitle:"أثاث فاخر معاصر",
-heroSub:"الأناقة الأوروبية تلتقي بالرقي الآسيوي.",
-heroBtn:"اكتشف المجموعات",
-
-collectionLabel:"المجموعات",
-collectionTitle:"عالم FORMA",
-collectionText:"مجموعة مختارة من تصاميم الجلد والنسيج والرخام للمساحات المعاصرة الفاخرة.",
-
-cardLeather:"مجموعة الجلد",
-cardFabric:"مجموعة النسيج",
-cardShowroom:"تجربة صالة العرض",
-
-galleryLabel:"المعرض",
-galleryTitle:"أجواء صالة العرض",
-
-filterAll:"الكل",
-filterShowroom:"صالة العرض",
-filterLeather:"جلد",
-filterFabric:"نسيج",
-
-galleryShowroom:"صالة العرض",
-galleryLeather:"جلد",
-galleryFabric:"نسيج",
-galleryLuxury:"فخامة",
-gallerySofa:"أريكة",
-galleryDetail:"تفاصيل",
-
-showroomLabel:"صالة العرض",
-showroomTitle:"قم بزيارة FORMA",
-showroomText:"اكتشف عالم FORMA داخل صالة العرض المعاصرة في فوشان.",
-
-phoneText:"الهاتف — +86 1313 8614 198",
-locationText:"فوشان · قوانغدونغ · الصين",
-
-footerText:"© 2025 FORMA — Contemporary Luxury Living"
-
-},
-
-ru:{
-
-navCollections:"Коллекции",
-navGallery:"Галерея",
-navShowroom:"Шоурум",
-navContact:"Контакты",
-
-heroEyebrow:"TIMELESS LIVING · CONTEMPORARY LUXURY",
-heroTitle:"Современная Роскошная Мебель",
-heroSub:"Европейская элегантность встречает азиатскую утонченность.",
-heroBtn:"Открыть Коллекции",
-
-collectionLabel:"Коллекции",
-collectionTitle:"Вселенная FORMA",
-collectionText:"Коллекции кожи, текстиля и мрамора для современных роскошных интерьеров.",
-
-cardLeather:"Кожаная Коллекция",
-cardFabric:"Текстильная Коллекция",
-cardShowroom:"Шоурум Experience",
-
-galleryLabel:"Галерея",
-galleryTitle:"Атмосфера Шоурума",
-
-filterAll:"Все",
-filterShowroom:"Шоурум",
-filterLeather:"Кожа",
-filterFabric:"Текстиль",
-
-galleryShowroom:"Шоурум",
-galleryLeather:"Кожа",
-galleryFabric:"Текстиль",
-galleryLuxury:"Luxury",
-gallerySofa:"Диван",
-galleryDetail:"Деталь",
-
-showroomLabel:"Шоурум",
-showroomTitle:"Посетите FORMA",
-showroomText:"Откройте мир FORMA в нашем современном шоуруме в Фошане.",
-
-phoneText:"Телефон — +86 1313 8614 198",
-locationText:"Фошань · Гуандун · Китай",
-
-footerText:"© 2025 FORMA — Contemporary Luxury Living"
-
-},
-
-cn:{
-
-navCollections:"系列",
-navGallery:"画廊",
-navShowroom:"展厅",
-navContact:"联系",
-
-heroEyebrow:"永恒生活 · 当代奢华",
-heroTitle:"现代奢华家具",
-heroSub:"欧洲优雅与亚洲精致的融合。",
-heroBtn:"探索系列",
-
-collectionLabel:"系列",
-collectionTitle:"FORMA 世界",
-collectionText:"精选皮革、织物与大理石系列，打造高端现代空间。",
-
-cardLeather:"皮革系列",
-cardFabric:"布艺系列",
-cardShowroom:"展厅体验",
-
-galleryLabel:"画廊",
-galleryTitle:"展厅氛围",
-
-filterAll:"全部",
-filterShowroom:"展厅",
-filterLeather:"皮革",
-filterFabric:"布艺",
-
-galleryShowroom:"展厅",
-galleryLeather:"皮革",
-galleryFabric:"布艺",
-galleryLuxury:"奢华",
-gallerySofa:"沙发",
-galleryDetail:"细节",
-
-showroomLabel:"展厅",
-showroomTitle:"参观 FORMA",
-showroomText:"欢迎来到 FORMA 佛山现代奢华展厅。",
-
-phoneText:"电话 — +86 1313 8614 198",
-locationText:"佛山 · 广东 · 中国",
-
-footerText:"© 2025 FORMA — Contemporary Luxury Living"
-
+// LANGUE — l'attribut lang="fr" statique (dans le HTML brut) reste la source
+// de vérité première : il doit être correct sans JavaScript, pour les lecteurs
+// d'écran et les moteurs de recherche. Cette fonction garde en plus l'attribut
+// lang synchronisé avec data-lang, pour le jour où un vrai sélecteur de langue
+// changera data-lang sans recharger la page.
+function syncDocumentLanguage(){
+  const code = document.documentElement.dataset.lang || 'fr';
+  document.documentElement.setAttribute('lang', code);
 }
-
+syncDocumentLanguage();
+window.setSiteLanguage = function(code){
+  document.documentElement.dataset.lang = code;
+  syncDocumentLanguage();
 };
 
-function setLang(lang, btn){
+// NAV — solidification au scroll
+const nav = document.getElementById('siteNav');
+const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 40);
+document.addEventListener('scroll', onScroll, {passive:true});
+onScroll();
 
-document.documentElement.lang = lang;
-
-if(lang === 'ar'){
-document.documentElement.dir = 'rtl';
-}
-else{
-document.documentElement.dir = 'ltr';
-}
-
-document.querySelectorAll('.lang-btn').forEach(button=>{
-button.classList.remove('active');
+// NAV — menu mobile
+const navToggle = document.getElementById('navToggle');
+const navLinks = document.getElementById('navLinks');
+navToggle.addEventListener('click', () => {
+  const open = navLinks.classList.toggle('open');
+  navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
 });
+navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+  navLinks.classList.remove('open');
+  navToggle.setAttribute('aria-expanded', 'false');
+}));
 
-btn.classList.add('active');
-
-document.querySelectorAll('[data-translate]').forEach(element=>{
-
-const key = element.getAttribute('data-translate');
-
-if(translations[lang][key]){
-element.innerHTML = translations[lang][key];
+// REVEAL AU SCROLL
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+if (!reduceMotion && 'IntersectionObserver' in window) {
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, {threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+} else {
+  document.querySelectorAll('.reveal').forEach(el => el.classList.add('in'));
 }
 
-});
+// CURSEUR PERSONNALISÉ — amélioration progressive uniquement
+// N'est jamais activé sur écran tactile, pointeur imprécis, ou préférence "réduire les animations".
 
+// SELECTEUR DE LANGUE
+const langSwitch = document.getElementById('langSwitch');
+const langSwitchBtn = document.getElementById('langSwitchBtn');
+if (langSwitch && langSwitchBtn) {
+  langSwitchBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const open = langSwitch.classList.toggle('open');
+    langSwitchBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  document.addEventListener('click', () => {
+    langSwitch.classList.remove('open');
+    langSwitchBtn.setAttribute('aria-expanded', 'false');
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      langSwitch.classList.remove('open');
+      langSwitchBtn.setAttribute('aria-expanded', 'false');
+    }
+  });
 }
-
-function filterGallery(cat, btn){
-
-document.querySelectorAll('.gf-btn').forEach(b=>{
-b.classList.remove('active');
-});
-
-btn.classList.add('active');
-
-document.querySelectorAll('#galleryScroll .gallery-item')
-.forEach(item=>{
-
-if(cat === 'all'){
-item.style.display='block';
-}
-else{
-item.style.display =
-item.dataset.cat === cat ? 'block' : 'none';
-}
-
-});
-
-}
-
 </script>
-
+<script src="zoom.js" defer></script>
 </body>
 </html>

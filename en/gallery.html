@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+
+<html data-lang="en" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>FORMA | 福玛 — Gallery</title>
+<meta content="FORMA gallery: sofas, armchairs, tables, beds and poufs shown in their setting. Filter by material or by piece type to explore the catalogue." name="description"/>
+<link href="https://www.formalife.cn/en/gallery.html" rel="canonical"/>
+<link href="https://www.formalife.cn/gallery.html" hreflang="fr" rel="alternate"/>
+<link href="https://www.formalife.cn/en/gallery.html" hreflang="en" rel="alternate"/>
+<link href="https://www.formalife.cn/es/gallery.html" hreflang="es" rel="alternate"/>
+<link href="https://www.formalife.cn/ru/gallery.html" hreflang="ru" rel="alternate"/>
+<link href="https://www.formalife.cn/ar/gallery.html" hreflang="ar" rel="alternate"/>
+<link href="https://www.formalife.cn/zh/gallery.html" hreflang="zh" rel="alternate"/>
+<link href="https://www.formalife.cn/en/gallery.html" hreflang="x-default" rel="alternate"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&amp;family=Montserrat:ital,wght@0,300;0,400;0,500;1,300;1,400&amp;display=swap" rel="stylesheet">
+<style>
+  :root{
+    --gold:#C9A96A;--gold-light:#e2c68a;--black:#0A0A0A;--black-mid:#111;--black-soft:#1a1a1a;
+    --ivory:#F8F5EE;--ivory-mid:rgba(248,245,238,.55);--ivory-dim:rgba(248,245,238,.06);
+  }
+  *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--black);color:var(--ivory);font-family:'Montserrat',sans-serif;font-weight:300;overflow-x:hidden}
+  img{display:block;max-width:100%;height:auto}
+  a{color:inherit}
+  button{font-family:inherit}
+
+  .skip-link{position:absolute;left:-999px;top:0;background:var(--gold);color:var(--black);padding:12px 20px;font-family:'Montserrat',sans-serif;font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;z-index:10000}
+  .skip-link:focus{left:16px;top:16px}
+  :focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+
+  .eyebrow{display:flex;flex-wrap:wrap;row-gap:4px;align-items:center;gap:10px;font-family:'Montserrat',sans-serif;font-size:.62rem;letter-spacing:.4em;text-transform:uppercase;color:var(--gold);margin-bottom:18px}
+  .eyebrow .zh{font-family:'Cinzel',serif;letter-spacing:.1em;color:rgba(201,169,106,.55);font-size:.7rem}
+  .eyebrow::before{content:'';width:24px;height:1px;background:var(--gold)}
+
+  /* NAV (identique au reste du site) */
+  nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;align-items:center;justify-content:space-between;padding:18px 60px;background:rgba(10,10,10,.94);border-bottom:1px solid rgba(201,169,106,.18)}
+  .nav-logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+  .nav-mark{height:42px;width:35px;flex-shrink:0;object-fit:contain}
+  .nav-logo-main{font-family:'Cinzel',serif;font-size:.85rem;letter-spacing:.32em;color:var(--ivory)}
+  .nav-logo-main span{color:var(--gold)}
+  .nav-logo-sub{font-family:'Cinzel',serif;font-size:.5rem;letter-spacing:.4em;color:rgba(201,169,106,.5)}
+  .nav-links{display:flex;align-items:center;gap:40px;list-style:none}
+  .nav-links a{font-family:'Montserrat',sans-serif;font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ivory-mid);text-decoration:none;transition:color .3s}
+  .nav-links a:hover,.nav-links a[aria-current="page"]{color:var(--gold)}
+  .nav-lang{font-family:'Cinzel',serif;font-size:.6rem;letter-spacing:.2em;color:rgba(201,169,106,.6);border:1px solid rgba(201,169,106,.25);padding:6px 10px}
+  .nav-right{display:flex;align-items:center;gap:28px}
+  .btn-quote{font-family:'Montserrat',sans-serif;font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;background:var(--gold);color:var(--black);border:none;padding:13px 26px;font-weight:500;text-decoration:none;transition:background .3s,transform .3s;display:inline-block}
+  .btn-quote:hover{background:var(--gold-light);transform:translateY(-2px)}
+  .nav-toggle{display:none;background:none;border:none;color:var(--ivory);cursor:pointer;padding:8px}
+  .nav-mobile-cta{display:none}
+
+  /* HEADER DE PAGE */
+  .page-header{padding:170px 60px 60px;text-align:center}
+  .page-header h1{font-family:'Cinzel',serif;font-weight:400;font-size:clamp(2rem,3.6vw,3rem);color:var(--ivory);margin-bottom:20px}
+  .page-header p{font-family:'Montserrat',sans-serif;font-weight:300;font-style:italic;color:var(--ivory-mid);font-size:1rem;max-width:600px;margin:0 auto}
+
+  /* FIL D'ARIANE */
+  .breadcrumb{padding:0 60px;max-width:1400px;margin:0 auto;font-family:'Montserrat',sans-serif;font-size:.68rem;letter-spacing:.08em;color:rgba(248,245,238,.35)}
+  .breadcrumb a{color:rgba(201,169,106,.7);text-decoration:none}
+  .breadcrumb a:hover{color:var(--gold)}
+
+  /* FILTRES */
+  .filters{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;padding:40px 60px 10px}
+  .filter-btn{background:transparent;border:1px solid rgba(201,169,106,.3);color:var(--ivory-mid);font-family:'Montserrat',sans-serif;font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;padding:11px 24px;cursor:pointer;transition:all .3s}
+  .filter-btn:hover{border-color:var(--gold);color:var(--ivory)}
+  .filter-btn.active{background:var(--gold);border-color:var(--gold);color:var(--black)}
+
+  .gallery-count{text-align:center;font-family:'Montserrat',sans-serif;font-size:.68rem;letter-spacing:.1em;color:rgba(248,245,238,.35);padding:8px 0 30px}
+
+  /* GRILLE */
+  .gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;max-width:1600px;margin:0 auto;padding:0 60px 120px}
+  .gallery-item{position:relative;aspect-ratio:4/3;overflow:hidden;background:var(--black-soft);cursor:pointer;border:none;padding:0;display:block;width:100%}
+  .gallery-item img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+  .gallery-item:hover img{transform:scale(1.045)}
+  .gallery-item::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(10,10,10,.85) 0%,transparent 55%);opacity:0;transition:opacity .35s}
+  .gallery-item:hover::after,.gallery-item:focus-visible::after{opacity:1}
+  .gallery-caption{position:absolute;left:0;right:0;bottom:0;padding:18px 20px;z-index:1;opacity:0;transform:translateY(8px);transition:opacity .35s,transform .35s;text-align:left}
+  .gallery-item:hover .gallery-caption,.gallery-item:focus-visible .gallery-caption{opacity:1;transform:translateY(0)}
+  .gallery-caption .cat{font-family:'Montserrat',sans-serif;font-size:.56rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:6px}
+  .gallery-caption .desc{font-family:'Montserrat',sans-serif;font-weight:300;font-style:italic;font-size:.82rem;color:var(--ivory)}
+  .gallery-item[hidden]{display:none}
+
+  /* VISIONNEUSE */
+  .lightbox{position:fixed;inset:0;background:rgba(6,6,5,.96);z-index:5000;display:none;align-items:center;justify-content:center;padding:40px}
+  .lightbox.open{display:flex}
+  .lightbox-inner{max-width:1100px;width:100%;display:flex;flex-direction:column;align-items:center;gap:20px}
+  .lightbox-inner img{max-height:78vh;width:auto;max-width:100%;object-fit:contain}
+  .lightbox-caption{text-align:center}
+  .lightbox-caption .cat{font-family:'Montserrat',sans-serif;font-size:.6rem;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:8px}
+  .lightbox-caption .desc{font-family:'Montserrat',sans-serif;font-weight:300;font-style:italic;color:var(--ivory-mid);font-size:.95rem}
+  .lightbox-close{position:absolute;top:24px;right:32px;background:none;border:1px solid rgba(201,169,106,.4);color:var(--ivory);width:44px;height:44px;font-size:1.1rem;cursor:pointer;transition:border-color .3s,color .3s}
+  .lightbox-close:hover{border-color:var(--gold);color:var(--gold)}
+  .lightbox-nav{position:absolute;top:50%;transform:translateY(-50%);background:none;border:1px solid rgba(201,169,106,.3);color:var(--ivory);width:48px;height:48px;font-size:1.2rem;cursor:pointer;transition:border-color .3s,color .3s}
+  .lightbox-nav:hover{border-color:var(--gold);color:var(--gold)}
+  .lightbox-prev{left:24px}
+  .lightbox-next{right:24px}
+  @media(max-width:760px){
+    .lightbox-nav{width:40px;height:40px;font-size:1rem}
+    .lightbox-prev{left:8px}
+    .lightbox-next{right:8px}
+    .lightbox-close{top:14px;right:14px}
+  }
+
+  /* FOOTER (identique au reste du site) */
+  footer{background:var(--black-soft);border-top:1px solid rgba(201,169,106,.15);padding:70px 60px 36px}
+  .footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:50px;margin-bottom:56px}
+  .footer-brand p{font-family:'Montserrat',sans-serif;font-weight:300;font-style:italic;color:var(--ivory-mid);font-size:.85rem;line-height:1.7;max-width:280px;margin-top:14px}
+  .footer-col h4{font-family:'Montserrat',sans-serif;font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:20px}
+  .footer-col ul{list-style:none;display:flex;flex-direction:column;gap:12px}
+  .footer-col a{font-family:'Montserrat',sans-serif;font-size:.78rem;color:var(--ivory-mid);text-decoration:none;transition:color .3s}
+  .footer-col a:hover{color:var(--gold)}
+  .footer-bottom{border-top:1px solid rgba(201,169,106,.1);padding-top:26px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-family:'Montserrat',sans-serif;font-size:.68rem;color:rgba(248,245,238,.32);letter-spacing:.04em}
+  .footer-social{display:flex;align-items:flex-start;gap:14px;flex-wrap:wrap}
+  .footer-social-item{display:flex;flex-direction:column;align-items:center;gap:7px;text-decoration:none;color:var(--ivory-mid);transition:color .3s;background:none;border:none;padding:0;font:inherit;cursor:pointer}
+  .footer-social-item:hover{color:var(--gold)}
+  .footer-social-icon{display:flex;align-items:center;justify-content:center;width:44px;height:44px;border:1px solid rgba(201,169,106,.25);overflow:hidden;transition:border-color .3s}
+  .footer-social-item:hover .footer-social-icon{border-color:var(--gold)}
+  .footer-social-icon svg{width:20px;height:20px}
+  .footer-social-label{font-family:'Montserrat',sans-serif;font-size:.56rem;letter-spacing:.14em;text-transform:uppercase}
+
+
+  /* CURSEUR — amélioration progressive uniquement */
+  .cursor-dot,.cursor-ring{display:none}
+  body.cc-active{cursor:none}
+  body.cc-active .cursor-dot{position:fixed;top:0;left:0;display:block;width:6px;height:6px;background:var(--gold);border-radius:50%;transform:translate(-50%,-50%);pointer-events:none;z-index:9999;transition:transform .1s}
+  body.cc-active .cursor-ring{position:fixed;top:0;left:0;display:block;width:36px;height:36px;border:1px solid rgba(201,169,106,.5);border-radius:50%;transform:translate(-50%,-50%);pointer-events:none;z-index:9998;transition:width .25s,height .25s,border-color .25s}
+  body.cc-active .cursor-ring.expand{width:54px;height:54px;border-color:var(--gold)}
+  body.cc-active a,body.cc-active button{cursor:none}
+
+  @media(prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    body.cc-active{cursor:auto}
+    body.cc-active .cursor-dot,body.cc-active .cursor-ring{display:none}
+    *{animation-duration:.01ms !important;transition-duration:.01ms !important}
+  }
+
+  @media(max-width:1600px){
+    nav{padding:14px 22px}
+    .nav-links{position:fixed;inset:0 0 0 auto;width:78%;max-width:340px;background:var(--black);flex-direction:column;align-items:flex-start;gap:0;padding:100px 32px 40px;transform:translateX(100%);transition:transform .4s ease;border-left:1px solid rgba(201,169,106,.18);overflow-y:auto}
+    .nav-links.open{transform:translateX(0)}
+    .nav-links li{width:100%;border-bottom:1px solid rgba(201,169,106,.1);padding:18px 0}
+    .nav-right .btn-quote{display:none}
+    .nav-toggle{display:block}
+    .nav-mobile-cta{display:block;width:100%;margin-top:20px}
+    .nav-mobile-cta .btn-quote{display:block;width:100%;text-align:center;box-sizing:border-box}
+  }
+  @media(max-width:1080px){
+    .gallery-grid{grid-template-columns:repeat(2,1fr)}
+    .footer-grid{grid-template-columns:1fr 1fr}
+  }
+  @media(max-width:760px){
+    nav{padding:14px 22px}
+    .nav-links{position:fixed;inset:0 0 0 auto;width:78%;max-width:340px;background:var(--black);flex-direction:column;align-items:flex-start;gap:0;padding:100px 32px 40px;transform:translateX(100%);transition:transform .4s ease;border-left:1px solid rgba(201,169,106,.18)}
+    .nav-links.open{transform:translateX(0)}
+    .nav-links li{width:100%;border-bottom:1px solid rgba(201,169,106,.1);padding:18px 0}
+    .nav-right .btn-quote{display:none}
+    .nav-toggle{display:block}
+    .nav-mobile-cta{display:block;width:100%;margin-top:20px}
+    .nav-mobile-cta .btn-quote{display:block;width:100%;text-align:center;box-sizing:border-box}
+    .page-header{padding:130px 22px 40px}
+    .filters{padding:30px 22px 10px}
+    .gallery-grid{grid-template-columns:1fr 1fr;padding:0 12px 80px;gap:3px}
+    .breadcrumb{padding:0 22px}
+    .footer-grid{grid-template-columns:1fr}
+    footer{padding:60px 22px 30px}
+  }
+
+  /* SELECTEUR DE LANGUE */
+  .lang-switch{position:relative}
+  .lang-switch-btn{display:flex;align-items:center;gap:6px;font-family:'Cinzel',serif;font-size:.6rem;letter-spacing:.2em;color:rgba(201,169,106,.8);border:1px solid rgba(201,169,106,.3);padding:6px 10px;background:transparent;cursor:pointer;text-transform:uppercase;transition:border-color .3s,color .3s}
+  .lang-switch-btn:hover{border-color:var(--gold);color:var(--gold)}
+  .lang-switch-menu{list-style:none;position:absolute;top:calc(100% + 10px);right:0;background:var(--black-soft);border:1px solid rgba(201,169,106,.25);min-width:150px;padding:6px;display:none;z-index:2000;box-shadow:0 12px 30px rgba(0,0,0,.4)}
+  .lang-switch.open .lang-switch-menu{display:block}
+  .lang-switch-menu a{display:block;padding:9px 12px;font-family:'Montserrat',sans-serif;font-size:.72rem;letter-spacing:.03em;color:var(--ivory-mid);text-decoration:none;transition:background .2s,color .2s}
+  .lang-switch-menu a:hover,.lang-switch-menu a:focus-visible{background:rgba(201,169,106,.1);color:var(--gold)}
+  .lang-switch-menu a[aria-current="true"]{color:var(--gold);font-weight:500}
+  [dir="rtl"] .lang-switch-menu{right:auto;left:0}
+
+  /* ADAPTATIONS RTL (arabe) */
+  [dir="rtl"] body{direction:rtl}
+  [dir="rtl"] .eyebrow::before{order:2}
+  [dir="rtl"] .nav-back::before{content:'\2192'}
+  [dir="rtl"] .nav-back:hover::before{transform:translateX(4px)}
+  [dir="rtl"] .section-head.left{text-align:right}
+  [dir="rtl"] .hero-content{text-align:right}
+  [dir="rtl"] .cta-actions,[dir="rtl"] .hero-ctas,[dir="rtl"] .filters{direction:rtl}
+  [dir="rtl"] .footer-bottom{direction:rtl}
+  [dir="rtl"] .skip-link{left:auto;right:-999px}
+  [dir="rtl"] .skip-link:focus{left:auto;right:16px}
+</style>
+</link></head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+<div aria-hidden="true" class="cursor-dot" id="dot"></div>
+<div aria-hidden="true" class="cursor-ring" id="ring"></div>
+<!-- NAV -->
+<nav id="siteNav">
+<a class="nav-logo" href="index.html">
+<img alt="FORMA" class="nav-mark" height="42" src="../images/logo-mark.webp" width="35"/>
+<div>
+<div class="nav-logo-main">FORMA <span>|</span> <span lang="zh">FORMA</span></div>
+<div class="nav-logo-sub" lang="en">Luxury Furniture</div>
+</div>
+</a>
+<ul class="nav-links" id="navLinks">
+<li><a href="collections.html">Collections</a></li>
+<li><a href="materials.html">Materials</a></li>
+<li><a href="projects.html">Projects</a></li>
+<li><a href="professionals.html">Professionals</a></li>
+<li><a href="about.html">About</a></li>
+<li><a href="showroom.html">Showroom</a></li>
+<li><a href="contact.html">Contact</a></li>
+<li class="nav-mobile-cta"><a href="contact.html" class="btn-quote" lang="en">Request a Quote</a></li>
+</ul>
+<div class="nav-right">
+<div class="lang-switch" id="langSwitch">
+<button aria-expanded="false" aria-haspopup="true" class="lang-switch-btn" id="langSwitchBtn">EN<svg aria-hidden="true" fill="none" height="6" viewbox="0 0 10 6" width="10"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.3"></path></svg>
+</button>
+<ul aria-label="Choose language" class="lang-switch-menu" id="langSwitchMenu" role="menu">
+<li role="none"><a href="../gallery.html" lang="fr" role="menuitem">Français</a></li>
+<li role="none"><a aria-current="true" href="gallery.html" lang="en" role="menuitem">English</a></li>
+<li role="none"><a href="../es/gallery.html" lang="es" role="menuitem">Español</a></li>
+<li role="none"><a href="../ru/gallery.html" lang="ru" role="menuitem">Русский</a></li>
+<li role="none"><a href="../ar/gallery.html" lang="ar" role="menuitem">العربية</a></li>
+<li role="none"><a href="../zh/gallery.html" lang="zh" role="menuitem">中文</a></li>
+</ul>
+</div>
+<a class="btn-quote" href="contact.html" lang="en">Request a Quote</a>
+<button aria-controls="navLinks" aria-expanded="false" aria-label="Open menu" class="nav-toggle" id="navToggle">
+<svg fill="none" height="22" stroke="currentColor" stroke-width="1.4" viewbox="0 0 24 24" width="22"><line x1="3" x2="21" y1="6" y2="6"></line><line x1="3" x2="21" y1="12" y2="12"></line><line x1="3" x2="21" y1="18" y2="18"></line></svg>
+</button>
+</div>
+</nav>
+<main id="main">
+<p class="breadcrumb"><a href="index.html">Home</a> / Gallery</p>
+<div class="page-header">
+<p class="eyebrow" style="justify-content:center"><span>Gallery</span> <span class="zh" lang="zh">Gallery</span></p>
+<h1>Our Interiors in Pictures</h1>
+<p>Sofas, armchairs, tables, beds and poufs shown in context. Filter by material or by piece type to explore the gallery.</p>
+</div>
+<div aria-label="Filter the gallery by material" class="filters" id="filters" role="group">
+<button class="filter-btn active" data-filter="tout">All</button>
+<button class="filter-btn" data-filter="cuir">Leather</button>
+<button class="filter-btn" data-filter="textile">Textile &amp; Bouclé</button>
+<button class="filter-btn" data-filter="table">Tables</button>
+<button class="filter-btn" data-filter="lit">Beds</button>
+<button class="filter-btn" data-filter="fauteuil">Armchairs</button>
+<button class="filter-btn" data-filter="pouf">Poufs</button>
+</div>
+<p class="gallery-count" id="galleryCount"></p>
+<div class="gallery-grid" id="galleryGrid"></div>
+</main>
+<!-- VISIONNEUSE -->
+<div aria-label="Image viewer" aria-modal="true" class="lightbox" id="lightbox" role="dialog">
+<button aria-label="Close the viewer" class="lightbox-close" id="lightboxClose">✕</button>
+<button aria-label="Previous image" class="lightbox-nav lightbox-prev" id="lightboxPrev">←</button>
+<button aria-label="Next image" class="lightbox-nav lightbox-next" id="lightboxNext">→</button>
+<div class="lightbox-inner">
+<img alt="" id="lightboxImg" src=""/>
+<div class="lightbox-caption">
+<span class="cat" id="lightboxCat"></span>
+<span class="desc" id="lightboxDesc"></span>
+</div>
+</div>
+</div>
+<!-- FOOTER -->
+<footer>
+<div class="footer-grid">
+<div class="footer-brand">
+<div class="nav-logo-main">FORMA <span>|</span> <span lang="zh">FORMA</span></div>
+<p>Contemporary furniture designed and made in Foshan, Guangdong. European elegance, Asian refinement.</p>
+</div>
+<div class="footer-col">
+<h4>Website</h4>
+<ul>
+<li><a href="collections.html">Collections</a></li>
+<li><a href="materials.html">Materials</a></li>
+<li><a href="gallery.html">Gallery</a></li>
+<li><a href="projects.html">Projects</a></li>
+<li><a href="showroom.html">Showroom</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h4>Professionals</h4>
+<ul>
+<li><a href="professionals.html">Professional Services</a></li>
+<li><a href="contact.html">Quote request</a></li>
+<li><a href="contact.html">Distribution</a></li>
+<li><a href="contact.html">Press</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h4>Contact</h4>
+<ul>
+<li><a href="tel:+8613138614198">+86 1313 8614 198</a></li>
+<li><a href="https://wa.me/message/P5GC3C72CQSXD1" rel="noopener" target="_blank">WhatsApp</a></li>
+<li><a href="https://u.wechat.com/MLt8EcsR12yTC2cylwff6d8" rel="noopener" target="_blank">WeChat</a></li>
+<li><a href="contact.html">Full form</a></li>
+</ul>
+</div>
+</div>
+<div class="footer-bottom">
+<span>© 2026 FORMA — Foshan, Guangdong, China</span>
+<div class="footer-social"><button aria-label="FORMA WhatsApp — click to show the QR code and chat directly" class="footer-social-item" data-qr="../images/qr-whatsapp.webp" data-qr-label="FORMA WhatsApp — click to show the QR code and chat directly" type="button"><span class="footer-social-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M7 17.5l-3 1 1-3A8 8 0 1 1 7 17.5Z" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 10c0 3 2.5 5.5 5.5 5.5.6 0 1-.1 1.3-.3.4-.2.6-.7.5-1.1l-.3-1a.8.8 0 0 0-.9-.5l-1 .2a.7.7 0 0 1-.7-.2c-.6-.5-1.2-1.2-1.6-2a.7.7 0 0 1 0-.7l.4-.8a.8.8 0 0 0-.1-.9l-.7-.9a.8.8 0 0 0-1-.2c-.7.4-1.4 1.2-1.4 2.4Z"/></svg></span><span class="footer-social-label">WhatsApp</span></button><button aria-label="FORMA WeChat — click to show the QR code and add as a contact" class="footer-social-item" data-qr="../images/qr-wechat.webp" data-qr-label="FORMA WeChat — click to show the QR code and add as a contact" type="button"><span class="footer-social-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M9.5 4C5.9 4 3 6.5 3 9.6c0 1.8 1 3.4 2.5 4.4l-.5 2 2.1-1.1c.7.2 1.5.3 2.4.3h.3a5.6 5.6 0 0 1-.2-1.5c0-3.3 3.1-6 7-6h.2C15.9 5.5 13 4 9.5 4Z" stroke-linejoin="round"/><path d="M15.5 9.7c-3 0-5.5 2.1-5.5 4.7s2.5 4.7 5.5 4.7c.6 0 1.2-.1 1.8-.3l1.9.9-.5-1.7C20 17 21 15.6 21 14.4c0-2.6-2.5-4.7-5.5-4.7Z" stroke-linejoin="round"/><circle cx="7.3" cy="8.6" r="0.6" fill="currentColor" stroke="none"/><circle cx="11.5" cy="8.6" r="0.6" fill="currentColor" stroke="none"/><circle cx="13.7" cy="13.5" r="0.55" fill="currentColor" stroke="none"/><circle cx="17.3" cy="13.5" r="0.55" fill="currentColor" stroke="none"/></svg></span><span class="footer-social-label">WeChat</span></button><a class="footer-social-item" href="#" rel="noopener" target="_blank"><span class="footer-social-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect height="18" rx="5" width="18" x="3" y="3"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.2" cy="6.8" fill="currentColor" r="0.6" stroke="none"/></svg></span><span class="footer-social-label">Instagram</span></a><a class="footer-social-item" href="#" rel="noopener" target="_blank"><span class="footer-social-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="12" r="9"/><path d="M14 8.5h-1.6c-.9 0-1.4.5-1.4 1.4V11h3l-.4 2.6h-2.6V19" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="footer-social-label">Facebook</span></a><a class="footer-social-item" href="#" rel="noopener" target="_blank"><span class="footer-social-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 4c-3 0-5 2.3-5 5.3v2.1c0 .5-.3.9-.9 1.3l-1 .7c-.5.3-.4 1 .1 1.2l1.6.7c.3.1.5.4.6.7.2.9 1 2.3 3 2.6.3 0 .5.2.6.5.2.6.9 1.4 3 1.4s2.8-.8 3-1.4c.1-.3.3-.5.6-.5 2-.3 2.8-1.7 3-2.6.1-.3.3-.6.6-.7l1.6-.7c.5-.2.6-.9.1-1.2l-1-.7c-.6-.4-.9-.8-.9-1.3V9.3C17 6.3 15 4 12 4Z" stroke-linejoin="round"/></svg></span><span class="footer-social-label">Snapchat</span></a><a class="footer-social-item" href="#" rel="noopener" target="_blank"><span class="footer-social-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M14 4v10.5a3.5 3.5 0 1 1-3.5-3.5c.35 0 .7.04 1 .12" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 4c.3 2 1.8 3.6 4 3.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="footer-social-label">TikTok</span></a></div></div>
+</footer>
+<script>
+// LANGUE — l'attribut lang="fr" statique (dans le HTML brut) reste la source
+// de vérité première : il doit être correct sans JavaScript, pour les lecteurs
+// d'écran et les moteurs de recherche. Cette fonction garde en plus l'attribut
+// lang synchronisé avec data-lang, pour le jour où un vrai sélecteur de langue
+// changera data-lang sans recharger la page.
+function syncDocumentLanguage(){
+  const code = document.documentElement.dataset.lang || 'fr';
+  document.documentElement.setAttribute('lang', code);
+}
+syncDocumentLanguage();
+window.setSiteLanguage = function(code){
+  document.documentElement.dataset.lang = code;
+  syncDocumentLanguage();
+};
+
+/* ──────────────────────────────────────────────────────────────
+   DONNÉES DE LA GALERIE
+   Pour ajouter de nouvelles photos : ajoutez un objet à ce tableau.
+   - thumb / full : chemins vers les deux tailles d'image (voir dossier /gallery)
+   - category  : "cuir" ou "textile" (sert au filtre)
+   - label     : légende courte, sans référence produit inventée
+   ────────────────────────────────────────────────────────────── */
+const galleryItems = [
+  { thumb:'../images/thumbs/3DBG-D6088.webp', full:'../images/full/3DBG-D6088.webp', category:'textile', label:"Ivory bouclé corner sofa with integrated round pouf" },
+  { thumb:'../images/thumbs/4DBG-D6088.webp', full:'../images/full/4DBG-D6088.webp', category:'textile', label:"Ivory bouclé corner sofa, in front of a stone fireplace" },
+  { thumb:'../images/thumbs/3DBG-D6092.webp', full:'../images/full/3DBG-D6092.webp', category:'textile', label:'Low beige velvet sofa, brass legs' },
+  { thumb:'../images/thumbs/4DBG-D6092.webp', full:'../images/full/4DBG-D6092.webp', category:'textile', label:'Low beige velvet sofa, three-seater' },
+  { thumb:'../images/thumbs/DBG-D60933.webp', full:'../images/full/DBG-D60933.webp', category:'textile', label:'Curved sofa, patterned cushions and cognac leather armrest' },
+  { thumb:'../images/thumbs/DBG-D60934.webp', full:'../images/full/DBG-D60934.webp', category:'textile', label:'Curved sofa, patterned cushions, in front of a stone fireplace' },
+  { thumb:'../images/thumbs/DBG-D60983.webp', full:'../images/full/DBG-D60983.webp', category:'textile', label:'Configurable sofa in pleated cognac velvet' },
+  { thumb:'../images/thumbs/DBG-D60984.webp', full:'../images/full/DBG-D60984.webp', category:'textile', label:'Configurable sofa in cognac velvet, close-up view' },
+  { thumb:'../images/thumbs/DBG-D61003.webp', full:'../images/full/DBG-D61003.webp', category:'cuir', label:"Low chocolate leather sofa, deep corner module" },
+  { thumb:'../images/thumbs/DBG-D61004.webp', full:'../images/full/DBG-D61004.webp', category:'cuir', label:'Chocolate leather sofa, round coffee table' },
+  { thumb:'../images/thumbs/DBG-D61007.webp', full:'../images/full/DBG-D61007.webp', category:'textile', label:'Modular sofa in taupe bouclé, open configuration' },
+  { thumb:'../images/thumbs/DBG-D61008.webp', full:'../images/full/DBG-D61008.webp', category:'textile', label:'Modular sofa in taupe bouclé, close-up view' },
+  { thumb:'../images/thumbs/DBG-D80613.webp', full:'../images/full/DBG-D80613.webp', category:'textile', label:'Three-seater sofa in ivory bouclé, rounded armrests' },
+  { thumb:'../images/thumbs/DBG-D80614.webp', full:'../images/full/DBG-D80614.webp', category:'textile', label:'Ivory bouclé sofa, custom-built bookshelves' },
+  { thumb:'../images/thumbs/DBG-D80783.webp', full:'../images/full/DBG-D80783.webp', category:'cuir', label:'Quilted ivory leather sofa, graphic-print cushion' },
+  { thumb:'../images/thumbs/DBG-D80784.webp', full:'../images/full/DBG-D80784.webp', category:'cuir', label:'Ivory leather sofa, in front of a stone fireplace' },
+  { thumb:'../images/thumbs/DBG-D80793.webp', full:'../images/full/DBG-D80793.webp', category:'cuir', label:'Three-seater sofa in cognac leather' },
+  { thumb:'../images/thumbs/DBG-D80794.webp', full:'../images/full/DBG-D80794.webp', category:'cuir', label:'Cognac leather sofa, reading floor lamp' },
+  { thumb:'../images/thumbs/DBG-D80813.webp', full:'../images/full/DBG-D80813.webp', category:'textile', label:'Three-seater sofa in beige linen, generous armrests' },
+  { thumb:'../images/thumbs/DBG-D80814.webp', full:'../images/full/DBG-D80814.webp', category:'textile', label:'Two-seater sofa in beige linen, in front of a stone fireplace' },
+  { thumb:'../images/thumbs/DBG-D80833.webp', full:'../images/full/DBG-D80833.webp', category:'textile', label:"Ivory bouclé corner sofa, marbled-pattern cushions" },
+  { thumb:'../images/thumbs/DBG-D80834.webp', full:'../images/full/DBG-D80834.webp', category:'textile', label:"Ivory bouclé corner sofa, overhead view" },
+  { thumb:'../images/thumbs/DBG-D90103.webp', full:'../images/full/DBG-D90103.webp', category:'textile', label:"Corner sofa in camel corduroy velvet" },
+  { thumb:'../images/thumbs/DBG-D90104.webp', full:'../images/full/DBG-D90104.webp', category:'textile', label:"Corner sofa in camel corduroy velvet, in front of a stone fireplace" },
+  { thumb:'../images/thumbs/DBG-D90105.webp', full:'../images/full/DBG-D90105.webp', category:'textile', label:'Modular sofa in light grey linen, curved configuration' },
+  { thumb:'../images/thumbs/DBG-D90106.webp', full:'../images/full/DBG-D90106.webp', category:'textile', label:'Modular sofa in light grey linen, garden view' },
+  { thumb:'../images/thumbs/DBG-D90113.webp', full:'../images/full/DBG-D90113.webp', category:'textile', label:'Deep modular sofa in beige linen, low seat' },
+  { thumb:'../images/thumbs/DBG-D90114.webp', full:'../images/full/DBG-D90114.webp', category:'textile', label:'Deep modular sofa in beige linen, in front of a stone fireplace' },
+  { thumb:'../images/thumbs/DBG-D90213.webp', full:'../images/full/DBG-D90213.webp', category:'cuir', label:'Cognac leather sofa, faux-fur cushion' },
+  { thumb:'../images/thumbs/DBG-D90214.webp', full:'../images/full/DBG-D90214.webp', category:'cuir', label:'Cognac leather sofa, close-up view' },
+  { thumb:'../images/thumbs/DBG-YSZ-013.webp', full:'../images/full/DBG-YSZ-013.webp', category:'textile', label:'Slipcovered sofa in natural linen, relaxed silhouette' },
+  { thumb:'../images/thumbs/DBG-YSZ-014.webp', full:'../images/full/DBG-YSZ-014.webp', category:'textile', label:'Slipcovered sofa in natural linen, in front of a fireplace' },
+  { thumb:'../images/thumbs/cookie-sofa-sauge-3.webp', full:'../images/full/cookie-sofa-sauge-3.webp', category:'textile', label:'Curved sage velvet sofa, floral-print cushion' },
+  { thumb:'../images/thumbs/cookie-sofa-sauge-4.webp', full:'../images/full/cookie-sofa-sauge-4.webp', category:'textile', label:'Curved sage velvet sofa, outdoor terrace' },
+  { thumb:'../images/thumbs/table-basse-sculptee-plan.webp', full:'../images/full/table-basse-sculptee-plan.webp', category:'table', label:'Carved-wood coffee table, marquetry top, overhead view' },
+  { thumb:'../images/thumbs/table-basse-sculptee-scene.webp', full:'../images/full/table-basse-sculptee-scene.webp', category:'table', label:'Carved-wood coffee table, marquetry top, styled setting' },
+  { thumb:'../images/thumbs/DBG-D70763.webp', full:'../images/full/DBG-D70763.webp', category:'lit', label:'Tufted bed in ivory velvet, heathered-fabric frame' },
+  { thumb:'../images/thumbs/DBG-D70764.webp', full:'../images/full/DBG-D70764.webp', category:'lit', label:'Tufted bed in ivory velvet, bedside corner with wall shelf' },
+  { thumb:'../images/thumbs/DBG-D70783.webp', full:'../images/full/DBG-D70783.webp', category:'lit', label:'Low bed in taupe linen, dark wood block legs' },
+  { thumb:'../images/thumbs/DBG-D70784.webp', full:'../images/full/DBG-D70784.webp', category:'lit', label:'Low bed in taupe linen, dressing-table corner' },
+  { thumb:'../images/thumbs/DBG-D70803.webp', full:'../images/full/DBG-D70803.webp', category:'lit', label:'Bed with fluted headboard in ivory bouclé' },
+  { thumb:'../images/thumbs/DBG-D70804.webp', full:'../images/full/DBG-D70804.webp', category:'lit', label:'Bed with fluted headboard in ivory bouclé, wavy wall shelf' },
+  { thumb:'../images/thumbs/DBG-D70813.webp', full:'../images/full/DBG-D70813.webp', category:'lit', label:'Bed in beige leather, tufted base' },
+  { thumb:'../images/thumbs/DBG-D70814.webp', full:'../images/full/DBG-D70814.webp', category:'lit', label:'Bed in beige leather, city view' },
+  { thumb:'../images/thumbs/DBG-D70823.webp', full:'../images/full/DBG-D70823.webp', category:'lit', label:'Bed in powder-pink leather, tufted headboard' },
+  { thumb:'../images/thumbs/DBG-D70824.webp', full:'../images/full/DBG-D70824.webp', category:'lit', label:'Bed in powder-pink leather, dressing-table corner' },
+  { thumb:'../images/thumbs/DBG-D70833.webp', full:'../images/full/DBG-D70833.webp', category:'lit', label:'Bed with rounded headboard in ivory bouclé' },
+  { thumb:'../images/thumbs/DBG-D70834.webp', full:'../images/full/DBG-D70834.webp', category:'lit', label:'Bed with rounded headboard in ivory bouclé, sculptural shelf' },
+  { thumb:'../images/thumbs/DBG-D70853.webp', full:'../images/full/DBG-D70853.webp', category:'lit', label:'Bed in terracotta velvet, curved headboard' },
+  { thumb:'../images/thumbs/DBG-D70854.webp', full:'../images/full/DBG-D70854.webp', category:'lit', label:'Bed in terracotta velvet, dressing-table corner' },
+  { thumb:'../images/thumbs/3.webp', full:'../images/full/3.webp', category:'fauteuil', label:'Low armchair in plum-and-taupe striped corduroy' },
+  { thumb:'../images/thumbs/3A.webp', full:'../images/full/3A.webp', category:'fauteuil', label:'Swivel armchair in ivory shearling, curved shape' },
+  { thumb:'../images/thumbs/3CA.webp', full:'../images/full/3CA.webp', category:'fauteuil', label:'Bergère armchair in black leather with matching footstool' },
+  { thumb:'../images/thumbs/3D65.webp', full:'../images/full/3D65.webp', category:'fauteuil', label:'Swivel armchair in terracotta velvet' },
+  { thumb:'../images/thumbs/3D66.webp', full:'../images/full/3D66.webp', category:'fauteuil', label:'Armchair in ivory bouclé, wooden armrests' },
+  { thumb:'../images/thumbs/3D67.webp', full:'../images/full/3D67.webp', category:'fauteuil', label:'Swivel armchair in terracotta velvet, graphic-pattern backrest' },
+  { thumb:'../images/thumbs/3D68.webp', full:'../images/full/3D68.webp', category:'fauteuil', label:'Swivel armchair in brown shearling' },
+  { thumb:'../images/thumbs/3D69.webp', full:'../images/full/3D69.webp', category:'fauteuil', label:'Armchair in ivory shearling, cylindrical wood legs' },
+  { thumb:'../images/thumbs/3D70.webp', full:'../images/full/3D70.webp', category:'fauteuil', label:'Armchair in yellow-and-green print fabric, matching throw' },
+  { thumb:'../images/thumbs/3D72.webp', full:'../images/full/3D72.webp', category:'fauteuil', label:'Tufted black leather armchair, wood frame' },
+  { thumb:'../images/thumbs/3D73.webp', full:'../images/full/3D73.webp', category:'fauteuil', label:'Round armchair in olive-green velvet, floral cushion' },
+  { thumb:'../images/thumbs/3D106.webp', full:'../images/full/3D106.webp', category:'pouf', label:'Round pouf in brown faux fur, leather seat' },
+  { thumb:'../images/thumbs/3D107.webp', full:'../images/full/3D107.webp', category:'pouf', label:'Pair of poufs in ecru bouclé, marbled pattern' },
+  { thumb:'../images/thumbs/3D113.webp', full:'../images/full/3D113.webp', category:'pouf', label:'Round pouf in blush faux fur' },
+  { thumb:'../images/thumbs/3D801.webp', full:'../images/full/3D801.webp', category:'fauteuil', label:'Armchair in black leather and ecru bouclé, wood frame' },
+  { thumb:'../images/thumbs/3D809B.webp', full:'../images/full/3D809B.webp', category:'fauteuil', label:'Armchair and footstool in chocolate leather, rounded silhouette' },
+  { thumb:'../images/thumbs/3D833.webp', full:'../images/full/3D833.webp', category:'fauteuil', label:'Armchair in beige-and-black graphic-print fabric' },
+  { thumb:'../images/thumbs/3D835B.webp', full:'../images/full/3D835B.webp', category:'fauteuil', label:'Armchair in black-and-ecru graphic-print fabric' },
+  { thumb:'../images/thumbs/3D859.webp', full:'../images/full/3D859.webp', category:'fauteuil', label:'Chocolate leather armchair, metal frame with suspended straps' },
+  { thumb:'../images/thumbs/3D868.webp', full:'../images/full/3D868.webp', category:'fauteuil', label:'Swivel armchair in tufted brown velvet' },
+  { thumb:'../images/thumbs/3D9010.webp', full:'../images/full/3D9010.webp', category:'pouf', label:'Round pouf in camel faux fur, leather base' },
+  { thumb:'../images/thumbs/4D63.webp', full:'../images/full/4D63.webp', category:'fauteuil', label:'Bergère armchair in black leather with footstool, gilded wall light' },
+  { thumb:'../images/thumbs/4D66.webp', full:'../images/full/4D66.webp', category:'fauteuil', label:'Armchair in ivory bouclé, wooden armrests, wood-panelled wall' },
+  { thumb:'../images/thumbs/4D67.webp', full:'../images/full/4D67.webp', category:'fauteuil', label:'Swivel armchair in terracotta velvet, in front of a wood wall' },
+  { thumb:'../images/thumbs/4D68.webp', full:'../images/full/4D68.webp', category:'fauteuil', label:'Swivel armchair in brown shearling' },
+  { thumb:'../images/thumbs/4D69.webp', full:'../images/full/4D69.webp', category:'fauteuil', label:'Armchair in ivory shearling, cylindrical wood legs' },
+  { thumb:'../images/thumbs/4D70.webp', full:'../images/full/4D70.webp', category:'fauteuil', label:'Armchair in yellow-and-green print fabric' },
+  { thumb:'../images/thumbs/4D72.webp', full:'../images/full/4D72.webp', category:'fauteuil', label:'Tufted black leather armchair, light wood frame' },
+  { thumb:'../images/thumbs/4D73.webp', full:'../images/full/4D73.webp', category:'fauteuil', label:"Round armchair in olive-green velvet, integrated side table" },
+  { thumb:'../images/thumbs/4D106.webp', full:'../images/full/4D106.webp', category:'pouf', label:'Round pouf in terracotta faux fur, leather seat' },
+  { thumb:'../images/thumbs/4D107.webp', full:'../images/full/4D107.webp', category:'pouf', label:'Pouf in ecru bouclé with marbled pattern, openwork base' },
+  { thumb:'../images/thumbs/4D113.webp', full:'../images/full/4D113.webp', category:'pouf', label:'Round pouf in beige faux fur' },
+  { thumb:'../images/thumbs/4D801.webp', full:'../images/full/4D801.webp', category:'fauteuil', label:'Armchair in black leather and heathered grey fabric, black wood frame' },
+  { thumb:'../images/thumbs/4D809B.webp', full:'../images/full/4D809B.webp', category:'fauteuil', label:'Tufted chocolate leather armchair, slender wood legs' },
+  { thumb:'../images/thumbs/4D833.webp', full:'../images/full/4D833.webp', category:'fauteuil', label:'Armchair in black-and-gold polka-dot fabric, black wood frame' },
+  { thumb:'../images/thumbs/4D835B.webp', full:'../images/full/4D835B.webp', category:'fauteuil', label:'Armchair in black-and-ecru polka-dot fabric, black wood frame' },
+  { thumb:'../images/thumbs/a639b-coffee-table-1.webp', full:'../images/full/a639b-coffee-table-1.webp', category:'table', label:'Coffee table in veined ivory marble, wavy-edged top and cylindrical dark wood base' },
+  { thumb:'../images/thumbs/a639b-coffee-table-2.webp', full:'../images/full/a639b-coffee-table-2.webp', category:'table', label:'Coffee table in veined ivory marble, round dark wood base, close-up view' },
+  { thumb:'../images/thumbs/a662-coffee-table-1.webp', full:'../images/full/a662-coffee-table-1.webp', category:'table', label:'Glass-top coffee table, sculptural walnut-wood base paired with a white marble cylinder' },
+  { thumb:'../images/thumbs/a662-coffee-table-2.webp', full:'../images/full/a662-coffee-table-2.webp', category:'table', label:'Glass-top coffee table, overhead view of the walnut-wood and white marble base' },
+  { thumb:'../images/thumbs/a915-coffee-table-1.webp', full:'../images/full/a915-coffee-table-1.webp', category:'table', label:'Round coffee table with a dark wavy-surfaced top, tubular dark wood legs' },
+  { thumb:'../images/thumbs/a915-coffee-table-2.webp', full:'../images/full/a915-coffee-table-2.webp', category:'table', label:'Round coffee table, dark liquid-effect top on three cylindrical dark wood legs' },
+  { thumb:'../images/thumbs/a995-square-coffee-table-1.webp', full:'../images/full/a995-square-coffee-table-1.webp', category:'table', label:'Square coffee table in burl wood, solid base with four cylindrical legs' },
+  { thumb:'../images/thumbs/a995-square-coffee-table-2.webp', full:'../images/full/a995-square-coffee-table-2.webp', category:'table', label:'Square coffee table in burl-wood veneer, rounded corners and matching round legs' },
+  { thumb:'../images/thumbs/a999-coffee-table-1.webp', full:'../images/full/a999-coffee-table-1.webp', category:'table', label:'Free-form beige stone coffee table, inset metal disc and walnut-wood base' },
+  { thumb:'../images/thumbs/a999-coffee-table-2.webp', full:'../images/full/a999-coffee-table-2.webp', category:'table', label:'Coffee table in veined beige stone, organic top with a brushed metal ring inlay at the centre' },
+  { thumb:'../images/thumbs/bj001c-side-table.webp', full:'../images/full/bj001c-side-table.webp', category:'table', label:'Round side table, green lacquered top with cream trim, ivory cylindrical base' },
+  { thumb:'../images/thumbs/n609b-l-nightstand-2.webp', full:'../images/full/n609b-l-nightstand-2.webp', category:'table', label:'Walnut-wood nightstand, veined white marble top, close-up view' },
+  { thumb:'../images/thumbs/n609b-r-nightstand-1.webp', full:'../images/full/n609b-r-nightstand-1.webp', category:'table', label:'Walnut-wood nightstand, veined white marble top and curved two-drawer front' },
+  { thumb:'../images/thumbs/n609b-r-nightstand-2.webp', full:'../images/full/n609b-r-nightstand-2.webp', category:'table', label:'Walnut-wood and white marble nightstand, rounded corners, close-up view' },
+  { thumb:'../images/thumbs/n660-nightstand-1.webp', full:'../images/full/n660-nightstand-1.webp', category:'table', label:'Nightstand in ivory reconstituted stone, marquetry wood front with a hand motif, ball feet' },
+  { thumb:'../images/thumbs/n660-nightstand-2.webp', full:'../images/full/n660-nightstand-2.webp', category:'table', label:'Textured ivory nightstand, marquetry-wood drawers with a graphic motif and ball feet' },
+  { thumb:'../images/thumbs/n851-nightstand-1.webp', full:'../images/full/n851-nightstand-1.webp', category:'table', label:'Oval walnut-wood nightstand, scalloped two-tone front and heart-shaped handle' },
+  { thumb:'../images/thumbs/n851-nightstand-2.webp', full:'../images/full/n851-nightstand-2.webp', category:'table', label:'Oval nightstand, scalloped walnut and light-wood contour, metal heart-shaped handle' },
+  { thumb:'../images/thumbs/n871-nightstand-1.webp', full:'../images/full/n871-nightstand-1.webp', category:'table', label:'Cylindrical light-wood nightstand, navy trim and abstract motif on the top' },
+  { thumb:'../images/thumbs/n871-nightstand-2.webp', full:'../images/full/n871-nightstand-2.webp', category:'table', label:'Round light-wood nightstand, vertical blue band and blue graphic inlay' },
+  { thumb:'../images/thumbs/n952-nightstand-1.webp', full:'../images/full/n952-nightstand-1.webp', category:'table', label:'Round nightstand lacquered ivory, recessed top and curved base' },
+  { thumb:'../images/thumbs/n952-nightstand-2.webp', full:'../images/full/n952-nightstand-2.webp', category:'table', label:'Ivory lacquered nightstand, rimmed top with mirrored base, urn-shaped stand' },
+  { thumb:'../images/thumbs/s639-corner-table-1.webp', full:'../images/full/s639-corner-table-1.webp', category:'table', label:'Sculptural corner table in textured grey stone, wave-shaped curved silhouette' },
+  { thumb:'../images/thumbs/s639-corner-table-2.webp', full:'../images/full/s639-corner-table-2.webp', category:'table', label:'Corner table in textured grey stone, free-form shape with an irregular surface' },
+  { thumb:'../images/thumbs/s655-console-table-1.webp', full:'../images/full/s655-console-table-1.webp', category:'table', label:'Travertine console table, speckled dark concrete base with a circular cutout' },
+  { thumb:'../images/thumbs/s655-console-table-2.webp', full:'../images/full/s655-console-table-2.webp', category:'table', label:'Console table with a rounded travertine top, openwork speckled dark concrete base' },
+  { thumb:'../images/thumbs/s815-side-table-1.webp', full:'../images/full/s815-side-table-1.webp', category:'table', label:'Round side table in marquetry wood, sinuous two-tone pattern and flared cylindrical base' },
+  { thumb:'../images/thumbs/s815-side-table-2.webp', full:'../images/full/s815-side-table-2.webp', category:'table', label:'Side table in tone-on-tone marquetry wood, graphic top and drum base' },
+  { thumb:'../images/thumbs/s831-corner-table-1.webp', full:'../images/full/s831-corner-table-1.webp', category:'table', label:'Round side table, black-stained wood top with radiating grain, bulbous speckled grey stone base' },
+  { thumb:'../images/thumbs/s831-corner-table-2.webp', full:'../images/full/s831-corner-table-2.webp', category:'table', label:'Side table with a striated black top, curved base in charcoal-grey stone' },
+  { thumb:'../images/thumbs/s832-meeting-table-1.webp', full:'../images/full/s832-meeting-table-1.webp', category:'table', label:'Round table with a veined white marble top, sinuous edge, fluted stem on a bronze metal base' },
+  { thumb:'../images/thumbs/s832-meeting-table-2.webp', full:'../images/full/s832-meeting-table-2.webp', category:'table', label:'Table with a wavy-edged white marble top, fluted blackened-wood column and aged brass base' },
+  { thumb:'../images/thumbs/s839a-corner-table-1.webp', full:'../images/full/s839a-corner-table-1.webp', category:'table', label:'Octagonal side table in veined orange marble, slender bronze metal base' },
+  { thumb:'../images/thumbs/s839a-corner-table-2.webp', full:'../images/full/s839a-corner-table-2.webp', category:'table', label:'Side table with a coral-and-white marble top, central patinated metal leg' },
+  { thumb:'../images/thumbs/s853-corner-table-1.webp', full:'../images/full/s853-corner-table-1.webp', category:'table', label:'Side table with a veined red marble top, scalloped edge, fluted walnut-wood leg' },
+  { thumb:'../images/thumbs/s853-corner-table-2.webp', full:'../images/full/s853-corner-table-2.webp', category:'table', label:'Side table with a burgundy marble top, fluted cylindrical brown wood base' },
+  { thumb:'../images/thumbs/s858-corner-table-a-1.webp', full:'../images/full/s858-corner-table-a-1.webp', category:'table', label:'Sculptural side table in speckled grey stone, curved silhouette on a double conical base' },
+  { thumb:'../images/thumbs/s858-corner-table-a-2.webp', full:'../images/full/s858-corner-table-a-2.webp', category:'table', label:'Side table in speckled grey stone, flared organic shape, close-up view' },
+  { thumb:'../images/thumbs/s858-corner-table-b-1.webp', full:'../images/full/s858-corner-table-b-1.webp', category:'table', label:'Sculptural side table in crackled ivory stone, curved silhouette on a double conical base' },
+  { thumb:'../images/thumbs/s858-corner-table-b-2.webp', full:'../images/full/s858-corner-table-b-2.webp', category:'table', label:'Side table in crackled ivory stone, flared organic shape displayed on a plinth' },
+  { thumb:'../images/thumbs/s859-corner-table-1.webp', full:'../images/full/s859-corner-table-1.webp', category:'table', label:'Sculptural side table in crackled ivory stone, rounded curve and double conical base' },
+  { thumb:'../images/thumbs/s859-corner-table-2.webp', full:'../images/full/s859-corner-table-2.webp', category:'table', label:'Side table in crackled ivory stone, curved silhouette beside a window' },
+  { thumb:'../images/thumbs/s861-corner-table-1.webp', full:'../images/full/s861-corner-table-1.webp', category:'table', label:'Hexagonal side table with a faceted surface, hammered matte-black finish' },
+  { thumb:'../images/thumbs/s861-corner-table-2.webp', full:'../images/full/s861-corner-table-2.webp', category:'table', label:'Side table with a hexagonal base, faceted charcoal-black texture' },
+  { thumb:'../images/thumbs/s915-corner-table-1.webp', full:'../images/full/s915-corner-table-1.webp', category:'table', label:'Round coffee table, wavy black-surfaced top, three curved legs in black-stained wood' },
+  { thumb:'../images/thumbs/s915-corner-table-2.webp', full:'../images/full/s915-corner-table-2.webp', category:'table', label:'Tripod coffee table in blackened wood, textured top with rippling reflections' },
+  { thumb:'../images/thumbs/s936-corner-table-1.webp', full:'../images/full/s936-corner-table-1.webp', category:'table', label:'Terracotta lacquered side table, tilted cylindrical base' },
+  { thumb:'../images/thumbs/s936-corner-table-2.webp', full:'../images/full/s936-corner-table-2.webp', category:'table', label:'Side table with a round top and tubular brick-lacquered leg, asymmetric line' },
+  { thumb:'../images/thumbs/s965a-side-table-1.webp', full:'../images/full/s965a-side-table-1.webp', category:'table', label:'Side table with a marquetry top in white marble, black stone and striped wood, curved black leg' },
+  { thumb:'../images/thumbs/s965a-side-table-2.webp', full:'../images/full/s965a-side-table-2.webp', category:'table', label:'Side table, marble and zebra-wood marquetry top, circular motif' },
+  { thumb:'../images/thumbs/s965b-side-table-1.webp', full:'../images/full/s965b-side-table-1.webp', category:'table', label:'Side table with a white mother-of-pearl inlay top on a black ground, irregular edge' },
+  { thumb:'../images/thumbs/s965b-side-table-2.webp', full:'../images/full/s965b-side-table-2.webp', category:'table', label:'Side table, mother-of-pearl marquetry top forming an organic black-and-white motif' },
+  { thumb:'../images/thumbs/s989-corner-table-1.webp', full:'../images/full/s989-corner-table-1.webp', category:'table', label:'Side table in plum lacquered ceramic, curved ringed silhouette, top engraved with a geometric motif' },
+  { thumb:'../images/thumbs/s989-corner-table-2.webp', full:'../images/full/s989-corner-table-2.webp', category:'table', label:'Curved side table in glossy aubergine ceramic, chiselled top' },
+  { thumb:'../images/thumbs/a625-coffee-table-1.webp', full:'../images/full/a625-coffee-table-1.webp', category:'table', label:'Coffee table with a veined white marble top, sinuous edge, dark wood base' },
+  { thumb:'../images/thumbs/a625-coffee-table-2.webp', full:'../images/full/a625-coffee-table-2.webp', category:'table', label:'Coffee table, grey-white marble top engraved with concentric circles, cylindrical brown wood legs' },
+  { thumb:'../images/thumbs/s625-side-table-1.webp', full:'../images/full/s625-side-table-1.webp', category:'table', label:'Coffee table in black-stained wood, top engraved with concentric circles, base of crossed log-like legs' },
+  { thumb:'../images/thumbs/s625-side-table-2.webp', full:'../images/full/s625-side-table-2.webp', category:'table', label:'Black coffee table with a top carved in circular motifs, exposed cylindrical wood structure' },
+  { thumb:'../images/thumbs/c658-meeting-table-1.webp', full:'../images/full/c658-meeting-table-1.webp', category:'table', label:'Round table with a veined blue-grey marble top, scalloped edge, fluted walnut-wood column on a metal base' },
+  { thumb:'../images/thumbs/c658-meeting-table-2.webp', full:'../images/full/c658-meeting-table-2.webp', category:'table', label:'Round table, marble top with a jagged edge, triple fluted wood column, circular metal base' },
+  { thumb:'../images/thumbs/low-table-1.webp', full:'../images/full/low-table-1.webp', category:'table', label:'Cylindrical coffee table in brown wood, wavy-edged top' },
+  { thumb:'../images/thumbs/low-table-2.webp', full:'../images/full/low-table-2.webp', category:'table', label:'Coffee table in walnut wood, cylindrical silhouette and organic top' },
+  { thumb:'../images/thumbs/coffee-table-scene-a.webp', full:'../images/full/coffee-table-scene-a.webp', category:'table', label:'Set of nesting coffee tables, white marble and walnut-wood tops in organic shapes' },
+  { thumb:'../images/thumbs/coffee-table-scene-b.webp', full:'../images/full/coffee-table-scene-b.webp', category:'table', label:'Round coffee table in light wood, sculptural black metal base' },
+  { thumb:'../images/thumbs/s862-corner-table.webp', full:'../images/full/s862-corner-table.webp', category:'table', label:'Side table in burl wood, cubic silhouette with rounded edges' },
+  { thumb:'../images/thumbs/d661-sideboard-1.webp', full:'../images/full/d661-sideboard-1.webp', category:'table', label:'Sideboard in brown-and-ivory marquetry, graphic hand motif in reserve' },
+  { thumb:'../images/thumbs/d661-sideboard-2.webp', full:'../images/full/d661-sideboard-2.webp', category:'table', label:'Marquetry sideboard with a hand motif, brown-and-ivory tones, cylindrical black legs' },
+  { thumb:'../images/thumbs/d807-sideboard-1.webp', full:'../images/full/d807-sideboard-1.webp', category:'table', label:'Sideboard in multicoloured wood marquetry, geometric block composition' },
+  { thumb:'../images/thumbs/d807-sideboard-2.webp', full:'../images/full/d807-sideboard-2.webp', category:'table', label:'Marquetry sideboard in ochre, ebony and rust tones, abstract block motif' },
+  { thumb:'../images/thumbs/d830-sideboard-1.webp', full:'../images/full/d830-sideboard-1.webp', category:'table', label:'Marquetry sideboard with a wave motif, gradient from rust to dark brown, slender chrome legs' },
+  { thumb:'../images/thumbs/d830-sideboard-2.webp', full:'../images/full/d830-sideboard-2.webp', category:'table', label:'Sideboard with marquetry wave lines, wood-tone palette, crossed chrome legs' },
+  { thumb:'../images/thumbs/d852-cabinet-1.webp', full:'../images/full/d852-cabinet-1.webp', category:'table', label:'Modular cabinet in walnut cubes, light concentric-circle motif' },
+  { thumb:'../images/thumbs/d852-cabinet-2.webp', full:'../images/full/d852-cabinet-2.webp', category:'table', label:'Cabinet in stacked brown wood cubes, honey-toned inlaid circles' },
+  { thumb:'../images/thumbs/d902-sideboard-1.webp', full:'../images/full/d902-sideboard-1.webp', category:'table', label:'Cabinet with a marquetry face motif, ebony and light-wood ground, tubular black legs' },
+  { thumb:'../images/thumbs/d902-sideboard-2.webp', full:'../images/full/d902-sideboard-2.webp', category:'table', label:'Cabinet on a tubular black base, ebony and light-wood marquetry silhouettes' },
+  { thumb:'../images/thumbs/d928-sideboard-1.webp', full:'../images/full/d928-sideboard-1.webp', category:'table', label:'Sideboard with a carved faceted-relief front, charcoal-grey finish' },
+  { thumb:'../images/thumbs/d928-sideboard-2.webp', full:'../images/full/d928-sideboard-2.webp', category:'table', label:'Wall-mounted sideboard with a textured relief front, glass-and-dark-wood base' },
+  { thumb:'../images/thumbs/d995-cabinet-1.webp', full:'../images/full/d995-cabinet-1.webp', category:'table', label:'Sideboard in ivory-and-mahogany marquetry, vertical wave motif, cylindrical black legs' },
+  { thumb:'../images/thumbs/d995-cabinet-2.webp', full:'../images/full/d995-cabinet-2.webp', category:'table', label:'Sideboard with marquetry wave stripes, ivory-and-dark-brown tones, black legs' },
+  { thumb:'../images/thumbs/dc72-bookshelf.webp', full:'../images/full/dc72-bookshelf.webp', category:'table', label:'Open bookshelf in brown wood, grey uprights, asymmetric shelves' },
+  { thumb:'../images/thumbs/dc73-bookshelf.webp', full:'../images/full/dc73-bookshelf.webp', category:'table', label:'Bookshelf in light wood, navy leather-strap uprights' },
+  { thumb:'../images/thumbs/jg001c-wine-cabinet.webp', full:'../images/full/jg001c-wine-cabinet.webp', category:'table', label:'Lacquered cabinet in an orange-to-black gradient, orange plinth' },
+  { thumb:'../images/thumbs/n609b-l-nightstand-1.webp', full:'../images/full/n609b-l-nightstand-1.webp', category:'table', label:'Curved walnut-wood nightstand, veined white marble top' },
+  { thumb:'../images/thumbs/pm05b12-chest-of-drawers.webp', full:'../images/full/pm05b12-chest-of-drawers.webp', category:'table', label:'Cabinet with a marquetry basket-weave motif in plum and ochre, light-wood base' },
+  { thumb:'../images/thumbs/pm06b12-chest-of-drawers.webp', full:'../images/full/pm06b12-chest-of-drawers.webp', category:'table', label:'Marquetry cabinet with a dune motif, light-wood, brown, orange and magenta tones' },
+  { thumb:'../images/thumbs/pm07b12-chest-of-drawers.webp', full:'../images/full/pm07b12-chest-of-drawers.webp', category:'table', label:'Marquetry cabinet with a city-rooftop motif, burgundy and taupe tones, chrome metal joint' },
+  { thumb:'../images/thumbs/s979b-cabinet-1.webp', full:'../images/full/s979b-cabinet-1.webp', category:'table', label:'Magazine rack in saddle brown leather on a crossed wood-and-metal frame' },
+  { thumb:'../images/thumbs/s979b-cabinet-2.webp', full:'../images/full/s979b-cabinet-2.webp', category:'table', label:'Magazine rack in stitched charcoal-grey leather, X-frame in wood and metal' },
+  { thumb:'../images/thumbs/sy001-coat-rack.webp', full:'../images/full/sy001-coat-rack.webp', category:'table', label:'Sculptural coat rack in light wood with marquetry stripes, black hooks' },
+  { thumb:'../images/thumbs/sy002-coat-rack.webp', full:'../images/full/sy002-coat-rack.webp', category:'table', label:'Sculptural lacquered coat rack, fan-shaped silhouette in black, red and plum' },
+  { thumb:'../images/thumbs/h865-desk-1.webp', full:'../images/full/h865-desk-1.webp', category:'table', label:'Organic-shaped desk, veined beige stone top, black structure, burgundy leather drawer' },
+  { thumb:'../images/thumbs/h865-desk-2.webp', full:'../images/full/h865-desk-2.webp', category:'table', label:'Desk with a veined beige marble top on a black frame, exposed red leather drawer' },
+  { thumb:'../images/thumbs/t925b-desk-1.webp', full:'../images/full/t925b-desk-1.webp', category:'table', label:'Oval desk lacquered taupe, curved central column and clear glass legs' },
+  { thumb:'../images/thumbs/t925b-desk-2.webp', full:'../images/full/t925b-desk-2.webp', category:'table', label:'Glossy taupe-lacquered desk, sculptural curved column and cylindrical glass legs' },
+  { thumb:'../images/thumbs/c666-dining-table-1.webp', full:'../images/full/c666-dining-table-1.webp', category:'table', label:'Oval dining table in ivory marbled stone with a wavy edge, four cylindrical walnut-wood legs' },
+  { thumb:'../images/thumbs/c666-dining-table-2.webp', full:'../images/full/c666-dining-table-2.webp', category:'table', label:'Oval dining table in light stone with a wave-carved edge, solid walnut-wood base' },
+  { thumb:'../images/thumbs/c917-dining-table-1.webp', full:'../images/full/c917-dining-table-1.webp', category:'table', label:'Rectangular dining table in veined grey marble, conical walnut-wood base' },
+  { thumb:'../images/thumbs/c917-dining-table-2.webp', full:'../images/full/c917-dining-table-2.webp', category:'table', label:'Dining table with a rectangular light-grey marble top and a solid conical walnut-wood central leg' },
+  { thumb:'../images/thumbs/lounge-chair-a-scene.webp', full:'../images/full/lounge-chair-a-scene.webp', category:'fauteuil', label:'Lounge chair in midnight-blue velvet, curved black-stained wood frame' },
+  { thumb:'../images/thumbs/lounge-chair-b-scene-1.webp', full:'../images/full/lounge-chair-b-scene-1.webp', category:'fauteuil', label:'Armchair in carved walnut wood with curved armrests, round mustard velvet seat' },
+  { thumb:'../images/thumbs/lounge-chair-b-scene-2.webp', full:'../images/full/lounge-chair-b-scene-2.webp', category:'fauteuil', label:'Chair with a curved dark-wood backrest, round ochre velvet seat' },
+  { thumb:'../images/thumbs/c827-dining-table-1.webp', full:'../images/full/c827-dining-table-1.webp', category:'table', label:'Round dining table in walnut wood, central veined-marble lazy Susan' },
+  { thumb:'../images/thumbs/c827-dining-table-2.webp', full:'../images/full/c827-dining-table-2.webp', category:'table', label:'Round dining table in walnut wood with a carved base, light-marble swivel top at the centre' },
+  { thumb:'../images/thumbs/dining-table-1-scene-a.webp', full:'../images/full/dining-table-1-scene-a.webp', category:'table', label:'Round dining table in pink marble with a wavy edge, cylindrical gold-brass base' },
+  { thumb:'../images/thumbs/dining-table-1-scene-b.webp', full:'../images/full/dining-table-1-scene-b.webp', category:'table', label:'Round dining table in veined pink marble, central gold-brass leg surrounded by multicoloured velvet chairs' },
+  { thumb:'../images/thumbs/c01-lounge-chair-1.webp', full:'../images/full/c01-lounge-chair-1.webp', category:'fauteuil', label:'Dining armchair in checkerboard-woven ecru-and-beige fabric, enveloping frame' },
+  { thumb:'../images/thumbs/c01-lounge-chair-2.webp', full:'../images/full/c01-lounge-chair-2.webp', category:'fauteuil', label:'Dining armchair in checkerboard-woven ecru-and-beige fabric, three-quarter view' },
+  { thumb:'../images/thumbs/c02-dining-chair-1.webp', full:'../images/full/c02-dining-chair-1.webp', category:'fauteuil', label:'Chair in pearl-grey bouclé, quilted back and seat, tapered black metal legs' },
+  { thumb:'../images/thumbs/c02-dining-chair-2.webp', full:'../images/full/c02-dining-chair-2.webp', category:'fauteuil', label:'Chair in quilted pearl-grey bouclé, black legs, shown in a dining setting' },
+  { thumb:'../images/thumbs/c03-lounge-chair-1.webp', full:'../images/full/c03-lounge-chair-1.webp', category:'fauteuil', label:'Swivel chair in graphic taupe-and-ecru print fabric, black metal compass legs' },
+  { thumb:'../images/thumbs/c03-lounge-chair-2.webp', full:'../images/full/c03-lounge-chair-2.webp', category:'fauteuil', label:'Swivel chair in graphic taupe-and-ecru print fabric, black metal compass legs, front view' },
+  { thumb:'../images/thumbs/c05-dining-chair-1.webp', full:'../images/full/c05-dining-chair-1.webp', category:'fauteuil', label:'High-back armchair in grey-and-ecru striped fabric, enveloping armrests' },
+  { thumb:'../images/thumbs/c05-dining-chair-2.webp', full:'../images/full/c05-dining-chair-2.webp', category:'fauteuil', label:'High-back armchair in grey-and-ecru striped fabric, close-up on the quilting' },
+  { thumb:'../images/thumbs/c12-dining-chair-1.webp', full:'../images/full/c12-dining-chair-1.webp', category:'fauteuil', label:'Dining chair with a rounded back in beige organic-print fabric, black wood legs' },
+  { thumb:'../images/thumbs/c12-dining-chair-2.webp', full:'../images/full/c12-dining-chair-2.webp', category:'fauteuil', label:'Chair with rounded back and armrests in beige organic-print fabric, black wood legs' },
+  { thumb:'../images/thumbs/c13-dining-chair-1.webp', full:'../images/full/c13-dining-chair-1.webp', category:'fauteuil', label:'Dining armchair with a shell back in ivory linen, tapered dark-wood legs' },
+  { thumb:'../images/thumbs/c13-dining-chair-2.webp', full:'../images/full/c13-dining-chair-2.webp', category:'fauteuil', label:'Shell-back armchair in ivory linen, tapered dark-wood legs, three-quarter view' },
+  { thumb:'../images/thumbs/lounge-chair-c-scene-1.webp', full:'../images/full/lounge-chair-c-scene-1.webp', category:'fauteuil', label:'Low armchair with black-wood frame, striped woven cushions in terracotta, white and olive' },
+  { thumb:'../images/thumbs/lounge-chair-c-scene-2.webp', full:'../images/full/lounge-chair-c-scene-2.webp', category:'fauteuil', label:'Low armchair in black wood, striped woven cushions in terracotta and olive, close-up view' },
+  { thumb:'../images/thumbs/dc71-bench.webp', full:'../images/full/dc71-bench.webp', category:'table', label:'Sculptural bench in light wood with curved legs, slatted seat with round ecru bouclé cushions' },
+  { thumb:'../images/thumbs/4D859.webp', full:'../images/full/4D859.webp', category:'fauteuil', label:'Armchair in chocolate leather on a slender metal frame, full view of the thick seat' },
+  { thumb:'../images/thumbs/4D868.webp', full:'../images/full/4D868.webp', category:'fauteuil', label:'Swivel armchair in tufted brown velvet, warm end-of-day light' },
+  { thumb:'../images/thumbs/4D9010.webp', full:'../images/full/4D9010.webp', category:'pouf', label:'Round pouf in quilted camel faux fur, stitched cognac-leather base' },
+
+  // --- Import 御宅翡丽 白底 (sofas, armchairs, tables, beds, nightstands) ---
+  { thumb:'../images/thumbs/hm01-sofa-cuir-cognac.webp', full:'../images/full/hm01-sofa-cuir-cognac.webp', category:'cuir', label:'Cognac leather three-seater sofa, contrasting cushions' },
+  { thumb:'../images/thumbs/hm011-sofa-textile-gris.webp', full:'../images/full/hm011-sofa-textile-gris.webp', category:'textile', label:'Low sofa in light grey fabric, clean lines' },
+  { thumb:'../images/thumbs/hm013-sofa-cuir-ivoire.webp', full:'../images/full/hm013-sofa-cuir-ivoire.webp', category:'cuir', label:'Ivory leather sofa, contemporary low profile' },
+  { thumb:'../images/thumbs/hm014-sofa-textile-rose.webp', full:'../images/full/hm014-sofa-textile-rose.webp', category:'textile', label:'Modular sofa in powder pink bouclé' },
+  { thumb:'../images/thumbs/hm015-sofa-cuir-capitonne.webp', full:'../images/full/hm015-sofa-cuir-capitonne.webp', category:'cuir', label:'Ivory leather sofa with vertical channel tufting' },
+  { thumb:'../images/thumbs/hm016-sofa-cuir-angle.webp', full:'../images/full/hm016-sofa-cuir-angle.webp', category:'cuir', label:'Curved corner sofa in ivory leather' },
+  { thumb:'../images/thumbs/hm017-sofa-textile-cuir.webp', full:'../images/full/hm017-sofa-textile-cuir.webp', category:'textile', label:'Beige fabric sofa, cognac leather armrests' },
+  { thumb:'../images/thumbs/hm018-sofa-cuir-noir.webp', full:'../images/full/hm018-sofa-cuir-noir.webp', category:'cuir', label:'Black leather sofa, wooden armrests' },
+  { thumb:'../images/thumbs/hm019-sofa-textile-bleu.webp', full:'../images/full/hm019-sofa-textile-bleu.webp', category:'textile', label:'Modular sofa in blue and white fabric' },
+  { thumb:'../images/thumbs/hm09000-fauteuil-velours-bleu.webp', full:'../images/full/hm09000-fauteuil-velours-bleu.webp', category:'fauteuil', label:'Low armchair in blue velvet, rounded silhouette' },
+  { thumb:'../images/thumbs/hm09001-fauteuil-bicolore.webp', full:'../images/full/hm09001-fauteuil-bicolore.webp', category:'fauteuil', label:'Two-tone armchair, navy and cognac frame' },
+  { thumb:'../images/thumbs/hm09002-fauteuil-cuir-roux.webp', full:'../images/full/hm09002-fauteuil-cuir-roux.webp', category:'fauteuil', label:'Russet leather armchair, white piping' },
+  { thumb:'../images/thumbs/hm200-sofa-cuir-bordeaux.webp', full:'../images/full/hm200-sofa-cuir-bordeaux.webp', category:'cuir', label:'Curved corner sofa in burgundy leather' },
+  { thumb:'../images/thumbs/hm2001-sofa-cuir-cognac.webp', full:'../images/full/hm2001-sofa-cuir-cognac.webp', category:'cuir', label:'Cognac leather sofa, contrasting cushions' },
+  { thumb:'../images/thumbs/hm2002-sofa-textile-ivoire.webp', full:'../images/full/hm2002-sofa-textile-ivoire.webp', category:'textile', label:'Ivory fabric sofa, blue and burgundy accents' },
+  { thumb:'../images/thumbs/hm2003-sofa-cuir-marron.webp', full:'../images/full/hm2003-sofa-cuir-marron.webp', category:'cuir', label:'Dark brown leather sofa' },
+  { thumb:'../images/thumbs/hm2004-sofa-cuir-ivoire.webp', full:'../images/full/hm2004-sofa-cuir-ivoire.webp', category:'cuir', label:'Ivory leather sofa, openwork armrests' },
+  { thumb:'../images/thumbs/hm2005-sofa-velours-prune.webp', full:'../images/full/hm2005-sofa-velours-prune.webp', category:'textile', label:'Corner sofa in plum velvet' },
+  { thumb:'../images/thumbs/hm2006-sofa-textile-ivoire.webp', full:'../images/full/hm2006-sofa-textile-ivoire.webp', category:'textile', label:'Corner sofa in ivory fabric, burgundy accents' },
+  { thumb:'../images/thumbs/hm2007-sofa-cuir-cognac.webp', full:'../images/full/hm2007-sofa-cuir-cognac.webp', category:'cuir', label:'Cognac leather sofa, openwork armrests' },
+  { thumb:'../images/thumbs/hm2008-sofa-cuir-chaise.webp', full:'../images/full/hm2008-sofa-cuir-chaise.webp', category:'cuir', label:'Ivory leather chaise sofa' },
+  { thumb:'../images/thumbs/hm2009-sofa-cuir-marron.webp', full:'../images/full/hm2009-sofa-cuir-marron.webp', category:'cuir', label:'Dark brown leather sofa, low profile' },
+  { thumb:'../images/thumbs/hm2010-sofa-cuir-cognac.webp', full:'../images/full/hm2010-sofa-cuir-cognac.webp', category:'cuir', label:'Cognac leather sofa' },
+  { thumb:'../images/thumbs/hm2011-sofa-textile-ivoire.webp', full:'../images/full/hm2011-sofa-textile-ivoire.webp', category:'textile', label:'Ivory fabric sofa, teal accents' },
+  { thumb:'../images/thumbs/hm2012-sofa-cuir-noir-angle.webp', full:'../images/full/hm2012-sofa-cuir-noir-angle.webp', category:'cuir', label:'Black leather corner sofa, orange accents' },
+  { thumb:'../images/thumbs/hm2013-sofa-cuir-geometrique.webp', full:'../images/full/hm2013-sofa-cuir-geometrique.webp', category:'cuir', label:'Ivory leather sofa, geometric panels' },
+  { thumb:'../images/thumbs/hm2014-sofa-cuir-cognac.webp', full:'../images/full/hm2014-sofa-cuir-cognac.webp', category:'cuir', label:'Cognac leather sofa' },
+  { thumb:'../images/thumbs/hm2015-3-sofa-bouclé-1.webp', full:'../images/full/hm2015-3-sofa-bouclé-1.webp', category:'textile', label:'Ivory bouclé sofa, front view' },
+  { thumb:'../images/thumbs/hm2015-3-sofa-bouclé-2.webp', full:'../images/full/hm2015-3-sofa-bouclé-2.webp', category:'textile', label:'Ivory bouclé sofa, three-quarter view' },
+  { thumb:'../images/thumbs/hm2015-4-sofa-modulaire-1.webp', full:'../images/full/hm2015-4-sofa-modulaire-1.webp', category:'textile', label:'Modular sofa in ivory fabric, blue accents' },
+  { thumb:'../images/thumbs/hm2015-4-sofa-modulaire-2.webp', full:'../images/full/hm2015-4-sofa-modulaire-2.webp', category:'textile', label:'Modular sofa in ivory fabric, overhead view' },
+  { thumb:'../images/thumbs/hm2015-sofa-bouclé-angle.webp', full:'../images/full/hm2015-sofa-bouclé-angle.webp', category:'textile', label:'Corner sofa in ivory bouclé, blue accents' },
+  { thumb:'../images/thumbs/hm2016-1-sofa-courbe-ivoire.webp', full:'../images/full/hm2016-1-sofa-courbe-ivoire.webp', category:'textile', label:'Curved sofa in ivory fabric' },
+  { thumb:'../images/thumbs/hm2016-sofa-courbe-sarcelle.webp', full:'../images/full/hm2016-sofa-courbe-sarcelle.webp', category:'textile', label:'Curved sofa in teal blue fabric' },
+  { thumb:'../images/thumbs/hm03-fauteuil-tissu-bois.webp', full:'../images/full/hm03-fauteuil-tissu-bois.webp', category:'fauteuil', label:'Armchair in ivory fabric, exposed wood frame' },
+  { thumb:'../images/thumbs/hm031-fauteuil-cuir-cognac.webp', full:'../images/full/hm031-fauteuil-cuir-cognac.webp', category:'fauteuil', label:'Cognac leather armchair, acrylic base' },
+  { thumb:'../images/thumbs/hm032-fauteuil-cuir-vert.webp', full:'../images/full/hm032-fauteuil-cuir-vert.webp', category:'fauteuil', label:'Bergère armchair in green leather, wood legs' },
+  { thumb:'../images/thumbs/hm033-fauteuil-bergere-bois.webp', full:'../images/full/hm033-fauteuil-bergere-bois.webp', category:'fauteuil', label:'Bergère armchair, wooden armrests' },
+  { thumb:'../images/thumbs/hm034-fauteuil-velours-marine.webp', full:'../images/full/hm034-fauteuil-velours-marine.webp', category:'fauteuil', label:'Swivel armchair in navy velvet, wood frame' },
+  { thumb:'../images/thumbs/hm035-fauteuil-cuir-bas.webp', full:'../images/full/hm035-fauteuil-cuir-bas.webp', category:'fauteuil', label:'Low leather armchair, clean lines' },
+  { thumb:'../images/thumbs/hm036-fauteuil-velours-prune.webp', full:'../images/full/hm036-fauteuil-velours-prune.webp', category:'fauteuil', label:'Plum velvet armchair, wood frame' },
+  { thumb:'../images/thumbs/hm037-fauteuil-velours-marine.webp', full:'../images/full/hm037-fauteuil-velours-marine.webp', category:'fauteuil', label:'Navy velvet armchair with vertical channel tufting' },
+  { thumb:'../images/thumbs/hm038b-fauteuil-bouclé-repose.webp', full:'../images/full/hm038b-fauteuil-bouclé-repose.webp', category:'fauteuil', label:'Bergère armchair in ivory bouclé with ottoman' },
+  { thumb:'../images/thumbs/hm038-fauteuil-marine-marbre.webp', full:'../images/full/hm038-fauteuil-marine-marbre.webp', category:'fauteuil', label:'Navy blue armchair, marble-effect side panel' },
+  { thumb:'../images/thumbs/hm039-fauteuil-pivotant-bicolore.webp', full:'../images/full/hm039-fauteuil-pivotant-bicolore.webp', category:'fauteuil', label:'Two-tone swivel armchair, wood legs' },
+  { thumb:'../images/thumbs/hm040-fauteuil-cuir-noir.webp', full:'../images/full/hm040-fauteuil-cuir-noir.webp', category:'fauteuil', label:'Black leather swivel armchair, rounded silhouette' },
+  { thumb:'../images/thumbs/hm041-fauteuil-velours-courbe.webp', full:'../images/full/hm041-fauteuil-velours-courbe.webp', category:'fauteuil', label:'Swivel armchair in velvet, curved silhouette' },
+  { thumb:'../images/thumbs/hm042-fauteuil-cuir-tonneau.webp', full:'../images/full/hm042-fauteuil-cuir-tonneau.webp', category:'fauteuil', label:'Barrel armchair in cognac leather, wood legs' },
+  { thumb:'../images/thumbs/hm043-fauteuil-sculptural.webp', full:'../images/full/hm043-fauteuil-sculptural.webp', category:'fauteuil', label:'Sculptural armchair in ivory and cognac leather' },
+  { thumb:'../images/thumbs/hm044-fauteuil-tablette.webp', full:'../images/full/hm044-fauteuil-tablette.webp', category:'fauteuil', label:'Cognac leather armchair with integrated tray table' },
+  { thumb:'../images/thumbs/hm045-fauteuil-dossier-haut.webp', full:'../images/full/hm045-fauteuil-dossier-haut.webp', category:'fauteuil', label:'High-back armchair, exposed topstitching' },
+  { thumb:'../images/thumbs/hm046-fauteuil-sculptural-duo.webp', full:'../images/full/hm046-fauteuil-sculptural-duo.webp', category:'fauteuil', label:'Sculptural swivel armchair, ivory and teal' },
+  { thumb:'../images/thumbs/hm02-table-marbre-tiroir.webp', full:'../images/full/hm02-table-marbre-tiroir.webp', category:'table', label:'Marble coffee table with wood drawer and brass legs' },
+  { thumb:'../images/thumbs/hm021-table-marbre-vert.webp', full:'../images/full/hm021-table-marbre-vert.webp', category:'table', label:'Organic-shaped green marble coffee table, dark wood base' },
+  { thumb:'../images/thumbs/hm022-table-marbre-fleur.webp', full:'../images/full/hm022-table-marbre-fleur.webp', category:'table', label:'Round white marble coffee table with floral inlay, paired with wood side table' },
+  { thumb:'../images/thumbs/hm023-table-pierre-ovale.webp', full:'../images/full/hm023-table-pierre-ovale.webp', category:'table', label:'Oval coffee table in light stone, sculptural base' },
+  { thumb:'../images/thumbs/hm024-table-pierre-plateau.webp', full:'../images/full/hm024-table-pierre-plateau.webp', category:'table', label:'Blue-grey stone coffee table with brass well tray' },
+  { thumb:'../images/thumbs/hm025-table-duo-marbre.webp', full:'../images/full/hm025-table-duo-marbre.webp', category:'table', label:'Pair of round coffee tables, light and green marble' },
+  { thumb:'../images/thumbs/hm026-table-marbre-vert-metal.webp', full:'../images/full/hm026-table-marbre-vert-metal.webp', category:'table', label:'Rectangular green marble coffee table, metal base' },
+  { thumb:'../images/thumbs/hm027-table-pierre-appoint.webp', full:'../images/full/hm027-table-pierre-appoint.webp', category:'table', label:'Blue-grey stone coffee table with round side table' },
+  { thumb:'../images/thumbs/hm028-table-marbre-texture.webp', full:'../images/full/hm028-table-marbre-texture.webp', category:'table', label:'Textured marble bench-style coffee table' },
+  { thumb:'../images/thumbs/hm029-table-marbre-fleur-ovale.webp', full:'../images/full/hm029-table-marbre-fleur-ovale.webp', category:'table', label:'Oval white marble coffee table with floral inlay' },
+  { thumb:'../images/thumbs/hm030-table-marbre-vert-banc.webp', full:'../images/full/hm030-table-marbre-vert-banc.webp', category:'table', label:'Dark green marble bench-style coffee table' },
+  { thumb:'../images/thumbs/hm0301-table-bois-pierre.webp', full:'../images/full/hm0301-table-bois-pierre.webp', category:'table', label:'Round two-tier coffee table, wood and blue stone' },
+  { thumb:'../images/thumbs/hm0302-table-duo-sombre.webp', full:'../images/full/hm0302-table-duo-sombre.webp', category:'table', label:'Dark rectangular coffee table with round side table' },
+  { thumb:'../images/thumbs/hm0303-table-marbre-oiseau.webp', full:'../images/full/hm0303-table-marbre-oiseau.webp', category:'table', label:'Oval green marble coffee table with bird motif, paired with side table' },
+  { thumb:'../images/thumbs/hm0304-table-laquee-ivoire.webp', full:'../images/full/hm0304-table-laquee-ivoire.webp', category:'table', label:'Ivory lacquered coffee table, wood structure' },
+  { thumb:'../images/thumbs/hm0305-table-ivoire-metal.webp', full:'../images/full/hm0305-table-ivoire-metal.webp', category:'table', label:'Ivory coffee table with round metal side table' },
+  { thumb:'../images/thumbs/hm0306-table-marbre-vert-duo.webp', full:'../images/full/hm0306-table-marbre-vert-duo.webp', category:'table', label:'Oval green marble coffee table with wood side table' },
+  { thumb:'../images/thumbs/hm0307-table-bois-claire.webp', full:'../images/full/hm0307-table-bois-claire.webp', category:'table', label:'Wood coffee table with slatted base' },
+  { thumb:'../images/thumbs/hm0308-table-marbre-fleur-rect.webp', full:'../images/full/hm0308-table-marbre-fleur-rect.webp', category:'table', label:'Rectangular white marble coffee table with floral inlay' },
+  { thumb:'../images/thumbs/hm0309-table-marbre-bleu.webp', full:'../images/full/hm0309-table-marbre-bleu.webp', category:'table', label:'Blue marble coffee table, ivory base' },
+  { thumb:'../images/thumbs/hm0310-table-marbre-sombre-duo.webp', full:'../images/full/hm0310-table-marbre-sombre-duo.webp', category:'table', label:'Pair of round coffee tables in dark marble' },
+  { thumb:'../images/thumbs/hm0311-table-marbre-vert-duo.webp', full:'../images/full/hm0311-table-marbre-vert-duo.webp', category:'table', label:'Pair of green marble side tables, wood legs' },
+  { thumb:'../images/thumbs/hm6060-table-appoint-x.webp', full:'../images/full/hm6060-table-appoint-x.webp', category:'table', label:'Side table with X-shaped brass and marble base' },
+  { thumb:'../images/thumbs/hm6061-table-appoint-marbre-vert.webp', full:'../images/full/hm6061-table-appoint-marbre-vert.webp', category:'table', label:'Square dark green marble side table, metal legs' },
+  { thumb:'../images/thumbs/hm6062-table-appoint-duo-rose.webp', full:'../images/full/hm6062-table-appoint-duo-rose.webp', category:'table', label:'Pair of side tables in pink stone, sculptural bases' },
+  { thumb:'../images/thumbs/hm6063-table-appoint-marbre-blanc.webp', full:'../images/full/hm6063-table-appoint-marbre-blanc.webp', category:'table', label:'Round white marble side table, sculptural base' },
+  { thumb:'../images/thumbs/hm6064-table-appoint-marbre-fin.webp', full:'../images/full/hm6064-table-appoint-marbre-fin.webp', category:'table', label:'Square marble side table, slender metal legs' },
+  { thumb:'../images/thumbs/hm6065-table-appoint-marbre-sombre.webp', full:'../images/full/hm6065-table-appoint-marbre-sombre.webp', category:'table', label:'Round dark marble side table, metal legs' },
+  { thumb:'../images/thumbs/hm6066-table-appoint-duo-marbre.webp', full:'../images/full/hm6066-table-appoint-duo-marbre.webp', category:'table', label:'Pair of round marble side tables, brass legs' },
+  { thumb:'../images/thumbs/hm6067-table-appoint-duo-rect.webp', full:'../images/full/hm6067-table-appoint-duo-rect.webp', category:'table', label:'Pair of rectangular marble side tables' },
+  { thumb:'../images/thumbs/hm6068-table-appoint-carree.webp', full:'../images/full/hm6068-table-appoint-carree.webp', category:'table', label:'Square side table on marble base' },
+  { thumb:'../images/thumbs/hm6069-table-appoint-organique.webp', full:'../images/full/hm6069-table-appoint-organique.webp', category:'table', label:'Green-blue marble side table, organic shape, gilded base' },
+  { thumb:'../images/thumbs/hm6070-table-appoint-sombre.webp', full:'../images/full/hm6070-table-appoint-sombre.webp', category:'table', label:'Round dark marble side table, brass legs' },
+  { thumb:'../images/thumbs/hm6071-table-appoint-marbre-blanc-cylindre.webp', full:'../images/full/hm6071-table-appoint-marbre-blanc-cylindre.webp', category:'table', label:'Light marble side table, curved cylindrical base' },
+  { thumb:'../images/thumbs/hm6072-table-appoint-bois-fin.webp', full:'../images/full/hm6072-table-appoint-bois-fin.webp', category:'table', label:'Wood side table, slender brass legs' },
+  { thumb:'../images/thumbs/hm6073-table-appoint-bicolore.webp', full:'../images/full/hm6073-table-appoint-bicolore.webp', category:'table', label:'Two-tone side table, angular gilded base' },
+  { thumb:'../images/thumbs/hm6074-table-appoint-bois-cannele.webp', full:'../images/full/hm6074-table-appoint-bois-cannele.webp', category:'table', label:'Square wood side table, fluted ivory base' },
+  { thumb:'../images/thumbs/hm6075-table-appoint-duo-sombre.webp', full:'../images/full/hm6075-table-appoint-duo-sombre.webp', category:'table', label:'Pair of round marble side tables, dark bases' },
+  { thumb:'../images/thumbs/hm6076-table-appoint-marbre-courbe.webp', full:'../images/full/hm6076-table-appoint-marbre-courbe.webp', category:'table', label:'Round dark marble side table, curved brass base' },
+  { thumb:'../images/thumbs/hm6077-table-appoint-bois-marbre.webp', full:'../images/full/hm6077-table-appoint-bois-marbre.webp', category:'table', label:'Two-tier side table in wood and marble, brass base' },
+  { thumb:'../images/thumbs/hm6078-table-appoint-groupe.webp', full:'../images/full/hm6078-table-appoint-groupe.webp', category:'table', label:'Set of sculptural side tables' },
+  { thumb:'../images/thumbs/hm6079-table-appoint-bois-ronde.webp', full:'../images/full/hm6079-table-appoint-bois-ronde.webp', category:'table', label:'Round wood side table, ivory base' },
+  { thumb:'../images/thumbs/hm0800-lit-cuir-cognac.webp', full:'../images/full/hm0800-lit-cuir-cognac.webp', category:'lit', label:'Cognac leather bed with tufted headboard' },
+  { thumb:'../images/thumbs/hm08001-lit-velours-marine.webp', full:'../images/full/hm08001-lit-velours-marine.webp', category:'lit', label:'Winged headboard bed in navy velvet, matching nightstands' },
+  { thumb:'../images/thumbs/hm08002-lit-capitonne-prune.webp', full:'../images/full/hm08002-lit-capitonne-prune.webp', category:'lit', label:'Curved tufted headboard bed in plum velvet' },
+  { thumb:'../images/thumbs/hm08003-lit-ailes-marine.webp', full:'../images/full/hm08003-lit-ailes-marine.webp', category:'lit', label:'Winged tufted headboard bed in navy velvet' },
+  { thumb:'../images/thumbs/hm08004-lit-bordeaux-marbre.webp', full:'../images/full/hm08004-lit-bordeaux-marbre.webp', category:'lit', label:'Tufted burgundy bed, marble-effect side panels' },
+  { thumb:'../images/thumbs/hm08005-lit-panneaux-sarcelle.webp', full:'../images/full/hm08005-lit-panneaux-sarcelle.webp', category:'lit', label:'Panel headboard bed in teal blue velvet' },
+  { thumb:'../images/thumbs/hm08006-lit-panneaux-bleu.webp', full:'../images/full/hm08006-lit-panneaux-bleu.webp', category:'lit', label:'Bed with wide blue panel headboard' },
+  { thumb:'../images/thumbs/hm08007-lit-taupe-chevets.webp', full:'../images/full/hm08007-lit-taupe-chevets.webp', category:'lit', label:'Taupe fabric bed with integrated wood nightstands' },
+  { thumb:'../images/thumbs/hm08008-lit-noir-courbe.webp', full:'../images/full/hm08008-lit-noir-courbe.webp', category:'lit', label:'Black curved headboard bed, round nightstand inserts' },
+  { thumb:'../images/thumbs/hm08009-lit-cuir-vague.webp', full:'../images/full/hm08009-lit-cuir-vague.webp', category:'lit', label:'Brown leather bed, wave-pattern headboard' },
+  { thumb:'../images/thumbs/hm08010-lit-cuir-noir.webp', full:'../images/full/hm08010-lit-cuir-noir.webp', category:'lit', label:'Black leather bed, integrated round nightstand' },
+  { thumb:'../images/thumbs/hm08011-lit-ivoire-vague.webp', full:'../images/full/hm08011-lit-ivoire-vague.webp', category:'lit', label:'Ivory fabric bed, wave-shaped headboard' },
+  { thumb:'../images/thumbs/hm08012-lit-cuir-rainure.webp', full:'../images/full/hm08012-lit-cuir-rainure.webp', category:'lit', label:'Ribbed cognac leather bed with integrated nightstand-shelf' },
+  { thumb:'../images/thumbs/hm08013-lit-cuir-orange.webp', full:'../images/full/hm08013-lit-cuir-orange.webp', category:'lit', label:'Cognac leather bed, panel headboard' },
+  { thumb:'../images/thumbs/hm08014-lit-ivoire-panneaux.webp', full:'../images/full/hm08014-lit-ivoire-panneaux.webp', category:'lit', label:'Ivory fabric bed, panel headboard' },
+  { thumb:'../images/thumbs/hm08015-lit-cuir-bleu-pouf.webp', full:'../images/full/hm08015-lit-cuir-bleu-pouf.webp', category:'lit', label:'Blue leather bed with matching footboard ottoman' },
+  { thumb:'../images/thumbs/hm10000-chevet-cuir-bleu.webp', full:'../images/full/hm10000-chevet-cuir-bleu.webp', category:'table', label:'Pair of drum nightstands in blue leather' },
+  { thumb:'../images/thumbs/hm100001-chevet-cuir-mauve.webp', full:'../images/full/hm100001-chevet-cuir-mauve.webp', category:'table', label:'Pair of drum nightstands in mauve leather' },
+  { thumb:'../images/thumbs/hm100002-chevet-bois-sombre.webp', full:'../images/full/hm100002-chevet-bois-sombre.webp', category:'table', label:'Wood cube nightstand, dark top' },
+  { thumb:'../images/thumbs/hm100003-chevet-cuir-bordeaux.webp', full:'../images/full/hm100003-chevet-cuir-bordeaux.webp', category:'table', label:'Pair of cube nightstands in burgundy leather' },
+  { thumb:'../images/thumbs/hm100004-chevet-tissu-gris.webp', full:'../images/full/hm100004-chevet-tissu-gris.webp', category:'table', label:'Pair of grey fabric nightstands with drawer' },
+  { thumb:'../images/thumbs/hm100005-chevet-cuir-bordeaux-2.webp', full:'../images/full/hm100005-chevet-cuir-bordeaux-2.webp', category:'table', label:'Pair of burgundy leather nightstands, brass finish' },
+  { thumb:'../images/thumbs/hm100006-chevet-marine-marbre.webp', full:'../images/full/hm100006-chevet-marine-marbre.webp', category:'table', label:'Navy blue nightstand, marble-effect top' },
+  { thumb:'../images/thumbs/hm100007-chevet-cuir-marine.webp', full:'../images/full/hm100007-chevet-cuir-marine.webp', category:'table', label:'Pair of drum nightstands in navy leather' },
+  { thumb:'../images/thumbs/hm100008-chevet-bois-cube.webp', full:'../images/full/hm100008-chevet-bois-cube.webp', category:'table', label:'Brown wood cube nightstand' },
+  { thumb:'../images/thumbs/hm100009-chevet-cuir-ivoire.webp', full:'../images/full/hm100009-chevet-cuir-ivoire.webp', category:'table', label:'Pair of ivory leather nightstands, vertical topstitching' },
+  { thumb:'../images/thumbs/hm100010-chevet-marbre-noir.webp', full:'../images/full/hm100010-chevet-marbre-noir.webp', category:'table', label:'Round black nightstand, inlaid marble top' },
+  { thumb:'../images/thumbs/hm100011-chevet-pied-ivoire.webp', full:'../images/full/hm100011-chevet-pied-ivoire.webp', category:'table', label:'Pair of pedestal nightstands, round marbled top' },
+  { thumb:'../images/thumbs/hm100012-chevet-marine-pied.webp', full:'../images/full/hm100012-chevet-marine-pied.webp', category:'table', label:'Pair of navy blue pedestal nightstands' },
+  { thumb:'../images/thumbs/hm100013-chevet-ivoire-bois.webp', full:'../images/full/hm100013-chevet-ivoire-bois.webp', category:'table', label:'Pair of ivory nightstands, wood legs' },
+
+  // --- Import novapulezzi_media ---
+  { thumb:'../images/thumbs/sofa-1441-pj-1.webp', full:'../images/full/sofa-1441-pj-1.webp', category:'cuir', label:'Olive-green leather sofa, contemporary silhouette' },
+  { thumb:'../images/thumbs/sofa-1441-pj-2.webp', full:'../images/full/sofa-1441-pj-2.webp', category:'cuir', label:'Olive-green leather sofa, contemporary silhouette, overall view' },
+  { thumb:'../images/thumbs/sofa-1441-pj-3.webp', full:'../images/full/sofa-1441-pj-3.webp', category:'cuir', label:'Olive-green leather sofa, contemporary silhouette, close-up view' },
+  { thumb:'../images/thumbs/sofa-1441-pj-4.webp', full:'../images/full/sofa-1441-pj-4.webp', category:'cuir', label:'Olive-green leather sofa, contemporary silhouette, living room view' },
+  { thumb:'../images/thumbs/sofa-1441-pj-5.webp', full:'../images/full/sofa-1441-pj-5.webp', category:'cuir', label:'Olive-green leather sofa, contemporary silhouette, detail' },
+  { thumb:'../images/thumbs/sofa-1441-pj-6.webp', full:'../images/full/sofa-1441-pj-6.webp', category:'cuir', label:'Olive-green leather sofa, contemporary silhouette, styled setting' },
+  { thumb:'../images/thumbs/sofa-1448-plz-1.webp', full:'../images/full/sofa-1448-plz-1.webp', category:'cuir', label:'Ivory leather sofa, FORMA showroom' },
+  { thumb:'../images/thumbs/sofa-1448-plz-2.webp', full:'../images/full/sofa-1448-plz-2.webp', category:'cuir', label:'Ivory leather sofa, FORMA showroom, overall view' },
+  { thumb:'../images/thumbs/sofa-1448-plz-3.webp', full:'../images/full/sofa-1448-plz-3.webp', category:'cuir', label:'Ivory leather sofa, FORMA showroom, close-up view' },
+  { thumb:'../images/thumbs/sofa-1448-plz-4.webp', full:'../images/full/sofa-1448-plz-4.webp', category:'cuir', label:'Ivory leather sofa, FORMA showroom, living room view' },
+  { thumb:'../images/thumbs/sofa-1448-plz-5.webp', full:'../images/full/sofa-1448-plz-5.webp', category:'cuir', label:'Ivory leather sofa, FORMA showroom, detail' },
+  { thumb:'../images/thumbs/sofa-1449-plz-1.webp', full:'../images/full/sofa-1449-plz-1.webp', category:'textile', label:'Low sofa in mustard corduroy velvet' },
+  { thumb:'../images/thumbs/sofa-1449-plz-2.webp', full:'../images/full/sofa-1449-plz-2.webp', category:'textile', label:'Low sofa in mustard corduroy velvet, overall view' },
+  { thumb:'../images/thumbs/sofa-1449-plz-3.webp', full:'../images/full/sofa-1449-plz-3.webp', category:'textile', label:'Low sofa in mustard corduroy velvet, close-up view' },
+  { thumb:'../images/thumbs/sofa-1449-plz-4.webp', full:'../images/full/sofa-1449-plz-4.webp', category:'textile', label:'Low sofa in mustard corduroy velvet, living room view' },
+  { thumb:'../images/thumbs/sofa-1449-plz-5.webp', full:'../images/full/sofa-1449-plz-5.webp', category:'textile', label:'Low sofa in mustard corduroy velvet, detail' },
+  { thumb:'../images/thumbs/sofa-1449-plz-6.webp', full:'../images/full/sofa-1449-plz-6.webp', category:'textile', label:'Low sofa in mustard corduroy velvet, styled setting' },
+  { thumb:'../images/thumbs/sofa-1450-plz-1.webp', full:'../images/full/sofa-1450-plz-1.webp', category:'cuir', label:'Modular sofa in anthracite grey leather' },
+  { thumb:'../images/thumbs/sofa-1450-plz-2.webp', full:'../images/full/sofa-1450-plz-2.webp', category:'cuir', label:'Modular sofa in anthracite grey leather, overall view' },
+  { thumb:'../images/thumbs/sofa-1450-plz-3.webp', full:'../images/full/sofa-1450-plz-3.webp', category:'cuir', label:'Modular sofa in anthracite grey leather, close-up view' },
+  { thumb:'../images/thumbs/sofa-1450-plz-4.webp', full:'../images/full/sofa-1450-plz-4.webp', category:'cuir', label:'Modular sofa in anthracite grey leather, living room view' },
+  { thumb:'../images/thumbs/sofa-1450-plz-5.webp', full:'../images/full/sofa-1450-plz-5.webp', category:'cuir', label:'Modular sofa in anthracite grey leather, detail' },
+  { thumb:'../images/thumbs/sofa-1451-plz-1.webp', full:'../images/full/sofa-1451-plz-1.webp', category:'textile', label:'Pair of matching sofas in ecru and black tweed fabric' },
+  { thumb:'../images/thumbs/sofa-1451-plz-2.webp', full:'../images/full/sofa-1451-plz-2.webp', category:'textile', label:'Pair of matching sofas in ecru and black tweed fabric, overall view' },
+  { thumb:'../images/thumbs/sofa-1451-plz-3.webp', full:'../images/full/sofa-1451-plz-3.webp', category:'textile', label:'Pair of matching sofas in ecru and black tweed fabric, close-up view' },
+  { thumb:'../images/thumbs/sofa-1451-plz-4.webp', full:'../images/full/sofa-1451-plz-4.webp', category:'textile', label:'Pair of matching sofas in ecru and black tweed fabric, living room view' },
+  { thumb:'../images/thumbs/sofa-1451-plz-5.webp', full:'../images/full/sofa-1451-plz-5.webp', category:'textile', label:'Pair of matching sofas in ecru and black tweed fabric, detail' },
+  { thumb:'../images/thumbs/sofa-1451-plz-6.webp', full:'../images/full/sofa-1451-plz-6.webp', category:'textile', label:'Pair of matching sofas in ecru and black tweed fabric, styled setting' },
+  { thumb:'../images/thumbs/sofa-1451-plz-7.webp', full:'../images/full/sofa-1451-plz-7.webp', category:'textile', label:'Pair of matching sofas in ecru and black tweed fabric, alternate angle' },
+  { thumb:'../images/thumbs/sofa-1451-plz-8.webp', full:'../images/full/sofa-1451-plz-8.webp', category:'textile', label:'Pair of matching sofas in ecru and black tweed fabric' },
+  { thumb:'../images/thumbs/piece-1452-plz-1.webp', full:'../images/full/piece-1452-plz-1.webp', category:'lit', label:'Taupe leather bed, tufted headboard' },
+  { thumb:'../images/thumbs/piece-1452-plz-2.webp', full:'../images/full/piece-1452-plz-2.webp', category:'lit', label:'Taupe leather bed, tufted headboard, overall view' },
+  { thumb:'../images/thumbs/piece-1452-plz-3.webp', full:'../images/full/piece-1452-plz-3.webp', category:'lit', label:'Taupe leather bed, tufted headboard, close-up view' },
+  { thumb:'../images/thumbs/piece-1453-plz-1.webp', full:'../images/full/piece-1453-plz-1.webp', category:'lit', label:'Ivory bouclé bed' },
+  { thumb:'../images/thumbs/piece-1453-plz-2.webp', full:'../images/full/piece-1453-plz-2.webp', category:'lit', label:'Ivory bouclé bed, overall view' },
+  { thumb:'../images/thumbs/piece-1453-plz-3.webp', full:'../images/full/piece-1453-plz-3.webp', category:'lit', label:'Ivory bouclé bed, close-up view' },
+  { thumb:'../images/thumbs/piece-1453-plz-4.webp', full:'../images/full/piece-1453-plz-4.webp', category:'lit', label:'Ivory bouclé bed, living room view' },
+  { thumb:'../images/thumbs/piece-1453-plz-5.webp', full:'../images/full/piece-1453-plz-5.webp', category:'lit', label:'Ivory bouclé bed, detail' },
+  { thumb:'../images/thumbs/sofa-1454-jz-1.webp', full:'../images/full/sofa-1454-jz-1.webp', category:'cuir', label:'Taupe leather sofa' },
+  { thumb:'../images/thumbs/sofa-1454-jz-2.webp', full:'../images/full/sofa-1454-jz-2.webp', category:'cuir', label:'Taupe leather sofa, overall view' },
+  { thumb:'../images/thumbs/sofa-1454-jz-3.webp', full:'../images/full/sofa-1454-jz-3.webp', category:'cuir', label:'Taupe leather sofa, close-up view' },
+  { thumb:'../images/thumbs/sofa-1454-jz-4.webp', full:'../images/full/sofa-1454-jz-4.webp', category:'cuir', label:'Taupe leather sofa, living room view' },
+  { thumb:'../images/thumbs/sofa-1454-jz-5.webp', full:'../images/full/sofa-1454-jz-5.webp', category:'cuir', label:'Taupe leather sofa, detail' },
+  { thumb:'../images/thumbs/sofa-1455-jz-1.webp', full:'../images/full/sofa-1455-jz-1.webp', category:'cuir', label:'Chesterfield sofa in green leather, gold-button tufting' },
+  { thumb:'../images/thumbs/sofa-1455-jz-2.webp', full:'../images/full/sofa-1455-jz-2.webp', category:'cuir', label:'Chesterfield sofa in green leather, gold-button tufting, overall view' },
+  { thumb:'../images/thumbs/sofa-1455-jz-3.webp', full:'../images/full/sofa-1455-jz-3.webp', category:'cuir', label:'Chesterfield sofa in green leather, gold-button tufting, close-up view' },
+  { thumb:'../images/thumbs/sofa-1455-jz-4.webp', full:'../images/full/sofa-1455-jz-4.webp', category:'cuir', label:'Chesterfield sofa in green leather, gold-button tufting, living room view' },
+  { thumb:'../images/thumbs/sofa-1455-jz-5.webp', full:'../images/full/sofa-1455-jz-5.webp', category:'cuir', label:'Chesterfield sofa in green leather, gold-button tufting, detail' },
+  { thumb:'../images/thumbs/sofa-1456-jz-1.webp', full:'../images/full/sofa-1456-jz-1.webp', category:'cuir', label:'Curved green leather sofa, sculptural tufting' },
+  { thumb:'../images/thumbs/sofa-1456-jz-2.webp', full:'../images/full/sofa-1456-jz-2.webp', category:'cuir', label:'Curved green leather sofa, sculptural tufting, overall view' },
+  { thumb:'../images/thumbs/sofa-1456-jz-3.webp', full:'../images/full/sofa-1456-jz-3.webp', category:'cuir', label:'Curved green leather sofa, sculptural tufting, close-up view' },
+  { thumb:'../images/thumbs/sofa-1456-jz-4.webp', full:'../images/full/sofa-1456-jz-4.webp', category:'cuir', label:'Curved green leather sofa, sculptural tufting, living room view' },
+  { thumb:'../images/thumbs/sofa-1456-jz-5.webp', full:'../images/full/sofa-1456-jz-5.webp', category:'cuir', label:'Curved green leather sofa, sculptural tufting, detail' },
+  { thumb:'../images/thumbs/sofa-1456-jz-6.webp', full:'../images/full/sofa-1456-jz-6.webp', category:'cuir', label:'Curved green leather sofa, sculptural tufting, styled setting' },
+  { thumb:'../images/thumbs/sofa-1457-jz-1.webp', full:'../images/full/sofa-1457-jz-1.webp', category:'cuir', label:'Curved mauve leather sofa, sculptural tufting' },
+  { thumb:'../images/thumbs/sofa-1457-jz-2.webp', full:'../images/full/sofa-1457-jz-2.webp', category:'cuir', label:'Curved mauve leather sofa, sculptural tufting, overall view' },
+  { thumb:'../images/thumbs/sofa-1457-jz-3.webp', full:'../images/full/sofa-1457-jz-3.webp', category:'cuir', label:'Curved mauve leather sofa, sculptural tufting, close-up view' },
+  { thumb:'../images/thumbs/sofa-1457-jz-4.webp', full:'../images/full/sofa-1457-jz-4.webp', category:'cuir', label:'Curved mauve leather sofa, sculptural tufting, living room view' },
+  { thumb:'../images/thumbs/sofa-1457-jz-5.webp', full:'../images/full/sofa-1457-jz-5.webp', category:'cuir', label:'Curved mauve leather sofa, sculptural tufting, detail' },
+  { thumb:'../images/thumbs/sofa-1458-jz-1.webp', full:'../images/full/sofa-1458-jz-1.webp', category:'textile', label:'Curved lilac velvet sofa with integrated side table' },
+  { thumb:'../images/thumbs/sofa-1458-jz-2.webp', full:'../images/full/sofa-1458-jz-2.webp', category:'textile', label:'Curved lilac velvet sofa with integrated side table, overall view' },
+  { thumb:'../images/thumbs/sofa-1458-jz-3.webp', full:'../images/full/sofa-1458-jz-3.webp', category:'textile', label:'Curved lilac velvet sofa with integrated side table, close-up view' },
+  { thumb:'../images/thumbs/sofa-1458-jz-4.webp', full:'../images/full/sofa-1458-jz-4.webp', category:'textile', label:'Curved lilac velvet sofa with integrated side table, living room view' },
+  { thumb:'../images/thumbs/sofa-1458-jz-5.webp', full:'../images/full/sofa-1458-jz-5.webp', category:'textile', label:'Curved lilac velvet sofa with integrated side table, detail' },
+  { thumb:'../images/thumbs/sofa-1459-jz-1.webp', full:'../images/full/sofa-1459-jz-1.webp', category:'cuir', label:'Ivory leather sofa with fringe trim' },
+  { thumb:'../images/thumbs/sofa-1459-jz-2.webp', full:'../images/full/sofa-1459-jz-2.webp', category:'cuir', label:'Ivory leather sofa with fringe trim, overall view' },
+  { thumb:'../images/thumbs/sofa-1459-jz-3.webp', full:'../images/full/sofa-1459-jz-3.webp', category:'cuir', label:'Ivory leather sofa with fringe trim, close-up view' },
+  { thumb:'../images/thumbs/sofa-1459-jz-4.webp', full:'../images/full/sofa-1459-jz-4.webp', category:'cuir', label:'Ivory leather sofa with fringe trim, living room view' },
+  { thumb:'../images/thumbs/sofa-1459-jz-5.webp', full:'../images/full/sofa-1459-jz-5.webp', category:'cuir', label:'Ivory leather sofa with fringe trim, detail' },
+  { thumb:'../images/thumbs/piece-1461-jz-1.webp', full:'../images/full/piece-1461-jz-1.webp', category:'lit', label:'Taupe leather bed, tufted headboard with gold trim' },
+  { thumb:'../images/thumbs/piece-1461-jz-2.webp', full:'../images/full/piece-1461-jz-2.webp', category:'lit', label:'Taupe leather bed, tufted headboard with gold trim, overall view' },
+  { thumb:'../images/thumbs/piece-1461-jz-3.webp', full:'../images/full/piece-1461-jz-3.webp', category:'lit', label:'Taupe leather bed, tufted headboard with gold trim, close-up view' },
+  { thumb:'../images/thumbs/piece-1461-jz-4.webp', full:'../images/full/piece-1461-jz-4.webp', category:'lit', label:'Taupe leather bed, tufted headboard with gold trim, living room view' },
+  { thumb:'../images/thumbs/piece-1461-jz-5.webp', full:'../images/full/piece-1461-jz-5.webp', category:'lit', label:'Taupe leather bed, tufted headboard with gold trim, detail' },
+  { thumb:'../images/thumbs/sofa-1464-pj-1.webp', full:'../images/full/sofa-1464-pj-1.webp', category:'cuir', label:'Grey leather corner sofa, matching swivel armchairs' },
+  { thumb:'../images/thumbs/sofa-1464-pj-2.webp', full:'../images/full/sofa-1464-pj-2.webp', category:'cuir', label:'Grey leather corner sofa, matching swivel armchairs, overall view' },
+  { thumb:'../images/thumbs/sofa-1464-pj-3.webp', full:'../images/full/sofa-1464-pj-3.webp', category:'cuir', label:'Grey leather corner sofa, matching swivel armchairs, close-up view' },
+  { thumb:'../images/thumbs/sofa-1464-pj-4.webp', full:'../images/full/sofa-1464-pj-4.webp', category:'cuir', label:'Grey leather corner sofa, matching swivel armchairs, living room view' },
+  { thumb:'../images/thumbs/sofa-1466-plz-1.webp', full:'../images/full/sofa-1466-plz-1.webp', category:'textile', label:'Ivory fabric corner sofa, cognac leather armrests' },
+  { thumb:'../images/thumbs/sofa-1466-plz-2.webp', full:'../images/full/sofa-1466-plz-2.webp', category:'textile', label:'Ivory fabric corner sofa, cognac leather armrests, overall view' },
+  { thumb:'../images/thumbs/sofa-1466-plz-3.webp', full:'../images/full/sofa-1466-plz-3.webp', category:'textile', label:'Ivory fabric corner sofa, cognac leather armrests, close-up view' },
+  { thumb:'../images/thumbs/sofa-1466-plz-4.webp', full:'../images/full/sofa-1466-plz-4.webp', category:'textile', label:'Ivory fabric corner sofa, cognac leather armrests, living room view' },
+  { thumb:'../images/thumbs/sofa-1467-plz-1.webp', full:'../images/full/sofa-1467-plz-1.webp', category:'cuir', label:'Black leather corner sofa, contrasting ivory armrest' },
+  { thumb:'../images/thumbs/sofa-1467-plz-2.webp', full:'../images/full/sofa-1467-plz-2.webp', category:'cuir', label:'Black leather corner sofa, contrasting ivory armrest, overall view' },
+  { thumb:'../images/thumbs/sofa-1467-plz-3.webp', full:'../images/full/sofa-1467-plz-3.webp', category:'cuir', label:'Black leather corner sofa, contrasting ivory armrest, close-up view' },
+  { thumb:'../images/thumbs/sofa-1467-plz-4.webp', full:'../images/full/sofa-1467-plz-4.webp', category:'cuir', label:'Black leather corner sofa, contrasting ivory armrest, living room view' },
+  { thumb:'../images/thumbs/sofa-1468-plz-1.webp', full:'../images/full/sofa-1468-plz-1.webp', category:'cuir', label:'Modular sofa in petrol-blue leather' },
+  { thumb:'../images/thumbs/sofa-1468-plz-2.webp', full:'../images/full/sofa-1468-plz-2.webp', category:'cuir', label:'Modular sofa in petrol-blue leather, overall view' },
+  { thumb:'../images/thumbs/sofa-1468-plz-3.webp', full:'../images/full/sofa-1468-plz-3.webp', category:'cuir', label:'Modular sofa in petrol-blue leather, close-up view' },
+  { thumb:'../images/thumbs/sofa-1468-plz-4.webp', full:'../images/full/sofa-1468-plz-4.webp', category:'cuir', label:'Modular sofa in petrol-blue leather, living room view' },
+  { thumb:'../images/thumbs/sofa-1468-plz-5.webp', full:'../images/full/sofa-1468-plz-5.webp', category:'cuir', label:'Modular sofa in petrol-blue leather, detail' },
+  { thumb:'../images/thumbs/sofa-1469-plz-1.webp', full:'../images/full/sofa-1469-plz-1.webp', category:'textile', label:'Ecru bouclé corner sofa, leather base' },
+  { thumb:'../images/thumbs/sofa-1469-plz-2.webp', full:'../images/full/sofa-1469-plz-2.webp', category:'textile', label:'Ecru bouclé corner sofa, leather base, overall view' },
+  { thumb:'../images/thumbs/sofa-1470-plz-1.webp', full:'../images/full/sofa-1470-plz-1.webp', category:'textile', label:'Burgundy fabric corner sofa' },
+  { thumb:'../images/thumbs/sofa-1470-plz-2.webp', full:'../images/full/sofa-1470-plz-2.webp', category:'textile', label:'Burgundy fabric corner sofa, overall view' },
+  { thumb:'../images/thumbs/piece-1475-pj-1.webp', full:'../images/full/piece-1475-pj-1.webp', category:'table', label:'Travertine dining table, woven cognac leather chairs' },
+  { thumb:'../images/thumbs/piece-1475-pj-2.webp', full:'../images/full/piece-1475-pj-2.webp', category:'table', label:'Travertine dining table, woven cognac leather chairs, overall view' },
+  { thumb:'../images/thumbs/piece-1475-pj-3.webp', full:'../images/full/piece-1475-pj-3.webp', category:'table', label:'Travertine dining table, woven cognac leather chairs, close-up view' },
+  { thumb:'../images/thumbs/piece-1475-pj-4.webp', full:'../images/full/piece-1475-pj-4.webp', category:'table', label:'Travertine dining table, woven cognac leather chairs, living room view' },
+  { thumb:'../images/thumbs/piece-1475-pj-5.webp', full:'../images/full/piece-1475-pj-5.webp', category:'table', label:'Travertine dining table, woven cognac leather chairs, detail' },
+  { thumb:'../images/thumbs/piece-1476-plz-1.webp', full:'../images/full/piece-1476-plz-1.webp', category:'table', label:'Walnut wood table, leather chairs and woven bench' },
+  { thumb:'../images/thumbs/piece-1476-plz-2.webp', full:'../images/full/piece-1476-plz-2.webp', category:'table', label:'Walnut wood table, leather chairs and woven bench, overall view' },
+  { thumb:'../images/thumbs/piece-1476-plz-3.webp', full:'../images/full/piece-1476-plz-3.webp', category:'table', label:'Walnut wood table, leather chairs and woven bench, close-up view' },
+  { thumb:'../images/thumbs/piece-1476-plz-4.webp', full:'../images/full/piece-1476-plz-4.webp', category:'table', label:'Walnut wood table, leather chairs and woven bench, living room view' },
+  { thumb:'../images/thumbs/piece-1476-plz-5.webp', full:'../images/full/piece-1476-plz-5.webp', category:'table', label:'Walnut wood table, leather chairs and woven bench, detail' },
+  { thumb:'../images/thumbs/sofa-1477-px-1.webp', full:'../images/full/sofa-1477-px-1.webp', category:'cuir', label:'Leather sofa, FORMA showroom' },
+  { thumb:'../images/thumbs/sofa-1477-px-2.webp', full:'../images/full/sofa-1477-px-2.webp', category:'cuir', label:'Leather sofa, FORMA showroom, overall view' },
+  { thumb:'../images/thumbs/sofa-1477-px-3.webp', full:'../images/full/sofa-1477-px-3.webp', category:'cuir', label:'Leather sofa, FORMA showroom, close-up view' },
+  { thumb:'../images/thumbs/sofa-1477-px-4.webp', full:'../images/full/sofa-1477-px-4.webp', category:'cuir', label:'Leather sofa, FORMA showroom, living room view' },
+  { thumb:'../images/thumbs/sofa-1480-px-1.webp', full:'../images/full/sofa-1480-px-1.webp', category:'cuir', label:'Ivory leather sofa, black leather swivel armchair' },
+  { thumb:'../images/thumbs/sofa-1480-px-2.webp', full:'../images/full/sofa-1480-px-2.webp', category:'cuir', label:'Ivory leather sofa, black leather swivel armchair, overall view' },
+  { thumb:'../images/thumbs/sofa-1480-px-3.webp', full:'../images/full/sofa-1480-px-3.webp', category:'cuir', label:'Ivory leather sofa, black leather swivel armchair, close-up view' },
+  { thumb:'../images/thumbs/sofa-1481-px-1.webp', full:'../images/full/sofa-1481-px-1.webp', category:'cuir', label:'Anthracite leather sofa, mustard-yellow leather armchair' },
+  { thumb:'../images/thumbs/sofa-1481-px-2.webp', full:'../images/full/sofa-1481-px-2.webp', category:'cuir', label:'Anthracite leather sofa, mustard-yellow leather armchair, overall view' },
+  { thumb:'../images/thumbs/sofa-1481-px-3.webp', full:'../images/full/sofa-1481-px-3.webp', category:'cuir', label:'Anthracite leather sofa, mustard-yellow leather armchair, close-up view' },
+  { thumb:'../images/thumbs/sofa-1481-px-4.webp', full:'../images/full/sofa-1481-px-4.webp', category:'cuir', label:'Anthracite leather sofa, mustard-yellow leather armchair, living room view' },
+  { thumb:'../images/thumbs/sofa-1481-px-5.webp', full:'../images/full/sofa-1481-px-5.webp', category:'cuir', label:'Anthracite leather sofa, mustard-yellow leather armchair, detail' },
+  { thumb:'../images/thumbs/sofa-1494-pj-1.webp', full:'../images/full/sofa-1494-pj-1.webp', category:'cuir', label:'Ivory leather sofas, sculptural rolled armrest' },
+  { thumb:'../images/thumbs/sofa-1494-pj-2.webp', full:'../images/full/sofa-1494-pj-2.webp', category:'cuir', label:'Ivory leather sofas, sculptural rolled armrest, overall view' },
+  { thumb:'../images/thumbs/sofa-1494-pj-3.webp', full:'../images/full/sofa-1494-pj-3.webp', category:'cuir', label:'Ivory leather sofas, sculptural rolled armrest, close-up view' },
+  { thumb:'../images/thumbs/sofa-1494-pj-4.webp', full:'../images/full/sofa-1494-pj-4.webp', category:'cuir', label:'Ivory leather sofas, sculptural rolled armrest, living room view' },
+  { thumb:'../images/thumbs/sofa-1494-pj-5.webp', full:'../images/full/sofa-1494-pj-5.webp', category:'cuir', label:'Ivory leather sofas, sculptural rolled armrest, detail' },
+  { thumb:'../images/thumbs/piece-1506-pj-1.webp', full:'../images/full/piece-1506-pj-1.webp', category:'table', label:'Oval travertine table, woven cognac leather chairs' },
+  { thumb:'../images/thumbs/piece-1506-pj-2.webp', full:'../images/full/piece-1506-pj-2.webp', category:'table', label:'Oval travertine table, woven cognac leather chairs, overall view' },
+  { thumb:'../images/thumbs/piece-1506-pj-3.webp', full:'../images/full/piece-1506-pj-3.webp', category:'table', label:'Oval travertine table, woven cognac leather chairs, close-up view' },
+  { thumb:'../images/thumbs/piece-1507-pj-1.webp', full:'../images/full/piece-1507-pj-1.webp', category:'table', label:'Oval blackened-wood table, brass and travertine base' },
+  { thumb:'../images/thumbs/piece-1507-pj-2.webp', full:'../images/full/piece-1507-pj-2.webp', category:'table', label:'Oval blackened-wood table, brass and travertine base, overall view' },
+  { thumb:'../images/thumbs/piece-1508-pj-1.webp', full:'../images/full/piece-1508-pj-1.webp', category:'table', label:'Round blackened-wood and travertine table, orange and ivory leather chairs' },
+  { thumb:'../images/thumbs/piece-1508-pj-2.webp', full:'../images/full/piece-1508-pj-2.webp', category:'table', label:'Round blackened-wood and travertine table, orange and ivory leather chairs, overall view' },
+  { thumb:'../images/thumbs/piece-1509-pj-1.webp', full:'../images/full/piece-1509-pj-1.webp', category:'table', label:'Dark stone table, ecru bouclé chairs' },
+  { thumb:'../images/thumbs/piece-1509-pj-2.webp', full:'../images/full/piece-1509-pj-2.webp', category:'table', label:'Dark stone table, ecru bouclé chairs, overall view' },
+  { thumb:'../images/thumbs/piece-1510-pj-1.webp', full:'../images/full/piece-1510-pj-1.webp', category:'table', label:'Oval travertine table, cognac leather chairs' },
+  { thumb:'../images/thumbs/piece-1510-pj-2.webp', full:'../images/full/piece-1510-pj-2.webp', category:'table', label:'Oval travertine table, cognac leather chairs, overall view' },
+  { thumb:'../images/thumbs/piece-1531-jz-1.webp', full:'../images/full/piece-1531-jz-1.webp', category:'table', label:'Marble and brass coffee table, removable tray top' },
+  { thumb:'../images/thumbs/piece-1531-jz-2.webp', full:'../images/full/piece-1531-jz-2.webp', category:'table', label:'Marble and brass coffee table, removable tray top, overall view' },
+  { thumb:'../images/thumbs/piece-1532-jz-1.webp', full:'../images/full/piece-1532-jz-1.webp', category:'table', label:'Round marble coffee table, chiselled brass base' },
+  { thumb:'../images/thumbs/piece-1532-jz-2.webp', full:'../images/full/piece-1532-jz-2.webp', category:'table', label:'Round marble coffee table, chiselled brass base, overall view' },
+  { thumb:'../images/thumbs/piece-1532-jz-3.webp', full:'../images/full/piece-1532-jz-3.webp', category:'table', label:'Round marble coffee table, chiselled brass base, close-up view' },
+  { thumb:'../images/thumbs/piece-1540-jz-1.webp', full:'../images/full/piece-1540-jz-1.webp', category:'lit', label:'Tufted ivory leather bed' },
+  { thumb:'../images/thumbs/piece-1540-jz-2.webp', full:'../images/full/piece-1540-jz-2.webp', category:'lit', label:'Tufted ivory leather bed, overall view' },
+  { thumb:'../images/thumbs/piece-1540-jz-3.webp', full:'../images/full/piece-1540-jz-3.webp', category:'lit', label:'Tufted ivory leather bed, close-up view' },
+  { thumb:'../images/thumbs/piece-1542-jz-1.webp', full:'../images/full/piece-1542-jz-1.webp', category:'table', label:'Duo of round coffee tables, marble and white lacquer' },
+  { thumb:'../images/thumbs/piece-1548-jz-1.webp', full:'../images/full/piece-1548-jz-1.webp', category:'lit', label:'Cognac leather bed, fan-fluted headboard' },
+  { thumb:'../images/thumbs/piece-1548-jz-2.webp', full:'../images/full/piece-1548-jz-2.webp', category:'lit', label:'Cognac leather bed, fan-fluted headboard, overall view' },
+  { thumb:'../images/thumbs/piece-1548-jz-3.webp', full:'../images/full/piece-1548-jz-3.webp', category:'lit', label:'Cognac leather bed, fan-fluted headboard, close-up view' },
+  { thumb:'../images/thumbs/piece-1548-jz-4.webp', full:'../images/full/piece-1548-jz-4.webp', category:'lit', label:'Cognac leather bed, fan-fluted headboard, living room view' },
+  { thumb:'../images/thumbs/sofa-1549-ht-1.webp', full:'../images/full/sofa-1549-ht-1.webp', category:'cuir', label:'Sectional leather sofa, FORMA showroom' },
+  { thumb:'../images/thumbs/sofa-1549-ht-2.webp', full:'../images/full/sofa-1549-ht-2.webp', category:'cuir', label:'Sectional leather sofa, FORMA showroom, overall view' },
+  { thumb:'../images/thumbs/piece-1550-ht-1.webp', full:'../images/full/piece-1550-ht-1.webp', category:'table', label:'Organic walnut wood desk with swivelling drawer units' },
+  { thumb:'../images/thumbs/piece-1550-ht-2.webp', full:'../images/full/piece-1550-ht-2.webp', category:'table', label:'Organic walnut wood desk with swivelling drawer units, overall view' },
+  { thumb:'../images/thumbs/piece-1550-ht-3.webp', full:'../images/full/piece-1550-ht-3.webp', category:'table', label:'Organic walnut wood desk with swivelling drawer units, close-up view' },
+  { thumb:'../images/thumbs/piece-1551-ht-1.webp', full:'../images/full/piece-1551-ht-1.webp', category:'table', label:'Walnut wood sideboard, metal legs' },
+  { thumb:'../images/thumbs/piece-1551-ht-2.webp', full:'../images/full/piece-1551-ht-2.webp', category:'table', label:'Walnut wood sideboard, metal legs, overall view' },
+  { thumb:'../images/thumbs/piece-1552-ht-1.webp', full:'../images/full/piece-1552-ht-1.webp', category:'table', label:'Walnut wood console, ivory leather facade' },
+  { thumb:'../images/thumbs/piece-1552-ht-2.webp', full:'../images/full/piece-1552-ht-2.webp', category:'table', label:'Walnut wood console, ivory leather facade, overall view' },
+  { thumb:'../images/thumbs/piece-1552-ht-3.webp', full:'../images/full/piece-1552-ht-3.webp', category:'table', label:'Walnut wood console, ivory leather facade, close-up view' },
+  { thumb:'../images/thumbs/piece-1554-ht-1.webp', full:'../images/full/piece-1554-ht-1.webp', category:'table', label:'Duo of white marble coffee tables, walnut legs' },
+  { thumb:'../images/thumbs/piece-1554-ht-2.webp', full:'../images/full/piece-1554-ht-2.webp', category:'table', label:'Duo of white marble coffee tables, walnut legs, overall view' },
+  { thumb:'../images/thumbs/piece-1555-ht-1.webp', full:'../images/full/piece-1555-ht-1.webp', category:'pouf', label:'Square grey bouclé pouf, cognac leather base' },
+  { thumb:'../images/thumbs/piece-1555-ht-2.webp', full:'../images/full/piece-1555-ht-2.webp', category:'pouf', label:'Square grey bouclé pouf, cognac leather base, overall view' },
+  { thumb:'../images/thumbs/piece-1556-ht-1.webp', full:'../images/full/piece-1556-ht-1.webp', category:'table', label:'Round walnut table, rotating stone lazy Susan' },
+  { thumb:'../images/thumbs/piece-1556-ht-2.webp', full:'../images/full/piece-1556-ht-2.webp', category:'table', label:'Round walnut table, rotating stone lazy Susan, overall view' },
+  { thumb:'../images/thumbs/piece-1556-ht-3.webp', full:'../images/full/piece-1556-ht-3.webp', category:'table', label:'Round walnut table, rotating stone lazy Susan, close-up view' },
+  { thumb:'../images/thumbs/piece-1557-ht-1.webp', full:'../images/full/piece-1557-ht-1.webp', category:'table', label:'Round green stone table, faceted emerald-green base' },
+  { thumb:'../images/thumbs/piece-1557-ht-2.webp', full:'../images/full/piece-1557-ht-2.webp', category:'table', label:'Round green stone table, faceted emerald-green base, overall view' },
+  { thumb:'../images/thumbs/piece-1557-ht-3.webp', full:'../images/full/piece-1557-ht-3.webp', category:'table', label:'Round green stone table, faceted emerald-green base, close-up view' }
+];
+
+const catLabels = { cuir:'Leather', textile:'Textile & Bouclé', table:'Table', lit:'Bed', fauteuil:'Armchair', pouf:'Pouf' };
+
+const grid = document.getElementById('galleryGrid');
+const countEl = document.getElementById('galleryCount');
+
+function renderGallery(){
+  grid.innerHTML = '';
+  galleryItems.forEach((item, i) => {
+    const btn = document.createElement('button');
+    btn.className = 'gallery-item';
+    btn.dataset.category = item.category;
+    btn.dataset.index = i;
+    btn.setAttribute('aria-label', item.label);
+    btn.innerHTML = `
+      <img src="${item.thumb}" alt="${item.label}" loading="lazy"/>
+      <span class="gallery-caption">
+        <span class="cat">${catLabels[item.category]}</span>
+        <span class="desc">${item.label}</span>
+      </span>`;
+    btn.addEventListener('click', () => openLightbox(i));
+    grid.appendChild(btn);
+  });
+}
+renderGallery();
+
+// FILTRES
+const filterBtns = document.querySelectorAll('.filter-btn');
+const requestedCat = new URLSearchParams(window.location.search).get('cat');
+let currentFilter = (requestedCat && document.querySelector(`.filter-btn[data-filter="${requestedCat}"]`)) ? requestedCat : 'tout';
+filterBtns.forEach(b => b.classList.toggle('active', b.dataset.filter === currentFilter));
+
+function applyFilter(){
+  const items = grid.querySelectorAll('.gallery-item');
+  let visible = 0;
+  items.forEach(el => {
+    const match = currentFilter === 'tout' || el.dataset.category === currentFilter;
+    el.hidden = !match;
+    if (match) visible++;
+  });
+  countEl.textContent = visible + (visible > 1 ? ' pieces' : ' piece');
+}
+filterBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    filterBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    currentFilter = btn.dataset.filter;
+    applyFilter();
+  });
+});
+applyFilter();
+
+// VISIONNEUSE
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightboxImg');
+const lightboxCat = document.getElementById('lightboxCat');
+const lightboxDesc = document.getElementById('lightboxDesc');
+let lightboxIndex = 0;
+let lastFocused = null;
+
+function visibleIndexes(){
+  return galleryItems.map((it, i) => i).filter(i => currentFilter === 'tout' || galleryItems[i].category === currentFilter);
+}
+
+function openLightbox(index){
+  lastFocused = document.activeElement;
+  lightboxIndex = index;
+  updateLightbox();
+  lightbox.classList.add('open');
+  document.getElementById('lightboxClose').focus();
+  document.addEventListener('keydown', onLightboxKey);
+}
+function updateLightbox(){
+  const item = galleryItems[lightboxIndex];
+  lightboxImg.src = item.full;
+  lightboxImg.alt = item.label;
+  lightboxCat.textContent = catLabels[item.category];
+  lightboxDesc.textContent = item.label;
+}
+function closeLightbox(){
+  lightbox.classList.remove('open');
+  document.removeEventListener('keydown', onLightboxKey);
+  if (lastFocused) lastFocused.focus();
+}
+function stepLightbox(dir){
+  const visible = visibleIndexes();
+  const pos = visible.indexOf(lightboxIndex);
+  const next = (pos + dir + visible.length) % visible.length;
+  lightboxIndex = visible[next];
+  updateLightbox();
+}
+function onLightboxKey(e){
+  if (e.key === 'Escape') closeLightbox();
+  if (e.key === 'ArrowRight') stepLightbox(1);
+  if (e.key === 'ArrowLeft') stepLightbox(-1);
+}
+document.getElementById('lightboxClose').addEventListener('click', closeLightbox);
+document.getElementById('lightboxNext').addEventListener('click', () => stepLightbox(1));
+document.getElementById('lightboxPrev').addEventListener('click', () => stepLightbox(-1));
+lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
+
+// NAV — solidification au scroll (déjà solide ici, conservé pour cohérence de comportement)
+const nav = document.getElementById('siteNav');
+document.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 40), {passive:true});
+
+// NAV — menu mobile
+const navToggle = document.getElementById('navToggle');
+const navLinks = document.getElementById('navLinks');
+navToggle.addEventListener('click', () => {
+  const open = navLinks.classList.toggle('open');
+  navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+});
+navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+  navLinks.classList.remove('open');
+  navToggle.setAttribute('aria-expanded', 'false');
+}));
+
+// CURSEUR PERSONNALISÉ — amélioration progressive uniquement
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+// SELECTEUR DE LANGUE
+const langSwitch = document.getElementById('langSwitch');
+const langSwitchBtn = document.getElementById('langSwitchBtn');
+if (langSwitch && langSwitchBtn) {
+  langSwitchBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const open = langSwitch.classList.toggle('open');
+    langSwitchBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  document.addEventListener('click', () => {
+    langSwitch.classList.remove('open');
+    langSwitchBtn.setAttribute('aria-expanded', 'false');
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      langSwitch.classList.remove('open');
+      langSwitchBtn.setAttribute('aria-expanded', 'false');
+    }
+  });
+}
+</script>
+<script src="../zoom.js" defer></script>
+</body>
+</html>

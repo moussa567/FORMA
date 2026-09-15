@@ -1,0 +1,982 @@
+<!DOCTYPE html>
+
+<html data-lang="zh" lang="zh">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>FORMA | 福玛 — 图库</title>
+<meta content="FORMA 图库：沙发、扶手椅、桌子、床与坐墩在真实场景中的呈现。按材质或品类筛选,探索完整系列。" name="description"/>
+<link href="https://www.formalife.cn/zh/gallery.html" rel="canonical"/>
+<link href="https://www.formalife.cn/gallery.html" hreflang="fr" rel="alternate"/>
+<link href="https://www.formalife.cn/en/gallery.html" hreflang="en" rel="alternate"/>
+<link href="https://www.formalife.cn/es/gallery.html" hreflang="es" rel="alternate"/>
+<link href="https://www.formalife.cn/ru/gallery.html" hreflang="ru" rel="alternate"/>
+<link href="https://www.formalife.cn/ar/gallery.html" hreflang="ar" rel="alternate"/>
+<link href="https://www.formalife.cn/zh/gallery.html" hreflang="zh" rel="alternate"/>
+<link href="https://www.formalife.cn/en/gallery.html" hreflang="x-default" rel="alternate"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&amp;family=Montserrat:ital,wght@0,300;0,400;0,500;1,300;1,400&amp;display=swap" rel="stylesheet">
+<style>
+  :root{
+    --gold:#C9A96A;--gold-light:#e2c68a;--black:#0A0A0A;--black-mid:#111;--black-soft:#1a1a1a;
+    --ivory:#F8F5EE;--ivory-mid:rgba(248,245,238,.55);--ivory-dim:rgba(248,245,238,.06);
+  }
+  *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--black);color:var(--ivory);font-family:'Montserrat',sans-serif;font-weight:300;overflow-x:hidden}
+  img{display:block;max-width:100%;height:auto}
+  a{color:inherit}
+  button{font-family:inherit}
+
+  .skip-link{position:absolute;left:-999px;top:0;background:var(--gold);color:var(--black);padding:12px 20px;font-family:'Montserrat',sans-serif;font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;z-index:10000}
+  .skip-link:focus{left:16px;top:16px}
+  :focus-visible{outline:2px solid var(--gold);outline-offset:3px}
+
+  .eyebrow{display:flex;flex-wrap:wrap;row-gap:4px;align-items:center;gap:10px;font-family:'Montserrat',sans-serif;font-size:.62rem;letter-spacing:.4em;text-transform:uppercase;color:var(--gold);margin-bottom:18px}
+  .eyebrow .zh{font-family:'Cinzel',serif;letter-spacing:.1em;color:rgba(201,169,106,.55);font-size:.7rem}
+  .eyebrow::before{content:'';width:24px;height:1px;background:var(--gold)}
+
+  /* NAV (identique au reste du site) */
+  nav{position:fixed;top:0;left:0;right:0;z-index:1000;display:flex;align-items:center;justify-content:space-between;padding:18px 60px;background:rgba(10,10,10,.94);border-bottom:1px solid rgba(201,169,106,.18)}
+  .nav-logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+  .nav-mark{height:42px;width:35px;flex-shrink:0;object-fit:contain}
+  .nav-logo-main{font-family:'Cinzel',serif;font-size:.85rem;letter-spacing:.32em;color:var(--ivory)}
+  .nav-logo-main span{color:var(--gold)}
+  .nav-logo-sub{font-family:'Cinzel',serif;font-size:.5rem;letter-spacing:.4em;color:rgba(201,169,106,.5)}
+  .nav-links{display:flex;align-items:center;gap:40px;list-style:none}
+  .nav-links a{font-family:'Montserrat',sans-serif;font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--ivory-mid);text-decoration:none;transition:color .3s}
+  .nav-links a:hover,.nav-links a[aria-current="page"]{color:var(--gold)}
+  .nav-lang{font-family:'Cinzel',serif;font-size:.6rem;letter-spacing:.2em;color:rgba(201,169,106,.6);border:1px solid rgba(201,169,106,.25);padding:6px 10px}
+  .nav-right{display:flex;align-items:center;gap:28px}
+  .btn-quote{font-family:'Montserrat',sans-serif;font-size:.65rem;letter-spacing:.2em;text-transform:uppercase;background:var(--gold);color:var(--black);border:none;padding:13px 26px;font-weight:500;text-decoration:none;transition:background .3s,transform .3s;display:inline-block}
+  .btn-quote:hover{background:var(--gold-light);transform:translateY(-2px)}
+  .nav-toggle{display:none;background:none;border:none;color:var(--ivory);cursor:pointer;padding:8px}
+  .nav-mobile-cta{display:none}
+
+  /* HEADER DE PAGE */
+  .page-header{padding:170px 60px 60px;text-align:center}
+  .page-header h1{font-family:'Cinzel',serif;font-weight:400;font-size:clamp(2rem,3.6vw,3rem);color:var(--ivory);margin-bottom:20px}
+  .page-header p{font-family:'Montserrat',sans-serif;font-weight:300;font-style:italic;color:var(--ivory-mid);font-size:1rem;max-width:600px;margin:0 auto}
+
+  /* FIL D'ARIANE */
+  .breadcrumb{padding:0 60px;max-width:1400px;margin:0 auto;font-family:'Montserrat',sans-serif;font-size:.68rem;letter-spacing:.08em;color:rgba(248,245,238,.35)}
+  .breadcrumb a{color:rgba(201,169,106,.7);text-decoration:none}
+  .breadcrumb a:hover{color:var(--gold)}
+
+  /* FILTRES */
+  .filters{display:flex;justify-content:center;gap:14px;flex-wrap:wrap;padding:40px 60px 10px}
+  .filter-btn{background:transparent;border:1px solid rgba(201,169,106,.3);color:var(--ivory-mid);font-family:'Montserrat',sans-serif;font-size:.65rem;letter-spacing:.18em;text-transform:uppercase;padding:11px 24px;cursor:pointer;transition:all .3s}
+  .filter-btn:hover{border-color:var(--gold);color:var(--ivory)}
+  .filter-btn.active{background:var(--gold);border-color:var(--gold);color:var(--black)}
+
+  .gallery-count{text-align:center;font-family:'Montserrat',sans-serif;font-size:.68rem;letter-spacing:.1em;color:rgba(248,245,238,.35);padding:8px 0 30px}
+
+  /* GRILLE */
+  .gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:4px;max-width:1600px;margin:0 auto;padding:0 60px 120px}
+  .gallery-item{position:relative;aspect-ratio:4/3;overflow:hidden;background:var(--black-soft);cursor:pointer;border:none;padding:0;display:block;width:100%}
+  .gallery-item img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+  .gallery-item:hover img{transform:scale(1.045)}
+  .gallery-item::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(10,10,10,.85) 0%,transparent 55%);opacity:0;transition:opacity .35s}
+  .gallery-item:hover::after,.gallery-item:focus-visible::after{opacity:1}
+  .gallery-caption{position:absolute;left:0;right:0;bottom:0;padding:18px 20px;z-index:1;opacity:0;transform:translateY(8px);transition:opacity .35s,transform .35s;text-align:left}
+  .gallery-item:hover .gallery-caption,.gallery-item:focus-visible .gallery-caption{opacity:1;transform:translateY(0)}
+  .gallery-caption .cat{font-family:'Montserrat',sans-serif;font-size:.56rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:6px}
+  .gallery-caption .desc{font-family:'Montserrat',sans-serif;font-weight:300;font-style:italic;font-size:.82rem;color:var(--ivory)}
+  .gallery-item[hidden]{display:none}
+
+  /* VISIONNEUSE */
+  .lightbox{position:fixed;inset:0;background:rgba(6,6,5,.96);z-index:5000;display:none;align-items:center;justify-content:center;padding:40px}
+  .lightbox.open{display:flex}
+  .lightbox-inner{max-width:1100px;width:100%;display:flex;flex-direction:column;align-items:center;gap:20px}
+  .lightbox-inner img{max-height:78vh;width:auto;max-width:100%;object-fit:contain}
+  .lightbox-caption{text-align:center}
+  .lightbox-caption .cat{font-family:'Montserrat',sans-serif;font-size:.6rem;letter-spacing:.25em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:8px}
+  .lightbox-caption .desc{font-family:'Montserrat',sans-serif;font-weight:300;font-style:italic;color:var(--ivory-mid);font-size:.95rem}
+  .lightbox-close{position:absolute;top:24px;right:32px;background:none;border:1px solid rgba(201,169,106,.4);color:var(--ivory);width:44px;height:44px;font-size:1.1rem;cursor:pointer;transition:border-color .3s,color .3s}
+  .lightbox-close:hover{border-color:var(--gold);color:var(--gold)}
+  .lightbox-nav{position:absolute;top:50%;transform:translateY(-50%);background:none;border:1px solid rgba(201,169,106,.3);color:var(--ivory);width:48px;height:48px;font-size:1.2rem;cursor:pointer;transition:border-color .3s,color .3s}
+  .lightbox-nav:hover{border-color:var(--gold);color:var(--gold)}
+  .lightbox-prev{left:24px}
+  .lightbox-next{right:24px}
+  @media(max-width:760px){
+    .lightbox-nav{width:40px;height:40px;font-size:1rem}
+    .lightbox-prev{left:8px}
+    .lightbox-next{right:8px}
+    .lightbox-close{top:14px;right:14px}
+  }
+
+  /* FOOTER (identique au reste du site) */
+  footer{background:var(--black-soft);border-top:1px solid rgba(201,169,106,.15);padding:70px 60px 36px}
+  .footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:50px;margin-bottom:56px}
+  .footer-brand p{font-family:'Montserrat',sans-serif;font-weight:300;font-style:italic;color:var(--ivory-mid);font-size:.85rem;line-height:1.7;max-width:280px;margin-top:14px}
+  .footer-col h4{font-family:'Montserrat',sans-serif;font-size:.62rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:20px}
+  .footer-col ul{list-style:none;display:flex;flex-direction:column;gap:12px}
+  .footer-col a{font-family:'Montserrat',sans-serif;font-size:.78rem;color:var(--ivory-mid);text-decoration:none;transition:color .3s}
+  .footer-col a:hover{color:var(--gold)}
+  .footer-bottom{border-top:1px solid rgba(201,169,106,.1);padding-top:26px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-family:'Montserrat',sans-serif;font-size:.68rem;color:rgba(248,245,238,.32);letter-spacing:.04em}
+  .footer-social{display:flex;align-items:flex-start;gap:14px;flex-wrap:wrap}
+  .footer-social-item{display:flex;flex-direction:column;align-items:center;gap:7px;text-decoration:none;color:var(--ivory-mid);transition:color .3s;background:none;border:none;padding:0;font:inherit;cursor:pointer}
+  .footer-social-item:hover{color:var(--gold)}
+  .footer-social-icon{display:flex;align-items:center;justify-content:center;width:44px;height:44px;border:1px solid rgba(201,169,106,.25);overflow:hidden;transition:border-color .3s}
+  .footer-social-item:hover .footer-social-icon{border-color:var(--gold)}
+  .footer-social-icon svg{width:20px;height:20px}
+  .footer-social-label{font-family:'Montserrat',sans-serif;font-size:.56rem;letter-spacing:.14em;text-transform:uppercase}
+
+
+  /* CURSEUR — amélioration progressive uniquement */
+  .cursor-dot,.cursor-ring{display:none}
+  body.cc-active{cursor:none}
+  body.cc-active .cursor-dot{position:fixed;top:0;left:0;display:block;width:6px;height:6px;background:var(--gold);border-radius:50%;transform:translate(-50%,-50%);pointer-events:none;z-index:9999;transition:transform .1s}
+  body.cc-active .cursor-ring{position:fixed;top:0;left:0;display:block;width:36px;height:36px;border:1px solid rgba(201,169,106,.5);border-radius:50%;transform:translate(-50%,-50%);pointer-events:none;z-index:9998;transition:width .25s,height .25s,border-color .25s}
+  body.cc-active .cursor-ring.expand{width:54px;height:54px;border-color:var(--gold)}
+  body.cc-active a,body.cc-active button{cursor:none}
+
+  @media(prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    body.cc-active{cursor:auto}
+    body.cc-active .cursor-dot,body.cc-active .cursor-ring{display:none}
+    *{animation-duration:.01ms !important;transition-duration:.01ms !important}
+  }
+
+  @media(max-width:1600px){
+    nav{padding:14px 22px}
+    .nav-links{position:fixed;inset:0 0 0 auto;width:78%;max-width:340px;background:var(--black);flex-direction:column;align-items:flex-start;gap:0;padding:100px 32px 40px;transform:translateX(100%);transition:transform .4s ease;border-left:1px solid rgba(201,169,106,.18);overflow-y:auto}
+    .nav-links.open{transform:translateX(0)}
+    .nav-links li{width:100%;border-bottom:1px solid rgba(201,169,106,.1);padding:18px 0}
+    .nav-right .btn-quote{display:none}
+    .nav-toggle{display:block}
+    .nav-mobile-cta{display:block;width:100%;margin-top:20px}
+    .nav-mobile-cta .btn-quote{display:block;width:100%;text-align:center;box-sizing:border-box}
+  }
+  @media(max-width:1080px){
+    .gallery-grid{grid-template-columns:repeat(2,1fr)}
+    .footer-grid{grid-template-columns:1fr 1fr}
+  }
+  @media(max-width:760px){
+    nav{padding:14px 22px}
+    .nav-links{position:fixed;inset:0 0 0 auto;width:78%;max-width:340px;background:var(--black);flex-direction:column;align-items:flex-start;gap:0;padding:100px 32px 40px;transform:translateX(100%);transition:transform .4s ease;border-left:1px solid rgba(201,169,106,.18)}
+    .nav-links.open{transform:translateX(0)}
+    .nav-links li{width:100%;border-bottom:1px solid rgba(201,169,106,.1);padding:18px 0}
+    .nav-right .btn-quote{display:none}
+    .nav-toggle{display:block}
+    .nav-mobile-cta{display:block;width:100%;margin-top:20px}
+    .nav-mobile-cta .btn-quote{display:block;width:100%;text-align:center;box-sizing:border-box}
+    .page-header{padding:130px 22px 40px}
+    .filters{padding:30px 22px 10px}
+    .gallery-grid{grid-template-columns:1fr 1fr;padding:0 12px 80px;gap:3px}
+    .breadcrumb{padding:0 22px}
+    .footer-grid{grid-template-columns:1fr}
+    footer{padding:60px 22px 30px}
+  }
+
+  /* SELECTEUR DE LANGUE */
+  .lang-switch{position:relative}
+  .lang-switch-btn{display:flex;align-items:center;gap:6px;font-family:'Cinzel',serif;font-size:.6rem;letter-spacing:.2em;color:rgba(201,169,106,.8);border:1px solid rgba(201,169,106,.3);padding:6px 10px;background:transparent;cursor:pointer;text-transform:uppercase;transition:border-color .3s,color .3s}
+  .lang-switch-btn:hover{border-color:var(--gold);color:var(--gold)}
+  .lang-switch-menu{list-style:none;position:absolute;top:calc(100% + 10px);right:0;background:var(--black-soft);border:1px solid rgba(201,169,106,.25);min-width:150px;padding:6px;display:none;z-index:2000;box-shadow:0 12px 30px rgba(0,0,0,.4)}
+  .lang-switch.open .lang-switch-menu{display:block}
+  .lang-switch-menu a{display:block;padding:9px 12px;font-family:'Montserrat',sans-serif;font-size:.72rem;letter-spacing:.03em;color:var(--ivory-mid);text-decoration:none;transition:background .2s,color .2s}
+  .lang-switch-menu a:hover,.lang-switch-menu a:focus-visible{background:rgba(201,169,106,.1);color:var(--gold)}
+  .lang-switch-menu a[aria-current="true"]{color:var(--gold);font-weight:500}
+  [dir="rtl"] .lang-switch-menu{right:auto;left:0}
+
+  /* ADAPTATIONS RTL (arabe) */
+  [dir="rtl"] body{direction:rtl}
+  [dir="rtl"] .eyebrow::before{order:2}
+  [dir="rtl"] .nav-back::before{content:'\2192'}
+  [dir="rtl"] .nav-back:hover::before{transform:translateX(4px)}
+  [dir="rtl"] .section-head.left{text-align:right}
+  [dir="rtl"] .hero-content{text-align:right}
+  [dir="rtl"] .cta-actions,[dir="rtl"] .hero-ctas,[dir="rtl"] .filters{direction:rtl}
+  [dir="rtl"] .footer-bottom{direction:rtl}
+  [dir="rtl"] .skip-link{left:auto;right:-999px}
+  [dir="rtl"] .skip-link:focus{left:auto;right:16px}
+</style>
+</link></head>
+<body>
+<a class="skip-link" href="#main">跳至内容</a>
+<div aria-hidden="true" class="cursor-dot" id="dot"></div>
+<div aria-hidden="true" class="cursor-ring" id="ring"></div>
+<!-- NAV -->
+<nav id="siteNav">
+<a class="nav-logo" href="index.html">
+<img alt="FORMA" class="nav-mark" height="42" src="../images/logo-mark.webp" width="35"/>
+<div>
+<div class="nav-logo-main">FORMA <span>|</span> <span lang="zh">福玛</span></div>
+<div class="nav-logo-sub" lang="en">Luxury Furniture</div>
+</div>
+</a>
+<ul class="nav-links" id="navLinks">
+<li><a href="collections.html">系列</a></li>
+<li><a href="materials.html">材质</a></li>
+<li><a href="projects.html">项目</a></li>
+<li><a href="professionals.html">专业客户</a></li>
+<li><a href="about.html">关于我们</a></li>
+<li><a href="showroom.html">展厅</a></li>
+<li><a href="contact.html">联系我们</a></li>
+<li class="nav-mobile-cta"><a href="contact.html" class="btn-quote" lang="zh">索取报价</a></li>
+</ul>
+<div class="nav-right">
+<div class="lang-switch" id="langSwitch">
+<button aria-expanded="false" aria-haspopup="true" class="lang-switch-btn" id="langSwitchBtn">ZH<svg aria-hidden="true" fill="none" height="6" viewbox="0 0 10 6" width="10"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.3"></path></svg>
+</button>
+<ul aria-label="选择语言" class="lang-switch-menu" id="langSwitchMenu" role="menu">
+<li role="none"><a href="../gallery.html" lang="fr" role="menuitem">Français</a></li>
+<li role="none"><a href="../en/gallery.html" lang="en" role="menuitem">English</a></li>
+<li role="none"><a href="../es/gallery.html" lang="es" role="menuitem">Español</a></li>
+<li role="none"><a href="../ru/gallery.html" lang="ru" role="menuitem">Русский</a></li>
+<li role="none"><a href="../ar/gallery.html" lang="ar" role="menuitem">العربية</a></li>
+<li role="none"><a aria-current="true" href="gallery.html" lang="zh" role="menuitem">中文</a></li>
+</ul>
+</div>
+<a class="btn-quote" href="contact.html" lang="zh">索取报价</a>
+<button aria-controls="navLinks" aria-expanded="false" aria-label="打开菜单" class="nav-toggle" id="navToggle">
+<svg fill="none" height="22" stroke="currentColor" stroke-width="1.4" viewbox="0 0 24 24" width="22"><line x1="3" x2="21" y1="6" y2="6"></line><line x1="3" x2="21" y1="12" y2="12"></line><line x1="3" x2="21" y1="18" y2="18"></line></svg>
+</button>
+</div>
+</nav>
+<main id="main">
+<p class="breadcrumb"><a href="index.html">首页</a> / 图库</p>
+<div class="page-header">
+<p class="eyebrow" style="justify-content:center"><span>图库</span></p>
+<h1>空间影像</h1>
+<p>沙发、扶手椅、桌几、床品与坐墩的实景展示。按材质或家具类型筛选,探索完整图库。</p>
+</div>
+<div aria-label="按材质筛选图库" class="filters" id="filters" role="group">
+<button class="filter-btn active" data-filter="tout">全部</button>
+<button class="filter-btn" data-filter="cuir">皮革</button>
+<button class="filter-btn" data-filter="textile">面料与波克雷</button>
+<button class="filter-btn" data-filter="table">桌子</button>
+<button class="filter-btn" data-filter="lit">床</button>
+<button class="filter-btn" data-filter="fauteuil">扶手椅</button>
+<button class="filter-btn" data-filter="pouf">坐墩</button>
+</div>
+<p class="gallery-count" id="galleryCount"></p>
+<div class="gallery-grid" id="galleryGrid"></div>
+</main>
+<!-- VISIONNEUSE -->
+<div aria-label="图片查看器" aria-modal="true" class="lightbox" id="lightbox" role="dialog">
+<button aria-label="关闭图片查看器" class="lightbox-close" id="lightboxClose">✕</button>
+<button aria-label="上一张图片" class="lightbox-nav lightbox-prev" id="lightboxPrev">←</button>
+<button aria-label="下一张图片" class="lightbox-nav lightbox-next" id="lightboxNext">→</button>
+<div class="lightbox-inner">
+<img alt="" id="lightboxImg" src=""/>
+<div class="lightbox-caption">
+<span class="cat" id="lightboxCat"></span>
+<span class="desc" id="lightboxDesc"></span>
+</div>
+</div>
+</div>
+<!-- FOOTER -->
+<footer>
+<div class="footer-grid">
+<div class="footer-brand">
+<div class="nav-logo-main">FORMA <span>|</span> <span lang="zh">福玛</span></div>
+<p>在广东佛山设计并制作的当代家具。欧式优雅,亚洲精致。</p>
+</div>
+<div class="footer-col">
+<h4>网站</h4>
+<ul>
+<li><a href="collections.html">系列</a></li>
+<li><a href="materials.html">材质</a></li>
+<li><a href="gallery.html">图库</a></li>
+<li><a href="projects.html">项目</a></li>
+<li><a href="showroom.html">展厅</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h4>专业客户</h4>
+<ul>
+<li><a href="professionals.html">专业服务</a></li>
+<li><a href="contact.html">索取报价</a></li>
+<li><a href="contact.html">经销合作</a></li>
+<li><a href="contact.html">媒体</a></li>
+</ul>
+</div>
+<div class="footer-col">
+<h4>联系我们</h4>
+<ul>
+<li><a href="tel:+8613138614198">+86 1313 8614 198</a></li>
+<li><a href="https://wa.me/message/P5GC3C72CQSXD1" rel="noopener" target="_blank">WhatsApp</a></li>
+<li><a href="https://u.wechat.com/MLt8EcsR12yTC2cylwff6d8" rel="noopener" target="_blank">微信</a></li>
+<li><a href="contact.html">完整表单</a></li>
+</ul>
+</div>
+</div>
+<div class="footer-bottom">
+<span>© 2026 FORMA — 中国广东佛山</span>
+<div class="footer-social"><button aria-label="FORMA WhatsApp——点击显示二维码，直接沟通" class="footer-social-item" data-qr="../images/qr-whatsapp.webp" data-qr-label="FORMA WhatsApp——点击显示二维码，直接沟通" type="button"><span class="footer-social-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M7 17.5l-3 1 1-3A8 8 0 1 1 7 17.5Z" stroke-linecap="round" stroke-linejoin="round"/><path d="M9 10c0 3 2.5 5.5 5.5 5.5.6 0 1-.1 1.3-.3.4-.2.6-.7.5-1.1l-.3-1a.8.8 0 0 0-.9-.5l-1 .2a.7.7 0 0 1-.7-.2c-.6-.5-1.2-1.2-1.6-2a.7.7 0 0 1 0-.7l.4-.8a.8.8 0 0 0-.1-.9l-.7-.9a.8.8 0 0 0-1-.2c-.7.4-1.4 1.2-1.4 2.4Z"/></svg></span><span class="footer-social-label">WhatsApp</span></button><button aria-label="FORMA 微信——点击显示二维码，添加联系方式" class="footer-social-item" data-qr="../images/qr-wechat.webp" data-qr-label="FORMA 微信——点击显示二维码，添加联系方式" type="button"><span class="footer-social-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M9.5 4C5.9 4 3 6.5 3 9.6c0 1.8 1 3.4 2.5 4.4l-.5 2 2.1-1.1c.7.2 1.5.3 2.4.3h.3a5.6 5.6 0 0 1-.2-1.5c0-3.3 3.1-6 7-6h.2C15.9 5.5 13 4 9.5 4Z" stroke-linejoin="round"/><path d="M15.5 9.7c-3 0-5.5 2.1-5.5 4.7s2.5 4.7 5.5 4.7c.6 0 1.2-.1 1.8-.3l1.9.9-.5-1.7C20 17 21 15.6 21 14.4c0-2.6-2.5-4.7-5.5-4.7Z" stroke-linejoin="round"/><circle cx="7.3" cy="8.6" r="0.6" fill="currentColor" stroke="none"/><circle cx="11.5" cy="8.6" r="0.6" fill="currentColor" stroke="none"/><circle cx="13.7" cy="13.5" r="0.55" fill="currentColor" stroke="none"/><circle cx="17.3" cy="13.5" r="0.55" fill="currentColor" stroke="none"/></svg></span><span class="footer-social-label">WeChat</span></button><a class="footer-social-item" href="#" rel="noopener" target="_blank"><span class="footer-social-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect height="18" rx="5" width="18" x="3" y="3"/><circle cx="12" cy="12" r="4.2"/><circle cx="17.2" cy="6.8" fill="currentColor" r="0.6" stroke="none"/></svg></span><span class="footer-social-label">Instagram</span></a><a class="footer-social-item" href="#" rel="noopener" target="_blank"><span class="footer-social-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><circle cx="12" cy="12" r="9"/><path d="M14 8.5h-1.6c-.9 0-1.4.5-1.4 1.4V11h3l-.4 2.6h-2.6V19" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="footer-social-label">Facebook</span></a><a class="footer-social-item" href="#" rel="noopener" target="_blank"><span class="footer-social-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M12 4c-3 0-5 2.3-5 5.3v2.1c0 .5-.3.9-.9 1.3l-1 .7c-.5.3-.4 1 .1 1.2l1.6.7c.3.1.5.4.6.7.2.9 1 2.3 3 2.6.3 0 .5.2.6.5.2.6.9 1.4 3 1.4s2.8-.8 3-1.4c.1-.3.3-.5.6-.5 2-.3 2.8-1.7 3-2.6.1-.3.3-.6.6-.7l1.6-.7c.5-.2.6-.9.1-1.2l-1-.7c-.6-.4-.9-.8-.9-1.3V9.3C17 6.3 15 4 12 4Z" stroke-linejoin="round"/></svg></span><span class="footer-social-label">Snapchat</span></a><a class="footer-social-item" href="#" rel="noopener" target="_blank"><span class="footer-social-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M14 4v10.5a3.5 3.5 0 1 1-3.5-3.5c.35 0 .7.04 1 .12" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 4c.3 2 1.8 3.6 4 3.9" stroke-linecap="round" stroke-linejoin="round"/></svg></span><span class="footer-social-label">TikTok</span></a></div></div>
+</footer>
+<script>
+// LANGUE — l'attribut lang="fr" statique (dans le HTML brut) reste la source
+// de vérité première : il doit être correct sans JavaScript, pour les lecteurs
+// d'écran et les moteurs de recherche. Cette fonction garde en plus l'attribut
+// lang synchronisé avec data-lang, pour le jour où un vrai sélecteur de langue
+// changera data-lang sans recharger la page.
+function syncDocumentLanguage(){
+  const code = document.documentElement.dataset.lang || 'fr';
+  document.documentElement.setAttribute('lang', code);
+}
+syncDocumentLanguage();
+window.setSiteLanguage = function(code){
+  document.documentElement.dataset.lang = code;
+  syncDocumentLanguage();
+};
+
+/* ──────────────────────────────────────────────────────────────
+   DONNÉES DE LA GALERIE
+   Pour ajouter de nouvelles photos : ajoutez un objet à ce tableau.
+   - thumb / full : chemins vers les deux tailles d'image (voir dossier /gallery)
+   - category  : "cuir" ou "textile" (sert au filtre)
+   - label     : légende courte, sans référence produit inventée
+   ────────────────────────────────────────────────────────────── */
+const galleryItems = [
+  { thumb:'../images/thumbs/3DBG-D6088.webp', full:'../images/full/3DBG-D6088.webp', category:'textile', label:"象牙白波克雷转角沙发,配一体式圆形坐墩" },
+  { thumb:'../images/thumbs/4DBG-D6088.webp', full:'../images/full/4DBG-D6088.webp', category:'textile', label:"象牙白波克雷转角沙发,石砌壁炉前场景" },
+  { thumb:'../images/thumbs/3DBG-D6092.webp', full:'../images/full/3DBG-D6092.webp', category:'textile', label:'米色天鹅绒矮沙发,黄铜脚架' },
+  { thumb:'../images/thumbs/4DBG-D6092.webp', full:'../images/full/4DBG-D6092.webp', category:'textile', label:'米色天鹅绒矮沙发,三人座' },
+  { thumb:'../images/thumbs/DBG-D60933.webp', full:'../images/full/DBG-D60933.webp', category:'textile', label:'曲线沙发,提花抱枕搭配干邑棕皮革扶手' },
+  { thumb:'../images/thumbs/DBG-D60934.webp', full:'../images/full/DBG-D60934.webp', category:'textile', label:'曲线沙发,提花抱枕,石砌壁炉前场景' },
+  { thumb:'../images/thumbs/DBG-D60983.webp', full:'../images/full/DBG-D60983.webp', category:'textile', label:'干邑棕褶皱天鹅绒可变形沙发' },
+  { thumb:'../images/thumbs/DBG-D60984.webp', full:'../images/full/DBG-D60984.webp', category:'textile', label:'干邑棕天鹅绒可变形沙发,细节特写' },
+  { thumb:'../images/thumbs/DBG-D61003.webp', full:'../images/full/DBG-D61003.webp', category:'cuir', label:"巧克力色皮革矮沙发,深度转角模块" },
+  { thumb:'../images/thumbs/DBG-D61004.webp', full:'../images/full/DBG-D61004.webp', category:'cuir', label:'巧克力色皮革沙发,圆形茶几' },
+  { thumb:'../images/thumbs/DBG-D61007.webp', full:'../images/full/DBG-D61007.webp', category:'textile', label:'灰褐色波克雷模块化沙发,开放式布局' },
+  { thumb:'../images/thumbs/DBG-D61008.webp', full:'../images/full/DBG-D61008.webp', category:'textile', label:'灰褐色波克雷模块化沙发,细节特写' },
+  { thumb:'../images/thumbs/DBG-D80613.webp', full:'../images/full/DBG-D80613.webp', category:'textile', label:'象牙白波克雷三人沙发,圆润扶手' },
+  { thumb:'../images/thumbs/DBG-D80614.webp', full:'../images/full/DBG-D80614.webp', category:'textile', label:'象牙白波克雷沙发,定制书架' },
+  { thumb:'../images/thumbs/DBG-D80783.webp', full:'../images/full/DBG-D80783.webp', category:'cuir', label:'象牙白绗缝皮革沙发,图案抱枕' },
+  { thumb:'../images/thumbs/DBG-D80784.webp', full:'../images/full/DBG-D80784.webp', category:'cuir', label:'象牙白皮革沙发,石砌壁炉前场景' },
+  { thumb:'../images/thumbs/DBG-D80793.webp', full:'../images/full/DBG-D80793.webp', category:'cuir', label:'干邑棕皮革三人沙发' },
+  { thumb:'../images/thumbs/DBG-D80794.webp', full:'../images/full/DBG-D80794.webp', category:'cuir', label:'干邑棕皮革沙发,阅读落地灯' },
+  { thumb:'../images/thumbs/DBG-D80813.webp', full:'../images/full/DBG-D80813.webp', category:'textile', label:'米色亚麻三人沙发,宽厚扶手' },
+  { thumb:'../images/thumbs/DBG-D80814.webp', full:'../images/full/DBG-D80814.webp', category:'textile', label:'米色亚麻双人沙发,石砌壁炉前场景' },
+  { thumb:'../images/thumbs/DBG-D80833.webp', full:'../images/full/DBG-D80833.webp', category:'textile', label:"象牙白波克雷转角沙发,大理石纹抱枕" },
+  { thumb:'../images/thumbs/DBG-D80834.webp', full:'../images/full/DBG-D80834.webp', category:'textile', label:"象牙白波克雷转角沙发,俯拍视角" },
+  { thumb:'../images/thumbs/DBG-D90103.webp', full:'../images/full/DBG-D90103.webp', category:'textile', label:"驼色灯芯绒转角沙发" },
+  { thumb:'../images/thumbs/DBG-D90104.webp', full:'../images/full/DBG-D90104.webp', category:'textile', label:"驼色灯芯绒转角沙发,石砌壁炉前场景" },
+  { thumb:'../images/thumbs/DBG-D90105.webp', full:'../images/full/DBG-D90105.webp', category:'textile', label:'浅灰色亚麻模块化沙发,弧形布局' },
+  { thumb:'../images/thumbs/DBG-D90106.webp', full:'../images/full/DBG-D90106.webp', category:'textile', label:'浅灰色亚麻模块化沙发,花园景观' },
+  { thumb:'../images/thumbs/DBG-D90113.webp', full:'../images/full/DBG-D90113.webp', category:'textile', label:'米色亚麻深座模块化沙发,低座设计' },
+  { thumb:'../images/thumbs/DBG-D90114.webp', full:'../images/full/DBG-D90114.webp', category:'textile', label:'米色亚麻深座模块化沙发,石砌壁炉前场景' },
+  { thumb:'../images/thumbs/DBG-D90213.webp', full:'../images/full/DBG-D90213.webp', category:'cuir', label:'干邑棕皮革沙发,仿毛皮抱枕' },
+  { thumb:'../images/thumbs/DBG-D90214.webp', full:'../images/full/DBG-D90214.webp', category:'cuir', label:'干邑棕皮革沙发,细节特写' },
+  { thumb:'../images/thumbs/DBG-YSZ-013.webp', full:'../images/full/DBG-YSZ-013.webp', category:'textile', label:'本色亚麻套罩沙发,休闲随性造型' },
+  { thumb:'../images/thumbs/DBG-YSZ-014.webp', full:'../images/full/DBG-YSZ-014.webp', category:'textile', label:'本色亚麻套罩沙发,壁炉前场景' },
+  { thumb:'../images/thumbs/cookie-sofa-sauge-3.webp', full:'../images/full/cookie-sofa-sauge-3.webp', category:'textile', label:'鼠尾草绿天鹅绒曲线沙发,花卉图案抱枕' },
+  { thumb:'../images/thumbs/cookie-sofa-sauge-4.webp', full:'../images/full/cookie-sofa-sauge-4.webp', category:'textile', label:'鼠尾草绿天鹅绒曲线沙发,室外露台场景' },
+  { thumb:'../images/thumbs/table-basse-sculptee-plan.webp', full:'../images/full/table-basse-sculptee-plan.webp', category:'table', label:'雕花木质茶几,镶嵌桌面,俯拍视角' },
+  { thumb:'../images/thumbs/table-basse-sculptee-scene.webp', full:'../images/full/table-basse-sculptee-scene.webp', category:'table', label:'雕花木质茶几,镶嵌桌面,场景陈设' },
+  { thumb:'../images/thumbs/DBG-D70763.webp', full:'../images/full/DBG-D70763.webp', category:'lit', label:'象牙白绗缝天鹅绒床,麻花面料床架' },
+  { thumb:'../images/thumbs/DBG-D70764.webp', full:'../images/full/DBG-D70764.webp', category:'lit', label:'象牙白绗缝天鹅绒床,床头角落与壁架' },
+  { thumb:'../images/thumbs/DBG-D70783.webp', full:'../images/full/DBG-D70783.webp', category:'lit', label:'灰褐色亚麻矮床,深色木质方脚' },
+  { thumb:'../images/thumbs/DBG-D70784.webp', full:'../images/full/DBG-D70784.webp', category:'lit', label:'灰褐色亚麻矮床,梳妆角落场景' },
+  { thumb:'../images/thumbs/DBG-D70803.webp', full:'../images/full/DBG-D70803.webp', category:'lit', label:'象牙白波克雷竖纹床头板床' },
+  { thumb:'../images/thumbs/DBG-D70804.webp', full:'../images/full/DBG-D70804.webp', category:'lit', label:'象牙白波克雷竖纹床头板床,波浪形壁架' },
+  { thumb:'../images/thumbs/DBG-D70813.webp', full:'../images/full/DBG-D70813.webp', category:'lit', label:'米色皮革床,绗缝床座' },
+  { thumb:'../images/thumbs/DBG-D70814.webp', full:'../images/full/DBG-D70814.webp', category:'lit', label:'米色皮革床,城市景观' },
+  { thumb:'../images/thumbs/DBG-D70823.webp', full:'../images/full/DBG-D70823.webp', category:'lit', label:'粉雾色皮革床,绗缝床头板' },
+  { thumb:'../images/thumbs/DBG-D70824.webp', full:'../images/full/DBG-D70824.webp', category:'lit', label:'粉雾色皮革床,梳妆角落场景' },
+  { thumb:'../images/thumbs/DBG-D70833.webp', full:'../images/full/DBG-D70833.webp', category:'lit', label:'象牙白波克雷圆润床头板床' },
+  { thumb:'../images/thumbs/DBG-D70834.webp', full:'../images/full/DBG-D70834.webp', category:'lit', label:'象牙白波克雷圆润床头板床,雕塑感搁架' },
+  { thumb:'../images/thumbs/DBG-D70853.webp', full:'../images/full/DBG-D70853.webp', category:'lit', label:'赤陶色天鹅绒床,弧形床头板' },
+  { thumb:'../images/thumbs/DBG-D70854.webp', full:'../images/full/DBG-D70854.webp', category:'lit', label:'赤陶色天鹅绒床,梳妆角落场景' },
+  { thumb:'../images/thumbs/3.webp', full:'../images/full/3.webp', category:'fauteuil', label:'梅紫与灰褐条纹灯芯绒矮扶手椅' },
+  { thumb:'../images/thumbs/3A.webp', full:'../images/full/3A.webp', category:'fauteuil', label:'象牙白剪羊毛旋转扶手椅,弧形造型' },
+  { thumb:'../images/thumbs/3CA.webp', full:'../images/full/3CA.webp', category:'fauteuil', label:'黑色皮革安乐椅,配套脚凳' },
+  { thumb:'../images/thumbs/3D65.webp', full:'../images/full/3D65.webp', category:'fauteuil', label:'赤陶色天鹅绒旋转扶手椅' },
+  { thumb:'../images/thumbs/3D66.webp', full:'../images/full/3D66.webp', category:'fauteuil', label:'象牙白波克雷扶手椅,木质扶手' },
+  { thumb:'../images/thumbs/3D67.webp', full:'../images/full/3D67.webp', category:'fauteuil', label:'赤陶色天鹅绒旋转扶手椅,图案靠背' },
+  { thumb:'../images/thumbs/3D68.webp', full:'../images/full/3D68.webp', category:'fauteuil', label:'棕色剪羊毛旋转扶手椅' },
+  { thumb:'../images/thumbs/3D69.webp', full:'../images/full/3D69.webp', category:'fauteuil', label:'象牙白剪羊毛扶手椅,圆柱形木脚' },
+  { thumb:'../images/thumbs/3D70.webp', full:'../images/full/3D70.webp', category:'fauteuil', label:'黄绿印花面料扶手椅,配套毯子' },
+  { thumb:'../images/thumbs/3D72.webp', full:'../images/full/3D72.webp', category:'fauteuil', label:'黑色绗缝皮革扶手椅,木质结构' },
+  { thumb:'../images/thumbs/3D73.webp', full:'../images/full/3D73.webp', category:'fauteuil', label:'橄榄绿天鹅绒圆形扶手椅,花卉抱枕' },
+  { thumb:'../images/thumbs/3D106.webp', full:'../images/full/3D106.webp', category:'pouf', label:'棕色仿毛皮圆形坐墩,皮革座面' },
+  { thumb:'../images/thumbs/3D107.webp', full:'../images/full/3D107.webp', category:'pouf', label:'米白色波克雷双坐墩,大理石纹图案' },
+  { thumb:'../images/thumbs/3D113.webp', full:'../images/full/3D113.webp', category:'pouf', label:'粉色仿毛皮圆形坐墩' },
+  { thumb:'../images/thumbs/3D801.webp', full:'../images/full/3D801.webp', category:'fauteuil', label:'黑色皮革与米白波克雷拼接扶手椅,木质结构' },
+  { thumb:'../images/thumbs/3D809B.webp', full:'../images/full/3D809B.webp', category:'fauteuil', label:'巧克力色皮革扶手椅配脚凳,圆润轮廓' },
+  { thumb:'../images/thumbs/3D833.webp', full:'../images/full/3D833.webp', category:'fauteuil', label:'米黑双色图案印花面料扶手椅' },
+  { thumb:'../images/thumbs/3D835B.webp', full:'../images/full/3D835B.webp', category:'fauteuil', label:'黑白撞色图案印花面料扶手椅' },
+  { thumb:'../images/thumbs/3D859.webp', full:'../images/full/3D859.webp', category:'fauteuil', label:'巧克力色皮革扶手椅,悬挂式皮带金属结构' },
+  { thumb:'../images/thumbs/3D868.webp', full:'../images/full/3D868.webp', category:'fauteuil', label:'棕色绗缝天鹅绒旋转扶手椅' },
+  { thumb:'../images/thumbs/3D9010.webp', full:'../images/full/3D9010.webp', category:'pouf', label:'驼色仿毛皮圆形坐墩,皮革底座' },
+  { thumb:'../images/thumbs/4D63.webp', full:'../images/full/4D63.webp', category:'fauteuil', label:'黑色皮革安乐椅配脚凳,金色壁灯' },
+  { thumb:'../images/thumbs/4D66.webp', full:'../images/full/4D66.webp', category:'fauteuil', label:'象牙白波克雷扶手椅,木质扶手,木饰面墙' },
+  { thumb:'../images/thumbs/4D67.webp', full:'../images/full/4D67.webp', category:'fauteuil', label:'赤陶色天鹅绒旋转扶手椅,木墙前场景' },
+  { thumb:'../images/thumbs/4D68.webp', full:'../images/full/4D68.webp', category:'fauteuil', label:'棕色剪羊毛旋转扶手椅' },
+  { thumb:'../images/thumbs/4D69.webp', full:'../images/full/4D69.webp', category:'fauteuil', label:'象牙白剪羊毛扶手椅,圆柱形木脚' },
+  { thumb:'../images/thumbs/4D70.webp', full:'../images/full/4D70.webp', category:'fauteuil', label:'黄绿印花面料扶手椅' },
+  { thumb:'../images/thumbs/4D72.webp', full:'../images/full/4D72.webp', category:'fauteuil', label:'黑色绗缝皮革扶手椅,浅色木质结构' },
+  { thumb:'../images/thumbs/4D73.webp', full:'../images/full/4D73.webp', category:'fauteuil', label:"橄榄绿天鹅绒圆形扶手椅,内置边几" },
+  { thumb:'../images/thumbs/4D106.webp', full:'../images/full/4D106.webp', category:'pouf', label:'赤陶色仿毛皮圆形坐墩,皮革座面' },
+  { thumb:'../images/thumbs/4D107.webp', full:'../images/full/4D107.webp', category:'pouf', label:'米白色波克雷坐墩,大理石纹图案,镂空底座' },
+  { thumb:'../images/thumbs/4D113.webp', full:'../images/full/4D113.webp', category:'pouf', label:'米色仿毛皮圆形坐墩' },
+  { thumb:'../images/thumbs/4D801.webp', full:'../images/full/4D801.webp', category:'fauteuil', label:'黑色皮革与灰色麻花面料拼接扶手椅,黑色木质结构' },
+  { thumb:'../images/thumbs/4D809B.webp', full:'../images/full/4D809B.webp', category:'fauteuil', label:'巧克力色绗缝皮革扶手椅,纤细木脚' },
+  { thumb:'../images/thumbs/4D833.webp', full:'../images/full/4D833.webp', category:'fauteuil', label:'黑金波点面料扶手椅,黑色木质结构' },
+  { thumb:'../images/thumbs/4D835B.webp', full:'../images/full/4D835B.webp', category:'fauteuil', label:'黑白波点面料扶手椅,黑色木质结构' },
+  { thumb:'../images/thumbs/a639b-coffee-table-1.webp', full:'../images/full/a639b-coffee-table-1.webp', category:'table', label:'象牙白大理石纹茶几,波浪边桌面搭配深色木质圆柱形桌腿' },
+  { thumb:'../images/thumbs/a639b-coffee-table-2.webp', full:'../images/full/a639b-coffee-table-2.webp', category:'table', label:'象牙白大理石纹茶几,深色木质圆形底座,细节特写' },
+  { thumb:'../images/thumbs/a662-coffee-table-1.webp', full:'../images/full/a662-coffee-table-1.webp', category:'table', label:'玻璃茶几,胡桃木雕塑感桌腿搭配白色大理石圆柱' },
+  { thumb:'../images/thumbs/a662-coffee-table-2.webp', full:'../images/full/a662-coffee-table-2.webp', category:'table', label:'玻璃茶几,俯拍视角展现胡桃木与白色大理石桌腿' },
+  { thumb:'../images/thumbs/a915-coffee-table-1.webp', full:'../images/full/a915-coffee-table-1.webp', category:'table', label:'深色波纹圆形茶几,深色木质管状桌腿' },
+  { thumb:'../images/thumbs/a915-coffee-table-2.webp', full:'../images/full/a915-coffee-table-2.webp', category:'table', label:'圆形茶几,深色流水纹桌面,三只深色木质圆柱形桌腿' },
+  { thumb:'../images/thumbs/a995-square-coffee-table-1.webp', full:'../images/full/a995-square-coffee-table-1.webp', category:'table', label:'树瘤木方形茶几,厚重四圆柱桌腿' },
+  { thumb:'../images/thumbs/a995-square-coffee-table-2.webp', full:'../images/full/a995-square-coffee-table-2.webp', category:'table', label:'树瘤木饰面方形茶几,圆角设计配套圆形桌腿' },
+  { thumb:'../images/thumbs/a999-coffee-table-1.webp', full:'../images/full/a999-coffee-table-1.webp', category:'table', label:'米色异形石材茶几,嵌入式金属圆盘搭配胡桃木桌腿' },
+  { thumb:'../images/thumbs/a999-coffee-table-2.webp', full:'../images/full/a999-coffee-table-2.webp', category:'table', label:'米色纹理石材茶几,有机形桌面中央嵌拉丝金属环' },
+  { thumb:'../images/thumbs/bj001c-side-table.webp', full:'../images/full/bj001c-side-table.webp', category:'table', label:"圆形边几,绿色漆面桌面镶奶油色滚边,象牙白圆柱形桌腿" },
+  { thumb:'../images/thumbs/n609b-l-nightstand-2.webp', full:'../images/full/n609b-l-nightstand-2.webp', category:'table', label:'胡桃木床头柜,白色大理石纹桌面,细节特写' },
+  { thumb:'../images/thumbs/n609b-r-nightstand-1.webp', full:'../images/full/n609b-r-nightstand-1.webp', category:'table', label:'胡桃木床头柜,白色大理石纹桌面,弧形双抽屉柜面' },
+  { thumb:'../images/thumbs/n609b-r-nightstand-2.webp', full:'../images/full/n609b-r-nightstand-2.webp', category:'table', label:'胡桃木与白色大理石床头柜,圆角设计,细节特写' },
+  { thumb:'../images/thumbs/n660-nightstand-1.webp', full:'../images/full/n660-nightstand-1.webp', category:'table', label:'象牙白人造石床头柜,镶嵌木纹手形图案柜面,球形脚' },
+  { thumb:'../images/thumbs/n660-nightstand-2.webp', full:'../images/full/n660-nightstand-2.webp', category:'table', label:'象牙白纹理床头柜,镶嵌木纹图案抽屉,球形脚' },
+  { thumb:'../images/thumbs/n851-nightstand-1.webp', full:'../images/full/n851-nightstand-1.webp', category:'table', label:'椭圆形胡桃木床头柜,双色扇贝纹柜面,心形拉手' },
+  { thumb:'../images/thumbs/n851-nightstand-2.webp', full:'../images/full/n851-nightstand-2.webp', category:'table', label:'椭圆形床头柜,胡桃木与浅色木质扇贝形轮廓,金属心形拉手' },
+  { thumb:'../images/thumbs/n871-nightstand-1.webp', full:'../images/full/n871-nightstand-1.webp', category:'table', label:'圆柱形浅色木质床头柜,藏青色滚边,桌面抽象图案' },
+  { thumb:'../images/thumbs/n871-nightstand-2.webp', full:'../images/full/n871-nightstand-2.webp', category:'table', label:'圆形浅色木质床头柜,竖向蓝色条带与蓝色图案镶嵌' },
+  { thumb:'../images/thumbs/n952-nightstand-1.webp', full:'../images/full/n952-nightstand-1.webp', category:'table', label:'象牙白漆面圆形床头柜,凹面桌面与弧形桌腿' },
+  { thumb:'../images/thumbs/n952-nightstand-2.webp', full:'../images/full/n952-nightstand-2.webp', category:'table', label:'象牙白漆面床头柜,带边桌面与镜面底,罐形桌腿' },
+  { thumb:'../images/thumbs/s639-corner-table-1.webp', full:'../images/full/s639-corner-table-1.webp', category:'table', label:"雕塑感灰色纹理石材角几,波浪形曲线轮廓" },
+  { thumb:'../images/thumbs/s639-corner-table-2.webp', full:'../images/full/s639-corner-table-2.webp', category:'table', label:"灰色纹理石材角几,异形不规则表面" },
+  { thumb:'../images/thumbs/s655-console-table-1.webp', full:'../images/full/s655-console-table-1.webp', category:'table', label:'洞石玄关桌,深色斑点混凝土桌腿带圆形镂空' },
+  { thumb:'../images/thumbs/s655-console-table-2.webp', full:'../images/full/s655-console-table-2.webp', category:'table', label:'玄关桌,圆润洞石桌面,深色斑点混凝土镂空底座' },
+  { thumb:'../images/thumbs/s815-side-table-1.webp', full:'../images/full/s815-side-table-1.webp', category:'table', label:"圆形镶嵌木纹边几,双色蜿蜒图案,外扩圆柱形桌腿" },
+  { thumb:'../images/thumbs/s815-side-table-2.webp', full:'../images/full/s815-side-table-2.webp', category:'table', label:"同色调镶嵌木纹边几,图案桌面与鼓形底座" },
+  { thumb:'../images/thumbs/s831-corner-table-1.webp', full:'../images/full/s831-corner-table-1.webp', category:'table', label:"圆形边几,黑色染色木放射纹桌面,灰色斑点石材球状桌腿" },
+  { thumb:'../images/thumbs/s831-corner-table-2.webp', full:'../images/full/s831-corner-table-2.webp', category:'table', label:"黑色条纹桌面边几,炭灰色石材弧形桌腿" },
+  { thumb:'../images/thumbs/s832-meeting-table-1.webp', full:'../images/full/s832-meeting-table-1.webp', category:'table', label:'圆桌,白色大理石纹桌面,蜿蜒边缘,青铜色金属底座上的凹槽立柱' },
+  { thumb:'../images/thumbs/s832-meeting-table-2.webp', full:'../images/full/s832-meeting-table-2.webp', category:'table', label:'白色大理石桌面圆桌,波浪边缘,黑色木质凹槽立柱搭配做旧黄铜底座' },
+  { thumb:'../images/thumbs/s839a-corner-table-1.webp', full:'../images/full/s839a-corner-table-1.webp', category:'table', label:"八角形边几,橙色大理石纹桌面,纤细青铜色金属桌腿" },
+  { thumb:'../images/thumbs/s839a-corner-table-2.webp', full:'../images/full/s839a-corner-table-2.webp', category:'table', label:"珊瑚色与白色大理石桌面边几,做旧金属中央支柱" },
+  { thumb:'../images/thumbs/s853-corner-table-1.webp', full:'../images/full/s853-corner-table-1.webp', category:'table', label:"红色大理石纹桌面边几,扇贝形边缘,胡桃木凹槽桌腿" },
+  { thumb:'../images/thumbs/s853-corner-table-2.webp', full:'../images/full/s853-corner-table-2.webp', category:'table', label:"酒红色大理石桌面边几,棕色木质凹槽圆柱形桌腿" },
+  { thumb:'../images/thumbs/s858-corner-table-a-1.webp', full:'../images/full/s858-corner-table-a-1.webp', category:'table', label:"雕塑感灰色斑点石材边几,弧形轮廓配双圆锥形桌腿" },
+  { thumb:'../images/thumbs/s858-corner-table-a-2.webp', full:'../images/full/s858-corner-table-a-2.webp', category:'table', label:"灰色斑点石材边几,有机外扩造型,细节特写" },
+  { thumb:'../images/thumbs/s858-corner-table-b-1.webp', full:'../images/full/s858-corner-table-b-1.webp', category:'table', label:"雕塑感象牙白裂纹石材边几,弧形轮廓配双圆锥形桌腿" },
+  { thumb:'../images/thumbs/s858-corner-table-b-2.webp', full:'../images/full/s858-corner-table-b-2.webp', category:'table', label:"象牙白裂纹石材边几,有机外扩造型,置于展示底座" },
+  { thumb:'../images/thumbs/s859-corner-table-1.webp', full:'../images/full/s859-corner-table-1.webp', category:'table', label:"雕塑感象牙白裂纹石材边几,圆润弧形配双圆锥形桌腿" },
+  { thumb:'../images/thumbs/s859-corner-table-2.webp', full:'../images/full/s859-corner-table-2.webp', category:'table', label:"象牙白裂纹石材边几,弧形轮廓,窗边场景" },
+  { thumb:'../images/thumbs/s861-corner-table-1.webp', full:'../images/full/s861-corner-table-1.webp', category:'table', label:"六角形边几,棱面造型,哑光黑锤纹饰面" },
+  { thumb:'../images/thumbs/s861-corner-table-2.webp', full:'../images/full/s861-corner-table-2.webp', category:'table', label:"六角形桌腿边几,炭黑色棱面纹理" },
+  { thumb:'../images/thumbs/s915-corner-table-1.webp', full:'../images/full/s915-corner-table-1.webp', category:'table', label:'圆形茶几,黑色波纹桌面,三只黑色染色木弧形桌腿' },
+  { thumb:'../images/thumbs/s915-corner-table-2.webp', full:'../images/full/s915-corner-table-2.webp', category:'table', label:'三足黑色木质茶几,波光纹理桌面' },
+  { thumb:'../images/thumbs/s936-corner-table-1.webp', full:'../images/full/s936-corner-table-1.webp', category:'table', label:"赤陶色漆面边几,倾斜圆柱形桌腿" },
+  { thumb:'../images/thumbs/s936-corner-table-2.webp', full:'../images/full/s936-corner-table-2.webp', category:'table', label:"圆形桌面边几,砖红色漆面管状桌腿,不对称线条" },
+  { thumb:'../images/thumbs/s965a-side-table-1.webp', full:'../images/full/s965a-side-table-1.webp', category:'table', label:"镶嵌桌面边几,白色大理石、黑色石材与条纹木材拼接,黑色弧形桌腿" },
+  { thumb:'../images/thumbs/s965a-side-table-2.webp', full:'../images/full/s965a-side-table-2.webp', category:'table', label:"边几,大理石与斑马纹木材镶嵌桌面,圆形图案" },
+  { thumb:'../images/thumbs/s965b-side-table-1.webp', full:'../images/full/s965b-side-table-1.webp', category:'table', label:"边几,黑色底面镶嵌白色贝母桌面,不规则边缘" },
+  { thumb:'../images/thumbs/s965b-side-table-2.webp', full:'../images/full/s965b-side-table-2.webp', category:'table', label:"边几,贝母镶嵌桌面构成黑白有机图案" },
+  { thumb:'../images/thumbs/s989-corner-table-1.webp', full:'../images/full/s989-corner-table-1.webp', category:'table', label:"梅紫色漆面陶瓷边几,环形弧线造型,桌面雕刻几何图案" },
+  { thumb:'../images/thumbs/s989-corner-table-2.webp', full:'../images/full/s989-corner-table-2.webp', category:'table', label:"亮面茄紫色陶瓷弧形边几,雕花桌面" },
+  { thumb:'../images/thumbs/a625-coffee-table-1.webp', full:'../images/full/a625-coffee-table-1.webp', category:'table', label:'白色大理石纹茶几,蜿蜒轮廓,深色木质桌腿' },
+  { thumb:'../images/thumbs/a625-coffee-table-2.webp', full:'../images/full/a625-coffee-table-2.webp', category:'table', label:'茶几,灰白色大理石桌面雕刻同心圆图案,棕色木质圆柱形桌腿' },
+  { thumb:'../images/thumbs/s625-side-table-1.webp', full:'../images/full/s625-side-table-1.webp', category:'table', label:'黑色染色木茶几,桌面雕刻同心圆图案,穿插原木桌腿' },
+  { thumb:'../images/thumbs/s625-side-table-2.webp', full:'../images/full/s625-side-table-2.webp', category:'table', label:'黑色茶几,桌面雕刻圆形图案,外露圆柱形木质结构' },
+  { thumb:'../images/thumbs/c658-meeting-table-1.webp', full:'../images/full/c658-meeting-table-1.webp', category:'table', label:'圆桌,灰蓝色大理石纹桌面,扇贝形边缘,金属底座上的胡桃木凹槽立柱' },
+  { thumb:'../images/thumbs/c658-meeting-table-2.webp', full:'../images/full/c658-meeting-table-2.webp', category:'table', label:'圆桌,锯齿边大理石桌面,三柱凹槽木质立柱,圆形金属底座' },
+  { thumb:'../images/thumbs/low-table-1.webp', full:'../images/full/low-table-1.webp', category:'table', label:'棕色圆柱形茶几,波浪边桌面' },
+  { thumb:'../images/thumbs/low-table-2.webp', full:'../images/full/low-table-2.webp', category:'table', label:'胡桃木茶几,圆柱形轮廓与有机形桌面' },
+  { thumb:'../images/thumbs/coffee-table-scene-a.webp', full:'../images/full/coffee-table-scene-a.webp', category:'table', label:'一组套叠茶几,白色大理石与胡桃木有机形桌面' },
+  { thumb:'../images/thumbs/coffee-table-scene-b.webp', full:'../images/full/coffee-table-scene-b.webp', category:'table', label:'浅色木质圆形茶几,黑色金属雕塑感桌腿' },
+  { thumb:'../images/thumbs/s862-corner-table.webp', full:'../images/full/s862-corner-table.webp', category:'table', label:"树瘤木边几,圆角立方体造型" },
+  { thumb:'../images/thumbs/d661-sideboard-1.webp', full:'../images/full/d661-sideboard-1.webp', category:'table', label:'棕色与象牙白镶嵌木纹餐边柜,留白手形图案' },
+  { thumb:'../images/thumbs/d661-sideboard-2.webp', full:'../images/full/d661-sideboard-2.webp', category:'table', label:'手形图案镶嵌木纹餐边柜,棕色与象牙白色调,黑色圆柱形桌腿' },
+  { thumb:'../images/thumbs/d807-sideboard-1.webp', full:'../images/full/d807-sideboard-1.webp', category:'table', label:'多彩镶嵌木纹餐边柜,几何色块构图' },
+  { thumb:'../images/thumbs/d807-sideboard-2.webp', full:'../images/full/d807-sideboard-2.webp', category:'table', label:'赭色、乌木色与铁锈色镶嵌木纹餐边柜,抽象色块图案' },
+  { thumb:'../images/thumbs/d830-sideboard-1.webp', full:'../images/full/d830-sideboard-1.webp', category:'table', label:'波浪图案镶嵌木纹餐边柜,赤褐至深棕渐变,镀铬细金属桌腿' },
+  { thumb:'../images/thumbs/d830-sideboard-2.webp', full:'../images/full/d830-sideboard-2.webp', category:'table', label:'波浪纹镶嵌木纹餐边柜,木色调,镀铬十字形桌腿' },
+  { thumb:'../images/thumbs/d852-cabinet-1.webp', full:'../images/full/d852-cabinet-1.webp', category:'table', label:'胡桃木立方模块柜,浅色同心圆图案' },
+  { thumb:'../images/thumbs/d852-cabinet-2.webp', full:'../images/full/d852-cabinet-2.webp', category:'table', label:'棕色木立方堆叠柜,蜜色镶嵌圆形图案' },
+  { thumb:'../images/thumbs/d902-sideboard-1.webp', full:'../images/full/d902-sideboard-1.webp', category:'table', label:'人脸图案镶嵌柜,乌木色底与浅色木材拼接,黑色管状桌腿' },
+  { thumb:'../images/thumbs/d902-sideboard-2.webp', full:'../images/full/d902-sideboard-2.webp', category:'table', label:'黑色管状底座柜,乌木色与浅色木材镶嵌人形图案' },
+  { thumb:'../images/thumbs/d928-sideboard-1.webp', full:'../images/full/d928-sideboard-1.webp', category:'table', label:'浮雕棱面柜门餐边柜,炭灰色饰面' },
+  { thumb:'../images/thumbs/d928-sideboard-2.webp', full:'../images/full/d928-sideboard-2.webp', category:'table', label:'悬挂式餐边柜,浮雕纹理柜门,玻璃与深色木质混合桌腿' },
+  { thumb:'../images/thumbs/d995-cabinet-1.webp', full:'../images/full/d995-cabinet-1.webp', category:'table', label:'象牙白与桃花心木镶嵌餐边柜,竖向波浪图案,黑色圆柱形桌腿' },
+  { thumb:'../images/thumbs/d995-cabinet-2.webp', full:'../images/full/d995-cabinet-2.webp', category:'table', label:'波浪条纹镶嵌餐边柜,象牙白与深棕色调,黑色桌腿' },
+  { thumb:'../images/thumbs/dc72-bookshelf.webp', full:'../images/full/dc72-bookshelf.webp', category:'table', label:'棕色木质开放式书架,灰色立柱,不对称层板' },
+  { thumb:'../images/thumbs/dc73-bookshelf.webp', full:'../images/full/dc73-bookshelf.webp', category:'table', label:'浅色木质书架,藏青色皮带立柱' },
+  { thumb:'../images/thumbs/jg001c-wine-cabinet.webp', full:'../images/full/jg001c-wine-cabinet.webp', category:'table', label:'橙黑渐变漆面酒柜,橙色底座' },
+  { thumb:'../images/thumbs/n609b-l-nightstand-1.webp', full:'../images/full/n609b-l-nightstand-1.webp', category:'table', label:'弧形胡桃木床头柜,白色大理石纹桌面' },
+  { thumb:'../images/thumbs/pm05b12-chest-of-drawers.webp', full:'../images/full/pm05b12-chest-of-drawers.webp', category:'table', label:'梅紫与赭色编织图案镶嵌柜,浅色木质桌腿' },
+  { thumb:'../images/thumbs/pm06b12-chest-of-drawers.webp', full:'../images/full/pm06b12-chest-of-drawers.webp', category:'table', label:'沙丘图案镶嵌柜,浅木色、棕色、橙色与洋红色调' },
+  { thumb:'../images/thumbs/pm07b12-chest-of-drawers.webp', full:'../images/full/pm07b12-chest-of-drawers.webp', category:'table', label:'城市屋顶图案镶嵌柜,酒红与灰褐色调,镀铬金属连接件' },
+  { thumb:'../images/thumbs/s979b-cabinet-1.webp', full:'../images/full/s979b-cabinet-1.webp', category:'table', label:'棕色马鞍皮革杂志架,木与金属交叉结构' },
+  { thumb:'../images/thumbs/s979b-cabinet-2.webp', full:'../images/full/s979b-cabinet-2.webp', category:'table', label:'炭灰色车缝皮革杂志架,木与金属X形结构' },
+  { thumb:'../images/thumbs/sy001-coat-rack.webp', full:'../images/full/sy001-coat-rack.webp', category:'table', label:'雕塑感浅色木质衣帽架,镶嵌条纹,黑色挂钩' },
+  { thumb:'../images/thumbs/sy002-coat-rack.webp', full:'../images/full/sy002-coat-rack.webp', category:'table', label:'雕塑感漆面衣帽架,黑红梅紫扇形轮廓' },
+  { thumb:'../images/thumbs/h865-desk-1.webp', full:'../images/full/h865-desk-1.webp', category:'table', label:'有机形书桌,米色纹理石材桌面,黑色结构,酒红色皮革抽屉' },
+  { thumb:'../images/thumbs/h865-desk-2.webp', full:'../images/full/h865-desk-2.webp', category:'table', label:'书桌,米色大理石纹桌面搭配黑色框架,外露红色皮革抽屉' },
+  { thumb:'../images/thumbs/t925b-desk-1.webp', full:'../images/full/t925b-desk-1.webp', category:'table', label:'椭圆形灰褐色漆面书桌,弧形中央支柱与透明玻璃桌腿' },
+  { thumb:'../images/thumbs/t925b-desk-2.webp', full:'../images/full/t925b-desk-2.webp', category:'table', label:'亮面灰褐色漆面书桌,雕塑感弧形支柱与玻璃圆柱形桌腿' },
+  { thumb:'../images/thumbs/c666-dining-table-1.webp', full:'../images/full/c666-dining-table-1.webp', category:'table', label:'椭圆形象牙白大理石纹餐桌,波浪边缘,四只胡桃木圆柱形桌腿' },
+  { thumb:'../images/thumbs/c666-dining-table-2.webp', full:'../images/full/c666-dining-table-2.webp', category:'table', label:'椭圆形浅色石材餐桌,波浪雕刻边缘,厚重胡桃木桌腿' },
+  { thumb:'../images/thumbs/c917-dining-table-1.webp', full:'../images/full/c917-dining-table-1.webp', category:'table', label:'长方形灰色大理石纹餐桌,胡桃木圆锥形桌腿' },
+  { thumb:'../images/thumbs/c917-dining-table-2.webp', full:'../images/full/c917-dining-table-2.webp', category:'table', label:'长方形浅灰色大理石桌面餐桌,厚重胡桃木圆锥形中央支柱' },
+  { thumb:'../images/thumbs/lounge-chair-a-scene.webp', full:'../images/full/lounge-chair-a-scene.webp', category:'fauteuil', label:'午夜蓝天鹅绒休闲椅,黑色染色木弧形结构' },
+  { thumb:'../images/thumbs/lounge-chair-b-scene-1.webp', full:'../images/full/lounge-chair-b-scene-1.webp', category:'fauteuil', label:'雕花胡桃木扶手椅,弧形扶手,芥末黄天鹅绒圆形坐垫' },
+  { thumb:'../images/thumbs/lounge-chair-b-scene-2.webp', full:'../images/full/lounge-chair-b-scene-2.webp', category:'fauteuil', label:'弧形靠背深色木质休闲椅,赭色天鹅绒圆形坐垫' },
+  { thumb:'../images/thumbs/c827-dining-table-1.webp', full:'../images/full/c827-dining-table-1.webp', category:'table', label:'圆形胡桃木餐桌,中央大理石纹旋转桌面' },
+  { thumb:'../images/thumbs/c827-dining-table-2.webp', full:'../images/full/c827-dining-table-2.webp', category:'table', label:'圆形胡桃木餐桌,雕花桌腿,中央浅色大理石旋转桌面' },
+  { thumb:'../images/thumbs/dining-table-1-scene-a.webp', full:'../images/full/dining-table-1-scene-a.webp', category:'table', label:'圆形粉色大理石餐桌,波浪边缘,金色黄铜圆柱形桌腿' },
+  { thumb:'../images/thumbs/dining-table-1-scene-b.webp', full:'../images/full/dining-table-1-scene-b.webp', category:'table', label:'圆形粉色大理石纹餐桌,金色黄铜中央支柱,周围环绕多彩天鹅绒椅子' },
+  { thumb:'../images/thumbs/c01-lounge-chair-1.webp', full:'../images/full/c01-lounge-chair-1.webp', category:'fauteuil', label:'餐椅,米白与米色棋盘格编织面料,包覆式椅身' },
+  { thumb:'../images/thumbs/c01-lounge-chair-2.webp', full:'../images/full/c01-lounge-chair-2.webp', category:'fauteuil', label:'餐椅,米白与米色棋盘格编织面料,三分之二侧视角' },
+  { thumb:'../images/thumbs/c02-dining-chair-1.webp', full:'../images/full/c02-dining-chair-1.webp', category:'fauteuil', label:'珍珠灰波克雷餐椅,靠背与坐面绗缝,纤细黑色金属椅腿' },
+  { thumb:'../images/thumbs/c02-dining-chair-2.webp', full:'../images/full/c02-dining-chair-2.webp', category:'fauteuil', label:'珍珠灰波克雷绗缝餐椅,黑色椅腿,置于餐厅场景中' },
+  { thumb:'../images/thumbs/c03-lounge-chair-1.webp', full:'../images/full/c03-lounge-chair-1.webp', category:'fauteuil', label:'灰褐与米白图形印花面料旋转椅,黑色金属八字椅腿' },
+  { thumb:'../images/thumbs/c03-lounge-chair-2.webp', full:'../images/full/c03-lounge-chair-2.webp', category:'fauteuil', label:'灰褐与米白图形印花面料旋转椅,黑色金属八字椅腿,正面视角' },
+  { thumb:'../images/thumbs/c05-dining-chair-1.webp', full:'../images/full/c05-dining-chair-1.webp', category:'fauteuil', label:'高靠背扶手椅,灰白条纹面料,包覆式扶手' },
+  { thumb:'../images/thumbs/c05-dining-chair-2.webp', full:'../images/full/c05-dining-chair-2.webp', category:'fauteuil', label:'高靠背扶手椅,灰白条纹面料,绗缝细节特写' },
+  { thumb:'../images/thumbs/c12-dining-chair-1.webp', full:'../images/full/c12-dining-chair-1.webp', category:'fauteuil', label:'圆润靠背餐椅,米色有机图案印花面料,黑色木质椅腿' },
+  { thumb:'../images/thumbs/c12-dining-chair-2.webp', full:'../images/full/c12-dining-chair-2.webp', category:'fauteuil', label:'圆润靠背与扶手餐椅,米色有机图案印花面料,黑色木质椅腿' },
+  { thumb:'../images/thumbs/c13-dining-chair-1.webp', full:'../images/full/c13-dining-chair-1.webp', category:'fauteuil', label:'象牙白亚麻贝壳靠背餐椅,深色木质锥形椅腿' },
+  { thumb:'../images/thumbs/c13-dining-chair-2.webp', full:'../images/full/c13-dining-chair-2.webp', category:'fauteuil', label:'象牙白亚麻贝壳靠背餐椅,深色木质锥形椅腿,三分之二侧视角' },
+  { thumb:'../images/thumbs/lounge-chair-c-scene-1.webp', full:'../images/full/lounge-chair-c-scene-1.webp', category:'fauteuil', label:'低矮扶手椅,黑色木质结构,赤陶红、白与橄榄绿条纹编织面料坐垫' },
+  { thumb:'../images/thumbs/lounge-chair-c-scene-2.webp', full:'../images/full/lounge-chair-c-scene-2.webp', category:'fauteuil', label:'低矮扶手椅,黑色木质结构,赤陶红与橄榄绿条纹编织坐垫特写' },
+  { thumb:'../images/thumbs/dc71-bench.webp', full:'../images/full/dc71-bench.webp', category:'table', label:'雕塑感长凳,浅色木质弯腿,板条坐面搭配米白波克雷圆形坐垫' },
+  { thumb:'../images/thumbs/4D859.webp', full:'../images/full/4D859.webp', category:'fauteuil', label:'巧克力色皮革扶手椅,纤细金属结构,厚实坐垫全景' },
+  { thumb:'../images/thumbs/4D868.webp', full:'../images/full/4D868.webp', category:'fauteuil', label:'棕色天鹅绒绗缝旋转扶手椅,黄昏暖光场景' },
+  { thumb:'../images/thumbs/4D9010.webp', full:'../images/full/4D9010.webp', category:'pouf', label:'驼色绗缝仿毛皮圆形坐墩,干邑棕车缝皮革底座' },
+
+  // --- Import 御宅翡丽 白底 (沙发、扶手椅、桌子、床、床头柜) ---
+  { thumb:'../images/thumbs/hm01-sofa-cuir-cognac.webp', full:'../images/full/hm01-sofa-cuir-cognac.webp', category:'cuir', label:'干邑色真皮三人沙发,撞色靠垫' },
+  { thumb:'../images/thumbs/hm011-sofa-textile-gris.webp', full:'../images/full/hm011-sofa-textile-gris.webp', category:'textile', label:'浅灰色布艺矮沙发,线条简约' },
+  { thumb:'../images/thumbs/hm013-sofa-cuir-ivoire.webp', full:'../images/full/hm013-sofa-cuir-ivoire.webp', category:'cuir', label:'象牙白真皮沙发,现代低矮造型' },
+  { thumb:'../images/thumbs/hm014-sofa-textile-rose.webp', full:'../images/full/hm014-sofa-textile-rose.webp', category:'textile', label:'粉扑色波克雷组合沙发' },
+  { thumb:'../images/thumbs/hm015-sofa-cuir-capitonne.webp', full:'../images/full/hm015-sofa-cuir-capitonne.webp', category:'cuir', label:'象牙白真皮沙发,竖向排骨绗缝' },
+  { thumb:'../images/thumbs/hm016-sofa-cuir-angle.webp', full:'../images/full/hm016-sofa-cuir-angle.webp', category:'cuir', label:'象牙白真皮弧形转角沙发' },
+  { thumb:'../images/thumbs/hm017-sofa-textile-cuir.webp', full:'../images/full/hm017-sofa-textile-cuir.webp', category:'textile', label:'米色布艺沙发,干邑色真皮扶手' },
+  { thumb:'../images/thumbs/hm018-sofa-cuir-noir.webp', full:'../images/full/hm018-sofa-cuir-noir.webp', category:'cuir', label:'黑色真皮沙发,木质扶手' },
+  { thumb:'../images/thumbs/hm019-sofa-textile-bleu.webp', full:'../images/full/hm019-sofa-textile-bleu.webp', category:'textile', label:'蓝白拼色布艺组合沙发' },
+  { thumb:'../images/thumbs/hm09000-fauteuil-velours-bleu.webp', full:'../images/full/hm09000-fauteuil-velours-bleu.webp', category:'fauteuil', label:'蓝色天鹅绒矮扶手椅,圆润造型' },
+  { thumb:'../images/thumbs/hm09001-fauteuil-bicolore.webp', full:'../images/full/hm09001-fauteuil-bicolore.webp', category:'fauteuil', label:'双色扶手椅,藏青与干邑色框架' },
+  { thumb:'../images/thumbs/hm09002-fauteuil-cuir-roux.webp', full:'../images/full/hm09002-fauteuil-cuir-roux.webp', category:'fauteuil', label:'棕红色真皮扶手椅,白色滚边' },
+  { thumb:'../images/thumbs/hm200-sofa-cuir-bordeaux.webp', full:'../images/full/hm200-sofa-cuir-bordeaux.webp', category:'cuir', label:'酒红色真皮弧形转角沙发' },
+  { thumb:'../images/thumbs/hm2001-sofa-cuir-cognac.webp', full:'../images/full/hm2001-sofa-cuir-cognac.webp', category:'cuir', label:'干邑色真皮沙发,撞色靠垫' },
+  { thumb:'../images/thumbs/hm2002-sofa-textile-ivoire.webp', full:'../images/full/hm2002-sofa-textile-ivoire.webp', category:'textile', label:'象牙白布艺沙发,蓝色与酒红色点缀' },
+  { thumb:'../images/thumbs/hm2003-sofa-cuir-marron.webp', full:'../images/full/hm2003-sofa-cuir-marron.webp', category:'cuir', label:'深棕色真皮沙发' },
+  { thumb:'../images/thumbs/hm2004-sofa-cuir-ivoire.webp', full:'../images/full/hm2004-sofa-cuir-ivoire.webp', category:'cuir', label:'象牙白真皮沙发,镂空扶手' },
+  { thumb:'../images/thumbs/hm2005-sofa-velours-prune.webp', full:'../images/full/hm2005-sofa-velours-prune.webp', category:'textile', label:'梅子色天鹅绒转角沙发' },
+  { thumb:'../images/thumbs/hm2006-sofa-textile-ivoire.webp', full:'../images/full/hm2006-sofa-textile-ivoire.webp', category:'textile', label:'象牙白布艺转角沙发,酒红色点缀' },
+  { thumb:'../images/thumbs/hm2007-sofa-cuir-cognac.webp', full:'../images/full/hm2007-sofa-cuir-cognac.webp', category:'cuir', label:'干邑色真皮沙发,镂空扶手' },
+  { thumb:'../images/thumbs/hm2008-sofa-cuir-chaise.webp', full:'../images/full/hm2008-sofa-cuir-chaise.webp', category:'cuir', label:'象牙白真皮贵妃位沙发' },
+  { thumb:'../images/thumbs/hm2009-sofa-cuir-marron.webp', full:'../images/full/hm2009-sofa-cuir-marron.webp', category:'cuir', label:'深棕色真皮沙发,低矮造型' },
+  { thumb:'../images/thumbs/hm2010-sofa-cuir-cognac.webp', full:'../images/full/hm2010-sofa-cuir-cognac.webp', category:'cuir', label:'干邑色真皮沙发' },
+  { thumb:'../images/thumbs/hm2011-sofa-textile-ivoire.webp', full:'../images/full/hm2011-sofa-textile-ivoire.webp', category:'textile', label:'象牙白布艺沙发,青绿色点缀' },
+  { thumb:'../images/thumbs/hm2012-sofa-cuir-noir-angle.webp', full:'../images/full/hm2012-sofa-cuir-noir-angle.webp', category:'cuir', label:'黑色真皮转角沙发,橙色点缀' },
+  { thumb:'../images/thumbs/hm2013-sofa-cuir-geometrique.webp', full:'../images/full/hm2013-sofa-cuir-geometrique.webp', category:'cuir', label:'象牙白真皮沙发,几何拼接面板' },
+  { thumb:'../images/thumbs/hm2014-sofa-cuir-cognac.webp', full:'../images/full/hm2014-sofa-cuir-cognac.webp', category:'cuir', label:'干邑色真皮沙发' },
+  { thumb:'../images/thumbs/hm2015-3-sofa-bouclé-1.webp', full:'../images/full/hm2015-3-sofa-bouclé-1.webp', category:'textile', label:'象牙白波克雷沙发,正面视角' },
+  { thumb:'../images/thumbs/hm2015-3-sofa-bouclé-2.webp', full:'../images/full/hm2015-3-sofa-bouclé-2.webp', category:'textile', label:'象牙白波克雷沙发,四分之三视角' },
+  { thumb:'../images/thumbs/hm2015-4-sofa-modulaire-1.webp', full:'../images/full/hm2015-4-sofa-modulaire-1.webp', category:'textile', label:'象牙白布艺组合沙发,蓝色点缀' },
+  { thumb:'../images/thumbs/hm2015-4-sofa-modulaire-2.webp', full:'../images/full/hm2015-4-sofa-modulaire-2.webp', category:'textile', label:'象牙白布艺组合沙发,俯视视角' },
+  { thumb:'../images/thumbs/hm2015-sofa-bouclé-angle.webp', full:'../images/full/hm2015-sofa-bouclé-angle.webp', category:'textile', label:'象牙白波克雷转角沙发,蓝色点缀' },
+  { thumb:'../images/thumbs/hm2016-1-sofa-courbe-ivoire.webp', full:'../images/full/hm2016-1-sofa-courbe-ivoire.webp', category:'textile', label:'象牙白布艺弧形沙发' },
+  { thumb:'../images/thumbs/hm2016-sofa-courbe-sarcelle.webp', full:'../images/full/hm2016-sofa-courbe-sarcelle.webp', category:'textile', label:'青绿色布艺弧形沙发' },
+  { thumb:'../images/thumbs/hm03-fauteuil-tissu-bois.webp', full:'../images/full/hm03-fauteuil-tissu-bois.webp', category:'fauteuil', label:'象牙白布艺扶手椅,木质外露框架' },
+  { thumb:'../images/thumbs/hm031-fauteuil-cuir-cognac.webp', full:'../images/full/hm031-fauteuil-cuir-cognac.webp', category:'fauteuil', label:'干邑色真皮扶手椅,亚克力底座' },
+  { thumb:'../images/thumbs/hm032-fauteuil-cuir-vert.webp', full:'../images/full/hm032-fauteuil-cuir-vert.webp', category:'fauteuil', label:'绿色真皮软扶手椅,木质椅腿' },
+  { thumb:'../images/thumbs/hm033-fauteuil-bergere-bois.webp', full:'../images/full/hm033-fauteuil-bergere-bois.webp', category:'fauteuil', label:'软扶手椅,木质扶手' },
+  { thumb:'../images/thumbs/hm034-fauteuil-velours-marine.webp', full:'../images/full/hm034-fauteuil-velours-marine.webp', category:'fauteuil', label:'藏青天鹅绒旋转扶手椅,木质框架' },
+  { thumb:'../images/thumbs/hm035-fauteuil-cuir-bas.webp', full:'../images/full/hm035-fauteuil-cuir-bas.webp', category:'fauteuil', label:'矮真皮扶手椅,线条简约' },
+  { thumb:'../images/thumbs/hm036-fauteuil-velours-prune.webp', full:'../images/full/hm036-fauteuil-velours-prune.webp', category:'fauteuil', label:'梅子色天鹅绒扶手椅,木质框架' },
+  { thumb:'../images/thumbs/hm037-fauteuil-velours-marine.webp', full:'../images/full/hm037-fauteuil-velours-marine.webp', category:'fauteuil', label:'藏青天鹅绒扶手椅,竖向排骨绗缝' },
+  { thumb:'../images/thumbs/hm038b-fauteuil-bouclé-repose.webp', full:'../images/full/hm038b-fauteuil-bouclé-repose.webp', category:'fauteuil', label:'象牙白波克雷软扶手椅,配脚凳' },
+  { thumb:'../images/thumbs/hm038-fauteuil-marine-marbre.webp', full:'../images/full/hm038-fauteuil-marine-marbre.webp', category:'fauteuil', label:'藏青色扶手椅,大理石纹侧板' },
+  { thumb:'../images/thumbs/hm039-fauteuil-pivotant-bicolore.webp', full:'../images/full/hm039-fauteuil-pivotant-bicolore.webp', category:'fauteuil', label:'双色旋转扶手椅,木质椅腿' },
+  { thumb:'../images/thumbs/hm040-fauteuil-cuir-noir.webp', full:'../images/full/hm040-fauteuil-cuir-noir.webp', category:'fauteuil', label:'黑色真皮旋转扶手椅,圆润造型' },
+  { thumb:'../images/thumbs/hm041-fauteuil-velours-courbe.webp', full:'../images/full/hm041-fauteuil-velours-courbe.webp', category:'fauteuil', label:'天鹅绒旋转扶手椅,弧形轮廓' },
+  { thumb:'../images/thumbs/hm042-fauteuil-cuir-tonneau.webp', full:'../images/full/hm042-fauteuil-cuir-tonneau.webp', category:'fauteuil', label:'干邑色真皮桶形扶手椅,木质椅腿' },
+  { thumb:'../images/thumbs/hm043-fauteuil-sculptural.webp', full:'../images/full/hm043-fauteuil-sculptural.webp', category:'fauteuil', label:'象牙白与干邑色真皮雕塑感扶手椅' },
+  { thumb:'../images/thumbs/hm044-fauteuil-tablette.webp', full:'../images/full/hm044-fauteuil-tablette.webp', category:'fauteuil', label:'干邑色真皮扶手椅,内置托盘' },
+  { thumb:'../images/thumbs/hm045-fauteuil-dossier-haut.webp', full:'../images/full/hm045-fauteuil-dossier-haut.webp', category:'fauteuil', label:'高靠背扶手椅,明线装饰' },
+  { thumb:'../images/thumbs/hm046-fauteuil-sculptural-duo.webp', full:'../images/full/hm046-fauteuil-sculptural-duo.webp', category:'fauteuil', label:'雕塑感旋转扶手椅,象牙白与青绿色' },
+  { thumb:'../images/thumbs/hm02-table-marbre-tiroir.webp', full:'../images/full/hm02-table-marbre-tiroir.webp', category:'table', label:'大理石茶几,木质抽屉与黄铜椅腿' },
+  { thumb:'../images/thumbs/hm021-table-marbre-vert.webp', full:'../images/full/hm021-table-marbre-vert.webp', category:'table', label:'绿色大理石异形茶几,深色木质底座' },
+  { thumb:'../images/thumbs/hm022-table-marbre-fleur.webp', full:'../images/full/hm022-table-marbre-fleur.webp', category:'table', label:'白色大理石圆形茶几,花卉镶嵌纹理,搭配木质边几' },
+  { thumb:'../images/thumbs/hm023-table-pierre-ovale.webp', full:'../images/full/hm023-table-pierre-ovale.webp', category:'table', label:'浅色石材椭圆形茶几,雕塑感底座' },
+  { thumb:'../images/thumbs/hm024-table-pierre-plateau.webp', full:'../images/full/hm024-table-pierre-plateau.webp', category:'table', label:'蓝灰色石材茶几,黄铜凹槽托盘' },
+  { thumb:'../images/thumbs/hm025-table-duo-marbre.webp', full:'../images/full/hm025-table-duo-marbre.webp', category:'table', label:'一对圆形茶几,浅色与绿色大理石' },
+  { thumb:'../images/thumbs/hm026-table-marbre-vert-metal.webp', full:'../images/full/hm026-table-marbre-vert-metal.webp', category:'table', label:'绿色大理石长方形茶几,金属底座' },
+  { thumb:'../images/thumbs/hm027-table-pierre-appoint.webp', full:'../images/full/hm027-table-pierre-appoint.webp', category:'table', label:'蓝灰色石材茶几,搭配圆形边几' },
+  { thumb:'../images/thumbs/hm028-table-marbre-texture.webp', full:'../images/full/hm028-table-marbre-texture.webp', category:'table', label:'纹理大理石长凳式茶几' },
+  { thumb:'../images/thumbs/hm029-table-marbre-fleur-ovale.webp', full:'../images/full/hm029-table-marbre-fleur-ovale.webp', category:'table', label:'白色大理石椭圆形茶几,花卉镶嵌纹理' },
+  { thumb:'../images/thumbs/hm030-table-marbre-vert-banc.webp', full:'../images/full/hm030-table-marbre-vert-banc.webp', category:'table', label:'深绿色大理石长凳式茶几' },
+  { thumb:'../images/thumbs/hm0301-table-bois-pierre.webp', full:'../images/full/hm0301-table-bois-pierre.webp', category:'table', label:'圆形双层茶几,木质与蓝色石材' },
+  { thumb:'../images/thumbs/hm0302-table-duo-sombre.webp', full:'../images/full/hm0302-table-duo-sombre.webp', category:'table', label:'深色长方形茶几,搭配圆形边几' },
+  { thumb:'../images/thumbs/hm0303-table-marbre-oiseau.webp', full:'../images/full/hm0303-table-marbre-oiseau.webp', category:'table', label:'绿色大理石椭圆形茶几,鸟纹图案,搭配边几' },
+  { thumb:'../images/thumbs/hm0304-table-laquee-ivoire.webp', full:'../images/full/hm0304-table-laquee-ivoire.webp', category:'table', label:'象牙白烤漆茶几,木质结构' },
+  { thumb:'../images/thumbs/hm0305-table-ivoire-metal.webp', full:'../images/full/hm0305-table-ivoire-metal.webp', category:'table', label:'象牙白茶几,搭配圆形金属边几' },
+  { thumb:'../images/thumbs/hm0306-table-marbre-vert-duo.webp', full:'../images/full/hm0306-table-marbre-vert-duo.webp', category:'table', label:'绿色大理石椭圆形茶几,搭配木质边几' },
+  { thumb:'../images/thumbs/hm0307-table-bois-claire.webp', full:'../images/full/hm0307-table-bois-claire.webp', category:'table', label:'木质茶几,格栅底座' },
+  { thumb:'../images/thumbs/hm0308-table-marbre-fleur-rect.webp', full:'../images/full/hm0308-table-marbre-fleur-rect.webp', category:'table', label:'白色大理石长方形茶几,花卉镶嵌纹理' },
+  { thumb:'../images/thumbs/hm0309-table-marbre-bleu.webp', full:'../images/full/hm0309-table-marbre-bleu.webp', category:'table', label:'蓝色大理石茶几,象牙白底座' },
+  { thumb:'../images/thumbs/hm0310-table-marbre-sombre-duo.webp', full:'../images/full/hm0310-table-marbre-sombre-duo.webp', category:'table', label:'一对圆形茶几,深色大理石' },
+  { thumb:'../images/thumbs/hm0311-table-marbre-vert-duo.webp', full:'../images/full/hm0311-table-marbre-vert-duo.webp', category:'table', label:'一对绿色大理石边几,木质椅腿' },
+  { thumb:'../images/thumbs/hm6060-table-appoint-x.webp', full:'../images/full/hm6060-table-appoint-x.webp', category:'table', label:'边几,黄铜与大理石X形底座' },
+  { thumb:'../images/thumbs/hm6061-table-appoint-marbre-vert.webp', full:'../images/full/hm6061-table-appoint-marbre-vert.webp', category:'table', label:'深绿色大理石方形边几,金属椅腿' },
+  { thumb:'../images/thumbs/hm6062-table-appoint-duo-rose.webp', full:'../images/full/hm6062-table-appoint-duo-rose.webp', category:'table', label:'一对粉色石材边几,雕塑感底座' },
+  { thumb:'../images/thumbs/hm6063-table-appoint-marbre-blanc.webp', full:'../images/full/hm6063-table-appoint-marbre-blanc.webp', category:'table', label:'白色大理石圆形边几,雕塑感底座' },
+  { thumb:'../images/thumbs/hm6064-table-appoint-marbre-fin.webp', full:'../images/full/hm6064-table-appoint-marbre-fin.webp', category:'table', label:'大理石方形边几,纤细金属椅腿' },
+  { thumb:'../images/thumbs/hm6065-table-appoint-marbre-sombre.webp', full:'../images/full/hm6065-table-appoint-marbre-sombre.webp', category:'table', label:'深色大理石圆形边几,金属椅腿' },
+  { thumb:'../images/thumbs/hm6066-table-appoint-duo-marbre.webp', full:'../images/full/hm6066-table-appoint-duo-marbre.webp', category:'table', label:'一对圆形大理石边几,黄铜椅腿' },
+  { thumb:'../images/thumbs/hm6067-table-appoint-duo-rect.webp', full:'../images/full/hm6067-table-appoint-duo-rect.webp', category:'table', label:'一对长方形大理石边几' },
+  { thumb:'../images/thumbs/hm6068-table-appoint-carree.webp', full:'../images/full/hm6068-table-appoint-carree.webp', category:'table', label:'方形边几,大理石底座' },
+  { thumb:'../images/thumbs/hm6069-table-appoint-organique.webp', full:'../images/full/hm6069-table-appoint-organique.webp', category:'table', label:'蓝绿色大理石边几,异形造型,镀金底座' },
+  { thumb:'../images/thumbs/hm6070-table-appoint-sombre.webp', full:'../images/full/hm6070-table-appoint-sombre.webp', category:'table', label:'深色大理石圆形边几,黄铜椅腿' },
+  { thumb:'../images/thumbs/hm6071-table-appoint-marbre-blanc-cylindre.webp', full:'../images/full/hm6071-table-appoint-marbre-blanc-cylindre.webp', category:'table', label:'浅色大理石边几,弧形圆柱底座' },
+  { thumb:'../images/thumbs/hm6072-table-appoint-bois-fin.webp', full:'../images/full/hm6072-table-appoint-bois-fin.webp', category:'table', label:'木质边几,纤细黄铜椅腿' },
+  { thumb:'../images/thumbs/hm6073-table-appoint-bicolore.webp', full:'../images/full/hm6073-table-appoint-bicolore.webp', category:'table', label:'双色边几,棱角镀金底座' },
+  { thumb:'../images/thumbs/hm6074-table-appoint-bois-cannele.webp', full:'../images/full/hm6074-table-appoint-bois-cannele.webp', category:'table', label:'木质方形边几,象牙白凹槽底座' },
+  { thumb:'../images/thumbs/hm6075-table-appoint-duo-sombre.webp', full:'../images/full/hm6075-table-appoint-duo-sombre.webp', category:'table', label:'一对圆形大理石边几,深色底座' },
+  { thumb:'../images/thumbs/hm6076-table-appoint-marbre-courbe.webp', full:'../images/full/hm6076-table-appoint-marbre-courbe.webp', category:'table', label:'深色大理石圆形边几,弧形黄铜底座' },
+  { thumb:'../images/thumbs/hm6077-table-appoint-bois-marbre.webp', full:'../images/full/hm6077-table-appoint-bois-marbre.webp', category:'table', label:'双层边几,木质与大理石,黄铜底座' },
+  { thumb:'../images/thumbs/hm6078-table-appoint-groupe.webp', full:'../images/full/hm6078-table-appoint-groupe.webp', category:'table', label:'一组雕塑感边几' },
+  { thumb:'../images/thumbs/hm6079-table-appoint-bois-ronde.webp', full:'../images/full/hm6079-table-appoint-bois-ronde.webp', category:'table', label:'圆形木质边几,象牙白底座' },
+  { thumb:'../images/thumbs/hm0800-lit-cuir-cognac.webp', full:'../images/full/hm0800-lit-cuir-cognac.webp', category:'lit', label:'干邑色真皮床,绗缝床头' },
+  { thumb:'../images/thumbs/hm08001-lit-velours-marine.webp', full:'../images/full/hm08001-lit-velours-marine.webp', category:'lit', label:'藏青天鹅绒翼形床头床,配套床头柜' },
+  { thumb:'../images/thumbs/hm08002-lit-capitonne-prune.webp', full:'../images/full/hm08002-lit-capitonne-prune.webp', category:'lit', label:'梅子色天鹅绒弧形绗缝床头床' },
+  { thumb:'../images/thumbs/hm08003-lit-ailes-marine.webp', full:'../images/full/hm08003-lit-ailes-marine.webp', category:'lit', label:'藏青天鹅绒翼形绗缝床头床' },
+  { thumb:'../images/thumbs/hm08004-lit-bordeaux-marbre.webp', full:'../images/full/hm08004-lit-bordeaux-marbre.webp', category:'lit', label:'酒红色绗缝床,大理石纹侧板' },
+  { thumb:'../images/thumbs/hm08005-lit-panneaux-sarcelle.webp', full:'../images/full/hm08005-lit-panneaux-sarcelle.webp', category:'lit', label:'青绿色天鹅绒排板床头床' },
+  { thumb:'../images/thumbs/hm08006-lit-panneaux-bleu.webp', full:'../images/full/hm08006-lit-panneaux-bleu.webp', category:'lit', label:'宽幅蓝色排板床头床' },
+  { thumb:'../images/thumbs/hm08007-lit-taupe-chevets.webp', full:'../images/full/hm08007-lit-taupe-chevets.webp', category:'lit', label:'灰褐色布艺床,内置木质床头柜' },
+  { thumb:'../images/thumbs/hm08008-lit-noir-courbe.webp', full:'../images/full/hm08008-lit-noir-courbe.webp', category:'lit', label:'黑色弧形床头床,圆形床头柜嵌入' },
+  { thumb:'../images/thumbs/hm08009-lit-cuir-vague.webp', full:'../images/full/hm08009-lit-cuir-vague.webp', category:'lit', label:'棕色真皮床,波浪纹床头' },
+  { thumb:'../images/thumbs/hm08010-lit-cuir-noir.webp', full:'../images/full/hm08010-lit-cuir-noir.webp', category:'lit', label:'黑色真皮床,内置圆形床头柜' },
+  { thumb:'../images/thumbs/hm08011-lit-ivoire-vague.webp', full:'../images/full/hm08011-lit-ivoire-vague.webp', category:'lit', label:'象牙白布艺床,波浪形床头' },
+  { thumb:'../images/thumbs/hm08012-lit-cuir-rainure.webp', full:'../images/full/hm08012-lit-cuir-rainure.webp', category:'lit', label:'干邑色排骨真皮床,内置床头柜搁架' },
+  { thumb:'../images/thumbs/hm08013-lit-cuir-orange.webp', full:'../images/full/hm08013-lit-cuir-orange.webp', category:'lit', label:'干邑色真皮床,排板床头' },
+  { thumb:'../images/thumbs/hm08014-lit-ivoire-panneaux.webp', full:'../images/full/hm08014-lit-ivoire-panneaux.webp', category:'lit', label:'象牙白布艺床,排板床头' },
+  { thumb:'../images/thumbs/hm08015-lit-cuir-bleu-pouf.webp', full:'../images/full/hm08015-lit-cuir-bleu-pouf.webp', category:'lit', label:'蓝色真皮床,配套床尾坐墩' },
+  { thumb:'../images/thumbs/hm10000-chevet-cuir-bleu.webp', full:'../images/full/hm10000-chevet-cuir-bleu.webp', category:'table', label:'一对蓝色真皮鼓形床头柜' },
+  { thumb:'../images/thumbs/hm100001-chevet-cuir-mauve.webp', full:'../images/full/hm100001-chevet-cuir-mauve.webp', category:'table', label:'一对淡紫色真皮鼓形床头柜' },
+  { thumb:'../images/thumbs/hm100002-chevet-bois-sombre.webp', full:'../images/full/hm100002-chevet-bois-sombre.webp', category:'table', label:'木质方块床头柜,深色台面' },
+  { thumb:'../images/thumbs/hm100003-chevet-cuir-bordeaux.webp', full:'../images/full/hm100003-chevet-cuir-bordeaux.webp', category:'table', label:'一对酒红色真皮方块床头柜' },
+  { thumb:'../images/thumbs/hm100004-chevet-tissu-gris.webp', full:'../images/full/hm100004-chevet-tissu-gris.webp', category:'table', label:'一对灰色布艺床头柜,带抽屉' },
+  { thumb:'../images/thumbs/hm100005-chevet-cuir-bordeaux-2.webp', full:'../images/full/hm100005-chevet-cuir-bordeaux-2.webp', category:'table', label:'一对酒红色真皮床头柜,黄铜饰面' },
+  { thumb:'../images/thumbs/hm100006-chevet-marine-marbre.webp', full:'../images/full/hm100006-chevet-marine-marbre.webp', category:'table', label:'藏青色床头柜,大理石纹台面' },
+  { thumb:'../images/thumbs/hm100007-chevet-cuir-marine.webp', full:'../images/full/hm100007-chevet-cuir-marine.webp', category:'table', label:'一对藏青色真皮鼓形床头柜' },
+  { thumb:'../images/thumbs/hm100008-chevet-bois-cube.webp', full:'../images/full/hm100008-chevet-bois-cube.webp', category:'table', label:'棕色木质方块床头柜' },
+  { thumb:'../images/thumbs/hm100009-chevet-cuir-ivoire.webp', full:'../images/full/hm100009-chevet-cuir-ivoire.webp', category:'table', label:'一对象牙白真皮床头柜,竖向明线' },
+  { thumb:'../images/thumbs/hm100010-chevet-marbre-noir.webp', full:'../images/full/hm100010-chevet-marbre-noir.webp', category:'table', label:'圆形黑色床头柜,镶嵌大理石台面' },
+  { thumb:'../images/thumbs/hm100011-chevet-pied-ivoire.webp', full:'../images/full/hm100011-chevet-pied-ivoire.webp', category:'table', label:'一对基座式床头柜,圆形大理石纹台面' },
+  { thumb:'../images/thumbs/hm100012-chevet-marine-pied.webp', full:'../images/full/hm100012-chevet-marine-pied.webp', category:'table', label:'一对藏青色基座式床头柜' },
+  { thumb:'../images/thumbs/hm100013-chevet-ivoire-bois.webp', full:'../images/full/hm100013-chevet-ivoire-bois.webp', category:'table', label:'一对象牙白床头柜,木质椅腿' },
+
+  // --- Import novapulezzi_media ---
+  { thumb:'../images/thumbs/sofa-1441-pj-1.webp', full:'../images/full/sofa-1441-pj-1.webp', category:'cuir', label:'橄榄绿真皮沙发,现代轮廓设计' },
+  { thumb:'../images/thumbs/sofa-1441-pj-2.webp', full:'../images/full/sofa-1441-pj-2.webp', category:'cuir', label:'橄榄绿真皮沙发,现代轮廓设计,整体视角' },
+  { thumb:'../images/thumbs/sofa-1441-pj-3.webp', full:'../images/full/sofa-1441-pj-3.webp', category:'cuir', label:'橄榄绿真皮沙发,现代轮廓设计,特写视角' },
+  { thumb:'../images/thumbs/sofa-1441-pj-4.webp', full:'../images/full/sofa-1441-pj-4.webp', category:'cuir', label:'橄榄绿真皮沙发,现代轮廓设计,客厅场景' },
+  { thumb:'../images/thumbs/sofa-1441-pj-5.webp', full:'../images/full/sofa-1441-pj-5.webp', category:'cuir', label:'橄榄绿真皮沙发,现代轮廓设计,细节' },
+  { thumb:'../images/thumbs/sofa-1441-pj-6.webp', full:'../images/full/sofa-1441-pj-6.webp', category:'cuir', label:'橄榄绿真皮沙发,现代轮廓设计,场景陈设' },
+  { thumb:'../images/thumbs/sofa-1448-plz-1.webp', full:'../images/full/sofa-1448-plz-1.webp', category:'cuir', label:'象牙白真皮沙发,FORMA展厅' },
+  { thumb:'../images/thumbs/sofa-1448-plz-2.webp', full:'../images/full/sofa-1448-plz-2.webp', category:'cuir', label:'象牙白真皮沙发,FORMA展厅,整体视角' },
+  { thumb:'../images/thumbs/sofa-1448-plz-3.webp', full:'../images/full/sofa-1448-plz-3.webp', category:'cuir', label:'象牙白真皮沙发,FORMA展厅,特写视角' },
+  { thumb:'../images/thumbs/sofa-1448-plz-4.webp', full:'../images/full/sofa-1448-plz-4.webp', category:'cuir', label:'象牙白真皮沙发,FORMA展厅,客厅场景' },
+  { thumb:'../images/thumbs/sofa-1448-plz-5.webp', full:'../images/full/sofa-1448-plz-5.webp', category:'cuir', label:'象牙白真皮沙发,FORMA展厅,细节' },
+  { thumb:'../images/thumbs/sofa-1449-plz-1.webp', full:'../images/full/sofa-1449-plz-1.webp', category:'textile', label:'芥末黄灯芯绒天鹅绒矮沙发' },
+  { thumb:'../images/thumbs/sofa-1449-plz-2.webp', full:'../images/full/sofa-1449-plz-2.webp', category:'textile', label:'芥末黄灯芯绒天鹅绒矮沙发,整体视角' },
+  { thumb:'../images/thumbs/sofa-1449-plz-3.webp', full:'../images/full/sofa-1449-plz-3.webp', category:'textile', label:'芥末黄灯芯绒天鹅绒矮沙发,特写视角' },
+  { thumb:'../images/thumbs/sofa-1449-plz-4.webp', full:'../images/full/sofa-1449-plz-4.webp', category:'textile', label:'芥末黄灯芯绒天鹅绒矮沙发,客厅场景' },
+  { thumb:'../images/thumbs/sofa-1449-plz-5.webp', full:'../images/full/sofa-1449-plz-5.webp', category:'textile', label:'芥末黄灯芯绒天鹅绒矮沙发,细节' },
+  { thumb:'../images/thumbs/sofa-1449-plz-6.webp', full:'../images/full/sofa-1449-plz-6.webp', category:'textile', label:'芥末黄灯芯绒天鹅绒矮沙发,场景陈设' },
+  { thumb:'../images/thumbs/sofa-1450-plz-1.webp', full:'../images/full/sofa-1450-plz-1.webp', category:'cuir', label:'炭灰色真皮组合沙发' },
+  { thumb:'../images/thumbs/sofa-1450-plz-2.webp', full:'../images/full/sofa-1450-plz-2.webp', category:'cuir', label:'炭灰色真皮组合沙发,整体视角' },
+  { thumb:'../images/thumbs/sofa-1450-plz-3.webp', full:'../images/full/sofa-1450-plz-3.webp', category:'cuir', label:'炭灰色真皮组合沙发,特写视角' },
+  { thumb:'../images/thumbs/sofa-1450-plz-4.webp', full:'../images/full/sofa-1450-plz-4.webp', category:'cuir', label:'炭灰色真皮组合沙发,客厅场景' },
+  { thumb:'../images/thumbs/sofa-1450-plz-5.webp', full:'../images/full/sofa-1450-plz-5.webp', category:'cuir', label:'炭灰色真皮组合沙发,细节' },
+  { thumb:'../images/thumbs/sofa-1451-plz-1.webp', full:'../images/full/sofa-1451-plz-1.webp', category:'textile', label:'米黑混纺布艺对称沙发一对' },
+  { thumb:'../images/thumbs/sofa-1451-plz-2.webp', full:'../images/full/sofa-1451-plz-2.webp', category:'textile', label:'米黑混纺布艺对称沙发一对,整体视角' },
+  { thumb:'../images/thumbs/sofa-1451-plz-3.webp', full:'../images/full/sofa-1451-plz-3.webp', category:'textile', label:'米黑混纺布艺对称沙发一对,特写视角' },
+  { thumb:'../images/thumbs/sofa-1451-plz-4.webp', full:'../images/full/sofa-1451-plz-4.webp', category:'textile', label:'米黑混纺布艺对称沙发一对,客厅场景' },
+  { thumb:'../images/thumbs/sofa-1451-plz-5.webp', full:'../images/full/sofa-1451-plz-5.webp', category:'textile', label:'米黑混纺布艺对称沙发一对,细节' },
+  { thumb:'../images/thumbs/sofa-1451-plz-6.webp', full:'../images/full/sofa-1451-plz-6.webp', category:'textile', label:'米黑混纺布艺对称沙发一对,场景陈设' },
+  { thumb:'../images/thumbs/sofa-1451-plz-7.webp', full:'../images/full/sofa-1451-plz-7.webp', category:'textile', label:'米黑混纺布艺对称沙发一对,另一视角' },
+  { thumb:'../images/thumbs/sofa-1451-plz-8.webp', full:'../images/full/sofa-1451-plz-8.webp', category:'textile', label:'米黑混纺布艺对称沙发一对' },
+  { thumb:'../images/thumbs/piece-1452-plz-1.webp', full:'../images/full/piece-1452-plz-1.webp', category:'lit', label:'灰褐色真皮床,软包床头' },
+  { thumb:'../images/thumbs/piece-1452-plz-2.webp', full:'../images/full/piece-1452-plz-2.webp', category:'lit', label:'灰褐色真皮床,软包床头,整体视角' },
+  { thumb:'../images/thumbs/piece-1452-plz-3.webp', full:'../images/full/piece-1452-plz-3.webp', category:'lit', label:'灰褐色真皮床,软包床头,特写视角' },
+  { thumb:'../images/thumbs/piece-1453-plz-1.webp', full:'../images/full/piece-1453-plz-1.webp', category:'lit', label:'象牙白仿羊羔绒床' },
+  { thumb:'../images/thumbs/piece-1453-plz-2.webp', full:'../images/full/piece-1453-plz-2.webp', category:'lit', label:'象牙白仿羊羔绒床,整体视角' },
+  { thumb:'../images/thumbs/piece-1453-plz-3.webp', full:'../images/full/piece-1453-plz-3.webp', category:'lit', label:'象牙白仿羊羔绒床,特写视角' },
+  { thumb:'../images/thumbs/piece-1453-plz-4.webp', full:'../images/full/piece-1453-plz-4.webp', category:'lit', label:'象牙白仿羊羔绒床,客厅场景' },
+  { thumb:'../images/thumbs/piece-1453-plz-5.webp', full:'../images/full/piece-1453-plz-5.webp', category:'lit', label:'象牙白仿羊羔绒床,细节' },
+  { thumb:'../images/thumbs/sofa-1454-jz-1.webp', full:'../images/full/sofa-1454-jz-1.webp', category:'cuir', label:'灰褐色真皮沙发' },
+  { thumb:'../images/thumbs/sofa-1454-jz-2.webp', full:'../images/full/sofa-1454-jz-2.webp', category:'cuir', label:'灰褐色真皮沙发,整体视角' },
+  { thumb:'../images/thumbs/sofa-1454-jz-3.webp', full:'../images/full/sofa-1454-jz-3.webp', category:'cuir', label:'灰褐色真皮沙发,特写视角' },
+  { thumb:'../images/thumbs/sofa-1454-jz-4.webp', full:'../images/full/sofa-1454-jz-4.webp', category:'cuir', label:'灰褐色真皮沙发,客厅场景' },
+  { thumb:'../images/thumbs/sofa-1454-jz-5.webp', full:'../images/full/sofa-1454-jz-5.webp', category:'cuir', label:'灰褐色真皮沙发,细节' },
+  { thumb:'../images/thumbs/sofa-1455-jz-1.webp', full:'../images/full/sofa-1455-jz-1.webp', category:'cuir', label:'绿色真皮切斯特菲尔德沙发,金色纽扣软包' },
+  { thumb:'../images/thumbs/sofa-1455-jz-2.webp', full:'../images/full/sofa-1455-jz-2.webp', category:'cuir', label:'绿色真皮切斯特菲尔德沙发,金色纽扣软包,整体视角' },
+  { thumb:'../images/thumbs/sofa-1455-jz-3.webp', full:'../images/full/sofa-1455-jz-3.webp', category:'cuir', label:'绿色真皮切斯特菲尔德沙发,金色纽扣软包,特写视角' },
+  { thumb:'../images/thumbs/sofa-1455-jz-4.webp', full:'../images/full/sofa-1455-jz-4.webp', category:'cuir', label:'绿色真皮切斯特菲尔德沙发,金色纽扣软包,客厅场景' },
+  { thumb:'../images/thumbs/sofa-1455-jz-5.webp', full:'../images/full/sofa-1455-jz-5.webp', category:'cuir', label:'绿色真皮切斯特菲尔德沙发,金色纽扣软包,细节' },
+  { thumb:'../images/thumbs/sofa-1456-jz-1.webp', full:'../images/full/sofa-1456-jz-1.webp', category:'cuir', label:'绿色真皮曲线沙发,雕塑感软包' },
+  { thumb:'../images/thumbs/sofa-1456-jz-2.webp', full:'../images/full/sofa-1456-jz-2.webp', category:'cuir', label:'绿色真皮曲线沙发,雕塑感软包,整体视角' },
+  { thumb:'../images/thumbs/sofa-1456-jz-3.webp', full:'../images/full/sofa-1456-jz-3.webp', category:'cuir', label:'绿色真皮曲线沙发,雕塑感软包,特写视角' },
+  { thumb:'../images/thumbs/sofa-1456-jz-4.webp', full:'../images/full/sofa-1456-jz-4.webp', category:'cuir', label:'绿色真皮曲线沙发,雕塑感软包,客厅场景' },
+  { thumb:'../images/thumbs/sofa-1456-jz-5.webp', full:'../images/full/sofa-1456-jz-5.webp', category:'cuir', label:'绿色真皮曲线沙发,雕塑感软包,细节' },
+  { thumb:'../images/thumbs/sofa-1456-jz-6.webp', full:'../images/full/sofa-1456-jz-6.webp', category:'cuir', label:'绿色真皮曲线沙发,雕塑感软包,场景陈设' },
+  { thumb:'../images/thumbs/sofa-1457-jz-1.webp', full:'../images/full/sofa-1457-jz-1.webp', category:'cuir', label:'紫灰色真皮曲线沙发,雕塑感软包' },
+  { thumb:'../images/thumbs/sofa-1457-jz-2.webp', full:'../images/full/sofa-1457-jz-2.webp', category:'cuir', label:'紫灰色真皮曲线沙发,雕塑感软包,整体视角' },
+  { thumb:'../images/thumbs/sofa-1457-jz-3.webp', full:'../images/full/sofa-1457-jz-3.webp', category:'cuir', label:'紫灰色真皮曲线沙发,雕塑感软包,特写视角' },
+  { thumb:'../images/thumbs/sofa-1457-jz-4.webp', full:'../images/full/sofa-1457-jz-4.webp', category:'cuir', label:'紫灰色真皮曲线沙发,雕塑感软包,客厅场景' },
+  { thumb:'../images/thumbs/sofa-1457-jz-5.webp', full:'../images/full/sofa-1457-jz-5.webp', category:'cuir', label:'紫灰色真皮曲线沙发,雕塑感软包,细节' },
+  { thumb:'../images/thumbs/sofa-1458-jz-1.webp', full:'../images/full/sofa-1458-jz-1.webp', category:'textile', label:'淡紫色天鹅绒曲线沙发,内置边几' },
+  { thumb:'../images/thumbs/sofa-1458-jz-2.webp', full:'../images/full/sofa-1458-jz-2.webp', category:'textile', label:'淡紫色天鹅绒曲线沙发,内置边几,整体视角' },
+  { thumb:'../images/thumbs/sofa-1458-jz-3.webp', full:'../images/full/sofa-1458-jz-3.webp', category:'textile', label:'淡紫色天鹅绒曲线沙发,内置边几,特写视角' },
+  { thumb:'../images/thumbs/sofa-1458-jz-4.webp', full:'../images/full/sofa-1458-jz-4.webp', category:'textile', label:'淡紫色天鹅绒曲线沙发,内置边几,客厅场景' },
+  { thumb:'../images/thumbs/sofa-1458-jz-5.webp', full:'../images/full/sofa-1458-jz-5.webp', category:'textile', label:'淡紫色天鹅绒曲线沙发,内置边几,细节' },
+  { thumb:'../images/thumbs/sofa-1459-jz-1.webp', full:'../images/full/sofa-1459-jz-1.webp', category:'cuir', label:'象牙白真皮流苏沙发' },
+  { thumb:'../images/thumbs/sofa-1459-jz-2.webp', full:'../images/full/sofa-1459-jz-2.webp', category:'cuir', label:'象牙白真皮流苏沙发,整体视角' },
+  { thumb:'../images/thumbs/sofa-1459-jz-3.webp', full:'../images/full/sofa-1459-jz-3.webp', category:'cuir', label:'象牙白真皮流苏沙发,特写视角' },
+  { thumb:'../images/thumbs/sofa-1459-jz-4.webp', full:'../images/full/sofa-1459-jz-4.webp', category:'cuir', label:'象牙白真皮流苏沙发,客厅场景' },
+  { thumb:'../images/thumbs/sofa-1459-jz-5.webp', full:'../images/full/sofa-1459-jz-5.webp', category:'cuir', label:'象牙白真皮流苏沙发,细节' },
+  { thumb:'../images/thumbs/piece-1461-jz-1.webp', full:'../images/full/piece-1461-jz-1.webp', category:'lit', label:'灰褐色真皮床,金边软包床头' },
+  { thumb:'../images/thumbs/piece-1461-jz-2.webp', full:'../images/full/piece-1461-jz-2.webp', category:'lit', label:'灰褐色真皮床,金边软包床头,整体视角' },
+  { thumb:'../images/thumbs/piece-1461-jz-3.webp', full:'../images/full/piece-1461-jz-3.webp', category:'lit', label:'灰褐色真皮床,金边软包床头,特写视角' },
+  { thumb:'../images/thumbs/piece-1461-jz-4.webp', full:'../images/full/piece-1461-jz-4.webp', category:'lit', label:'灰褐色真皮床,金边软包床头,客厅场景' },
+  { thumb:'../images/thumbs/piece-1461-jz-5.webp', full:'../images/full/piece-1461-jz-5.webp', category:'lit', label:'灰褐色真皮床,金边软包床头,细节' },
+  { thumb:'../images/thumbs/sofa-1464-pj-1.webp', full:'../images/full/sofa-1464-pj-1.webp', category:'cuir', label:'灰色真皮转角沙发,配套旋转扶手椅' },
+  { thumb:'../images/thumbs/sofa-1464-pj-2.webp', full:'../images/full/sofa-1464-pj-2.webp', category:'cuir', label:'灰色真皮转角沙发,配套旋转扶手椅,整体视角' },
+  { thumb:'../images/thumbs/sofa-1464-pj-3.webp', full:'../images/full/sofa-1464-pj-3.webp', category:'cuir', label:'灰色真皮转角沙发,配套旋转扶手椅,特写视角' },
+  { thumb:'../images/thumbs/sofa-1464-pj-4.webp', full:'../images/full/sofa-1464-pj-4.webp', category:'cuir', label:'灰色真皮转角沙发,配套旋转扶手椅,客厅场景' },
+  { thumb:'../images/thumbs/sofa-1466-plz-1.webp', full:'../images/full/sofa-1466-plz-1.webp', category:'textile', label:'象牙白布艺转角沙发,干邑色真皮扶手' },
+  { thumb:'../images/thumbs/sofa-1466-plz-2.webp', full:'../images/full/sofa-1466-plz-2.webp', category:'textile', label:'象牙白布艺转角沙发,干邑色真皮扶手,整体视角' },
+  { thumb:'../images/thumbs/sofa-1466-plz-3.webp', full:'../images/full/sofa-1466-plz-3.webp', category:'textile', label:'象牙白布艺转角沙发,干邑色真皮扶手,特写视角' },
+  { thumb:'../images/thumbs/sofa-1466-plz-4.webp', full:'../images/full/sofa-1466-plz-4.webp', category:'textile', label:'象牙白布艺转角沙发,干邑色真皮扶手,客厅场景' },
+  { thumb:'../images/thumbs/sofa-1467-plz-1.webp', full:'../images/full/sofa-1467-plz-1.webp', category:'cuir', label:'黑色真皮转角沙发,撞色象牙白扶手' },
+  { thumb:'../images/thumbs/sofa-1467-plz-2.webp', full:'../images/full/sofa-1467-plz-2.webp', category:'cuir', label:'黑色真皮转角沙发,撞色象牙白扶手,整体视角' },
+  { thumb:'../images/thumbs/sofa-1467-plz-3.webp', full:'../images/full/sofa-1467-plz-3.webp', category:'cuir', label:'黑色真皮转角沙发,撞色象牙白扶手,特写视角' },
+  { thumb:'../images/thumbs/sofa-1467-plz-4.webp', full:'../images/full/sofa-1467-plz-4.webp', category:'cuir', label:'黑色真皮转角沙发,撞色象牙白扶手,客厅场景' },
+  { thumb:'../images/thumbs/sofa-1468-plz-1.webp', full:'../images/full/sofa-1468-plz-1.webp', category:'cuir', label:'石油蓝真皮组合沙发' },
+  { thumb:'../images/thumbs/sofa-1468-plz-2.webp', full:'../images/full/sofa-1468-plz-2.webp', category:'cuir', label:'石油蓝真皮组合沙发,整体视角' },
+  { thumb:'../images/thumbs/sofa-1468-plz-3.webp', full:'../images/full/sofa-1468-plz-3.webp', category:'cuir', label:'石油蓝真皮组合沙发,特写视角' },
+  { thumb:'../images/thumbs/sofa-1468-plz-4.webp', full:'../images/full/sofa-1468-plz-4.webp', category:'cuir', label:'石油蓝真皮组合沙发,客厅场景' },
+  { thumb:'../images/thumbs/sofa-1468-plz-5.webp', full:'../images/full/sofa-1468-plz-5.webp', category:'cuir', label:'石油蓝真皮组合沙发,细节' },
+  { thumb:'../images/thumbs/sofa-1469-plz-1.webp', full:'../images/full/sofa-1469-plz-1.webp', category:'textile', label:'本白色仿羊羔绒转角沙发,真皮底座' },
+  { thumb:'../images/thumbs/sofa-1469-plz-2.webp', full:'../images/full/sofa-1469-plz-2.webp', category:'textile', label:'本白色仿羊羔绒转角沙发,真皮底座,整体视角' },
+  { thumb:'../images/thumbs/sofa-1470-plz-1.webp', full:'../images/full/sofa-1470-plz-1.webp', category:'textile', label:'酒红色布艺转角沙发' },
+  { thumb:'../images/thumbs/sofa-1470-plz-2.webp', full:'../images/full/sofa-1470-plz-2.webp', category:'textile', label:'酒红色布艺转角沙发,整体视角' },
+  { thumb:'../images/thumbs/piece-1475-pj-1.webp', full:'../images/full/piece-1475-pj-1.webp', category:'table', label:'洞石餐桌,编织干邑色真皮餐椅' },
+  { thumb:'../images/thumbs/piece-1475-pj-2.webp', full:'../images/full/piece-1475-pj-2.webp', category:'table', label:'洞石餐桌,编织干邑色真皮餐椅,整体视角' },
+  { thumb:'../images/thumbs/piece-1475-pj-3.webp', full:'../images/full/piece-1475-pj-3.webp', category:'table', label:'洞石餐桌,编织干邑色真皮餐椅,特写视角' },
+  { thumb:'../images/thumbs/piece-1475-pj-4.webp', full:'../images/full/piece-1475-pj-4.webp', category:'table', label:'洞石餐桌,编织干邑色真皮餐椅,客厅场景' },
+  { thumb:'../images/thumbs/piece-1475-pj-5.webp', full:'../images/full/piece-1475-pj-5.webp', category:'table', label:'洞石餐桌,编织干邑色真皮餐椅,细节' },
+  { thumb:'../images/thumbs/piece-1476-plz-1.webp', full:'../images/full/piece-1476-plz-1.webp', category:'table', label:'胡桃木餐桌,真皮餐椅搭配编织长凳' },
+  { thumb:'../images/thumbs/piece-1476-plz-2.webp', full:'../images/full/piece-1476-plz-2.webp', category:'table', label:'胡桃木餐桌,真皮餐椅搭配编织长凳,整体视角' },
+  { thumb:'../images/thumbs/piece-1476-plz-3.webp', full:'../images/full/piece-1476-plz-3.webp', category:'table', label:'胡桃木餐桌,真皮餐椅搭配编织长凳,特写视角' },
+  { thumb:'../images/thumbs/piece-1476-plz-4.webp', full:'../images/full/piece-1476-plz-4.webp', category:'table', label:'胡桃木餐桌,真皮餐椅搭配编织长凳,客厅场景' },
+  { thumb:'../images/thumbs/piece-1476-plz-5.webp', full:'../images/full/piece-1476-plz-5.webp', category:'table', label:'胡桃木餐桌,真皮餐椅搭配编织长凳,细节' },
+  { thumb:'../images/thumbs/sofa-1477-px-1.webp', full:'../images/full/sofa-1477-px-1.webp', category:'cuir', label:'真皮沙发,FORMA展厅' },
+  { thumb:'../images/thumbs/sofa-1477-px-2.webp', full:'../images/full/sofa-1477-px-2.webp', category:'cuir', label:'真皮沙发,FORMA展厅,整体视角' },
+  { thumb:'../images/thumbs/sofa-1477-px-3.webp', full:'../images/full/sofa-1477-px-3.webp', category:'cuir', label:'真皮沙发,FORMA展厅,特写视角' },
+  { thumb:'../images/thumbs/sofa-1477-px-4.webp', full:'../images/full/sofa-1477-px-4.webp', category:'cuir', label:'真皮沙发,FORMA展厅,客厅场景' },
+  { thumb:'../images/thumbs/sofa-1480-px-1.webp', full:'../images/full/sofa-1480-px-1.webp', category:'cuir', label:'象牙白真皮沙发,黑色真皮旋转扶手椅' },
+  { thumb:'../images/thumbs/sofa-1480-px-2.webp', full:'../images/full/sofa-1480-px-2.webp', category:'cuir', label:'象牙白真皮沙发,黑色真皮旋转扶手椅,整体视角' },
+  { thumb:'../images/thumbs/sofa-1480-px-3.webp', full:'../images/full/sofa-1480-px-3.webp', category:'cuir', label:'象牙白真皮沙发,黑色真皮旋转扶手椅,特写视角' },
+  { thumb:'../images/thumbs/sofa-1481-px-1.webp', full:'../images/full/sofa-1481-px-1.webp', category:'cuir', label:'炭灰色真皮沙发,芥末黄真皮扶手椅' },
+  { thumb:'../images/thumbs/sofa-1481-px-2.webp', full:'../images/full/sofa-1481-px-2.webp', category:'cuir', label:'炭灰色真皮沙发,芥末黄真皮扶手椅,整体视角' },
+  { thumb:'../images/thumbs/sofa-1481-px-3.webp', full:'../images/full/sofa-1481-px-3.webp', category:'cuir', label:'炭灰色真皮沙发,芥末黄真皮扶手椅,特写视角' },
+  { thumb:'../images/thumbs/sofa-1481-px-4.webp', full:'../images/full/sofa-1481-px-4.webp', category:'cuir', label:'炭灰色真皮沙发,芥末黄真皮扶手椅,客厅场景' },
+  { thumb:'../images/thumbs/sofa-1481-px-5.webp', full:'../images/full/sofa-1481-px-5.webp', category:'cuir', label:'炭灰色真皮沙发,芥末黄真皮扶手椅,细节' },
+  { thumb:'../images/thumbs/sofa-1494-pj-1.webp', full:'../images/full/sofa-1494-pj-1.webp', category:'cuir', label:'象牙白真皮沙发,雕塑感卷边扶手' },
+  { thumb:'../images/thumbs/sofa-1494-pj-2.webp', full:'../images/full/sofa-1494-pj-2.webp', category:'cuir', label:'象牙白真皮沙发,雕塑感卷边扶手,整体视角' },
+  { thumb:'../images/thumbs/sofa-1494-pj-3.webp', full:'../images/full/sofa-1494-pj-3.webp', category:'cuir', label:'象牙白真皮沙发,雕塑感卷边扶手,特写视角' },
+  { thumb:'../images/thumbs/sofa-1494-pj-4.webp', full:'../images/full/sofa-1494-pj-4.webp', category:'cuir', label:'象牙白真皮沙发,雕塑感卷边扶手,客厅场景' },
+  { thumb:'../images/thumbs/sofa-1494-pj-5.webp', full:'../images/full/sofa-1494-pj-5.webp', category:'cuir', label:'象牙白真皮沙发,雕塑感卷边扶手,细节' },
+  { thumb:'../images/thumbs/piece-1506-pj-1.webp', full:'../images/full/piece-1506-pj-1.webp', category:'table', label:'椭圆形洞石餐桌,编织干邑色真皮餐椅' },
+  { thumb:'../images/thumbs/piece-1506-pj-2.webp', full:'../images/full/piece-1506-pj-2.webp', category:'table', label:'椭圆形洞石餐桌,编织干邑色真皮餐椅,整体视角' },
+  { thumb:'../images/thumbs/piece-1506-pj-3.webp', full:'../images/full/piece-1506-pj-3.webp', category:'table', label:'椭圆形洞石餐桌,编织干邑色真皮餐椅,特写视角' },
+  { thumb:'../images/thumbs/piece-1507-pj-1.webp', full:'../images/full/piece-1507-pj-1.webp', category:'table', label:'椭圆形深色木质餐桌,黄铜与洞石底座' },
+  { thumb:'../images/thumbs/piece-1507-pj-2.webp', full:'../images/full/piece-1507-pj-2.webp', category:'table', label:'椭圆形深色木质餐桌,黄铜与洞石底座,整体视角' },
+  { thumb:'../images/thumbs/piece-1508-pj-1.webp', full:'../images/full/piece-1508-pj-1.webp', category:'table', label:'圆形深色木质与洞石餐桌,橙色与象牙白真皮餐椅' },
+  { thumb:'../images/thumbs/piece-1508-pj-2.webp', full:'../images/full/piece-1508-pj-2.webp', category:'table', label:'圆形深色木质与洞石餐桌,橙色与象牙白真皮餐椅,整体视角' },
+  { thumb:'../images/thumbs/piece-1509-pj-1.webp', full:'../images/full/piece-1509-pj-1.webp', category:'table', label:'深色石材餐桌,本白色仿羊羔绒餐椅' },
+  { thumb:'../images/thumbs/piece-1509-pj-2.webp', full:'../images/full/piece-1509-pj-2.webp', category:'table', label:'深色石材餐桌,本白色仿羊羔绒餐椅,整体视角' },
+  { thumb:'../images/thumbs/piece-1510-pj-1.webp', full:'../images/full/piece-1510-pj-1.webp', category:'table', label:'椭圆形洞石餐桌,干邑色真皮餐椅' },
+  { thumb:'../images/thumbs/piece-1510-pj-2.webp', full:'../images/full/piece-1510-pj-2.webp', category:'table', label:'椭圆形洞石餐桌,干邑色真皮餐椅,整体视角' },
+  { thumb:'../images/thumbs/piece-1531-jz-1.webp', full:'../images/full/piece-1531-jz-1.webp', category:'table', label:'大理石黄铜茶几,可拆卸托盘桌面' },
+  { thumb:'../images/thumbs/piece-1531-jz-2.webp', full:'../images/full/piece-1531-jz-2.webp', category:'table', label:'大理石黄铜茶几,可拆卸托盘桌面,整体视角' },
+  { thumb:'../images/thumbs/piece-1532-jz-1.webp', full:'../images/full/piece-1532-jz-1.webp', category:'table', label:'圆形大理石茶几,錾刻黄铜底座' },
+  { thumb:'../images/thumbs/piece-1532-jz-2.webp', full:'../images/full/piece-1532-jz-2.webp', category:'table', label:'圆形大理石茶几,錾刻黄铜底座,整体视角' },
+  { thumb:'../images/thumbs/piece-1532-jz-3.webp', full:'../images/full/piece-1532-jz-3.webp', category:'table', label:'圆形大理石茶几,錾刻黄铜底座,特写视角' },
+  { thumb:'../images/thumbs/piece-1540-jz-1.webp', full:'../images/full/piece-1540-jz-1.webp', category:'lit', label:'象牙白真皮软包床' },
+  { thumb:'../images/thumbs/piece-1540-jz-2.webp', full:'../images/full/piece-1540-jz-2.webp', category:'lit', label:'象牙白真皮软包床,整体视角' },
+  { thumb:'../images/thumbs/piece-1540-jz-3.webp', full:'../images/full/piece-1540-jz-3.webp', category:'lit', label:'象牙白真皮软包床,特写视角' },
+  { thumb:'../images/thumbs/piece-1542-jz-1.webp', full:'../images/full/piece-1542-jz-1.webp', category:'table', label:'圆形茶几组合,大理石与白色烤漆' },
+  { thumb:'../images/thumbs/piece-1548-jz-1.webp', full:'../images/full/piece-1548-jz-1.webp', category:'lit', label:'干邑色真皮床,扇形凹槽床头' },
+  { thumb:'../images/thumbs/piece-1548-jz-2.webp', full:'../images/full/piece-1548-jz-2.webp', category:'lit', label:'干邑色真皮床,扇形凹槽床头,整体视角' },
+  { thumb:'../images/thumbs/piece-1548-jz-3.webp', full:'../images/full/piece-1548-jz-3.webp', category:'lit', label:'干邑色真皮床,扇形凹槽床头,特写视角' },
+  { thumb:'../images/thumbs/piece-1548-jz-4.webp', full:'../images/full/piece-1548-jz-4.webp', category:'lit', label:'干邑色真皮床,扇形凹槽床头,客厅场景' },
+  { thumb:'../images/thumbs/sofa-1549-ht-1.webp', full:'../images/full/sofa-1549-ht-1.webp', category:'cuir', label:'真皮组合沙发,FORMA展厅' },
+  { thumb:'../images/thumbs/sofa-1549-ht-2.webp', full:'../images/full/sofa-1549-ht-2.webp', category:'cuir', label:'真皮组合沙发,FORMA展厅,整体视角' },
+  { thumb:'../images/thumbs/piece-1550-ht-1.webp', full:'../images/full/piece-1550-ht-1.webp', category:'table', label:'胡桃木有机造型书桌,旋转抽屉柜' },
+  { thumb:'../images/thumbs/piece-1550-ht-2.webp', full:'../images/full/piece-1550-ht-2.webp', category:'table', label:'胡桃木有机造型书桌,旋转抽屉柜,整体视角' },
+  { thumb:'../images/thumbs/piece-1550-ht-3.webp', full:'../images/full/piece-1550-ht-3.webp', category:'table', label:'胡桃木有机造型书桌,旋转抽屉柜,特写视角' },
+  { thumb:'../images/thumbs/piece-1551-ht-1.webp', full:'../images/full/piece-1551-ht-1.webp', category:'table', label:'胡桃木餐边柜,金属桌腿' },
+  { thumb:'../images/thumbs/piece-1551-ht-2.webp', full:'../images/full/piece-1551-ht-2.webp', category:'table', label:'胡桃木餐边柜,金属桌腿,整体视角' },
+  { thumb:'../images/thumbs/piece-1552-ht-1.webp', full:'../images/full/piece-1552-ht-1.webp', category:'table', label:'胡桃木玄关桌,象牙白真皮饰面' },
+  { thumb:'../images/thumbs/piece-1552-ht-2.webp', full:'../images/full/piece-1552-ht-2.webp', category:'table', label:'胡桃木玄关桌,象牙白真皮饰面,整体视角' },
+  { thumb:'../images/thumbs/piece-1552-ht-3.webp', full:'../images/full/piece-1552-ht-3.webp', category:'table', label:'胡桃木玄关桌,象牙白真皮饰面,特写视角' },
+  { thumb:'../images/thumbs/piece-1554-ht-1.webp', full:'../images/full/piece-1554-ht-1.webp', category:'table', label:'白色大理石茶几组合,胡桃木桌腿' },
+  { thumb:'../images/thumbs/piece-1554-ht-2.webp', full:'../images/full/piece-1554-ht-2.webp', category:'table', label:'白色大理石茶几组合,胡桃木桌腿,整体视角' },
+  { thumb:'../images/thumbs/piece-1555-ht-1.webp', full:'../images/full/piece-1555-ht-1.webp', category:'pouf', label:'灰色仿羊羔绒方形凳,干邑色真皮底座' },
+  { thumb:'../images/thumbs/piece-1555-ht-2.webp', full:'../images/full/piece-1555-ht-2.webp', category:'pouf', label:'灰色仿羊羔绒方形凳,干邑色真皮底座,整体视角' },
+  { thumb:'../images/thumbs/piece-1556-ht-1.webp', full:'../images/full/piece-1556-ht-1.webp', category:'table', label:'胡桃木圆桌,石质旋转托盘' },
+  { thumb:'../images/thumbs/piece-1556-ht-2.webp', full:'../images/full/piece-1556-ht-2.webp', category:'table', label:'胡桃木圆桌,石质旋转托盘,整体视角' },
+  { thumb:'../images/thumbs/piece-1556-ht-3.webp', full:'../images/full/piece-1556-ht-3.webp', category:'table', label:'胡桃木圆桌,石质旋转托盘,特写视角' },
+  { thumb:'../images/thumbs/piece-1557-ht-1.webp', full:'../images/full/piece-1557-ht-1.webp', category:'table', label:'绿色石材圆桌,棱面祖母绿底座' },
+  { thumb:'../images/thumbs/piece-1557-ht-2.webp', full:'../images/full/piece-1557-ht-2.webp', category:'table', label:'绿色石材圆桌,棱面祖母绿底座,整体视角' },
+  { thumb:'../images/thumbs/piece-1557-ht-3.webp', full:'../images/full/piece-1557-ht-3.webp', category:'table', label:'绿色石材圆桌,棱面祖母绿底座,特写视角' }
+];
+
+const catLabels = { cuir:'皮革', textile:'面料与波克雷', table:'桌子', lit:'床', fauteuil:'扶手椅', pouf:'坐墩' };
+
+const grid = document.getElementById('galleryGrid');
+const countEl = document.getElementById('galleryCount');
+
+function renderGallery(){
+  grid.innerHTML = '';
+  galleryItems.forEach((item, i) => {
+    const btn = document.createElement('button');
+    btn.className = 'gallery-item';
+    btn.dataset.category = item.category;
+    btn.dataset.index = i;
+    btn.setAttribute('aria-label', item.label);
+    btn.innerHTML = `
+      <img src="${item.thumb}" alt="${item.label}" loading="lazy"/>
+      <span class="gallery-caption">
+        <span class="cat">${catLabels[item.category]}</span>
+        <span class="desc">${item.label}</span>
+      </span>`;
+    btn.addEventListener('click', () => openLightbox(i));
+    grid.appendChild(btn);
+  });
+}
+renderGallery();
+
+// FILTRES
+const filterBtns = document.querySelectorAll('.filter-btn');
+const requestedCat = new URLSearchParams(window.location.search).get('cat');
+let currentFilter = (requestedCat && document.querySelector(`.filter-btn[data-filter="${requestedCat}"]`)) ? requestedCat : 'tout';
+filterBtns.forEach(b => b.classList.toggle('active', b.dataset.filter === currentFilter));
+
+function applyFilter(){
+  const items = grid.querySelectorAll('.gallery-item');
+  let visible = 0;
+  items.forEach(el => {
+    const match = currentFilter === 'tout' || el.dataset.category === currentFilter;
+    el.hidden = !match;
+    if (match) visible++;
+  });
+  countEl.textContent = visible + ' 件';
+}
+filterBtns.forEach(btn => {
+  btn.addEventListener('click', () => {
+    filterBtns.forEach(b => b.classList.remove('active'));
+    btn.classList.add('active');
+    currentFilter = btn.dataset.filter;
+    applyFilter();
+  });
+});
+applyFilter();
+
+// VISIONNEUSE
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightboxImg');
+const lightboxCat = document.getElementById('lightboxCat');
+const lightboxDesc = document.getElementById('lightboxDesc');
+let lightboxIndex = 0;
+let lastFocused = null;
+
+function visibleIndexes(){
+  return galleryItems.map((it, i) => i).filter(i => currentFilter === 'tout' || galleryItems[i].category === currentFilter);
+}
+
+function openLightbox(index){
+  lastFocused = document.activeElement;
+  lightboxIndex = index;
+  updateLightbox();
+  lightbox.classList.add('open');
+  document.getElementById('lightboxClose').focus();
+  document.addEventListener('keydown', onLightboxKey);
+}
+function updateLightbox(){
+  const item = galleryItems[lightboxIndex];
+  lightboxImg.src = item.full;
+  lightboxImg.alt = item.label;
+  lightboxCat.textContent = catLabels[item.category];
+  lightboxDesc.textContent = item.label;
+}
+function closeLightbox(){
+  lightbox.classList.remove('open');
+  document.removeEventListener('keydown', onLightboxKey);
+  if (lastFocused) lastFocused.focus();
+}
+function stepLightbox(dir){
+  const visible = visibleIndexes();
+  const pos = visible.indexOf(lightboxIndex);
+  const next = (pos + dir + visible.length) % visible.length;
+  lightboxIndex = visible[next];
+  updateLightbox();
+}
+function onLightboxKey(e){
+  if (e.key === 'Escape') closeLightbox();
+  if (e.key === 'ArrowRight') stepLightbox(1);
+  if (e.key === 'ArrowLeft') stepLightbox(-1);
+}
+document.getElementById('lightboxClose').addEventListener('click', closeLightbox);
+document.getElementById('lightboxNext').addEventListener('click', () => stepLightbox(1));
+document.getElementById('lightboxPrev').addEventListener('click', () => stepLightbox(-1));
+lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
+
+// NAV — solidification au scroll (déjà solide ici, conservé pour cohérence de comportement)
+const nav = document.getElementById('siteNav');
+document.addEventListener('scroll', () => nav.classList.toggle('scrolled', window.scrollY > 40), {passive:true});
+
+// NAV — menu mobile
+const navToggle = document.getElementById('navToggle');
+const navLinks = document.getElementById('navLinks');
+navToggle.addEventListener('click', () => {
+  const open = navLinks.classList.toggle('open');
+  navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+});
+navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+  navLinks.classList.remove('open');
+  navToggle.setAttribute('aria-expanded', 'false');
+}));
+
+// CURSEUR PERSONNALISÉ — amélioration progressive uniquement
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+// SELECTEUR DE LANGUE
+const langSwitch = document.getElementById('langSwitch');
+const langSwitchBtn = document.getElementById('langSwitchBtn');
+if (langSwitch && langSwitchBtn) {
+  langSwitchBtn.addEventListener('click', (e) => {
+    e.stopPropagation();
+    const open = langSwitch.classList.toggle('open');
+    langSwitchBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  document.addEventListener('click', () => {
+    langSwitch.classList.remove('open');
+    langSwitchBtn.setAttribute('aria-expanded', 'false');
+  });
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      langSwitch.classList.remove('open');
+      langSwitchBtn.setAttribute('aria-expanded', 'false');
+    }
+  });
+}
+</script>
+<script src="../zoom.js" defer></script>
+</body>
+</html>
